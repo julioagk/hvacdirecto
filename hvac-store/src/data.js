@@ -4061,7 +4061,7 @@ export const products = [
     "description": "Paquete res SF 2 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal",
     "function": "",
     "voltage": "",
-    "price": 1.738,
+    "price": 1738,
     "brand": "AC COOLING"
   },
   {
@@ -4076,7 +4076,7 @@ export const products = [
     "description": "Paquete res SF 3 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal",
     "function": "",
     "voltage": "",
-    "price": 1.862,
+    "price": 1862,
     "brand": "AC COOLING"
   },
   {
@@ -4091,7 +4091,7 @@ export const products = [
     "description": "Paquete res SF 4 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal",
     "function": "",
     "voltage": "",
-    "price": 2.363,
+    "price": 2363,
     "brand": "AC COOLING"
   },
   {
@@ -4106,7 +4106,7 @@ export const products = [
     "description": "Paquete res SF 5 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal",
     "function": "",
     "voltage": "",
-    "price": 2.487,
+    "price": 2487,
     "brand": "AC COOLING"
   },
   {
@@ -4121,7 +4121,7 @@ export const products = [
     "description": "Paquete res HP 2 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal",
     "function": "",
     "voltage": "",
-    "price": 2.112,
+    "price": 2112,
     "brand": "AC COOLING"
   },
   {
@@ -4136,7 +4136,7 @@ export const products = [
     "description": "Paquete res HP 3 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal",
     "function": "",
     "voltage": "",
-    "price": 2.237,
+    "price": 2237,
     "brand": "AC COOLING"
   },
   {
@@ -4151,7 +4151,7 @@ export const products = [
     "description": "Paquete res HP 4 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal",
     "function": "",
     "voltage": "",
-    "price": 2.738,
+    "price": 2738,
     "brand": "AC COOLING"
   },
   {
@@ -4166,7 +4166,7 @@ export const products = [
     "description": "Paquete res HP 5 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal",
     "function": "",
     "voltage": "",
-    "price": 2.862,
+    "price": 2862,
     "brand": "AC COOLING"
   },
   {
@@ -4181,7 +4181,7 @@ export const products = [
     "description": "Paquete res GAS HEAT 3 ton, 14 SEER R-454b, 220/1/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 3.807,
+    "price": 3807,
     "brand": "INTENSITY"
   },
   {
@@ -4196,7 +4196,7 @@ export const products = [
     "description": "Paquete res GAS HEAT 4 ton, 14 SEER R-454b, 220/1/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 4.133,
+    "price": 4133,
     "brand": "INTENSITY"
   },
   {
@@ -4211,7 +4211,7 @@ export const products = [
     "description": "Paquete res GAS HEAT 5 ton, 14 SEER R-454b, 220/1/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 4.463,
+    "price": 4463,
     "brand": "INTENSITY"
   },
   {
@@ -4226,7 +4226,7 @@ export const products = [
     "description": "Paquete res SF 3 ton, 14 SEER, R-454b, 220/3/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 2.999,
+    "price": 2999,
     "brand": "INTENSITY"
   },
   {
@@ -4241,7 +4241,7 @@ export const products = [
     "description": "Paquete res SF 4 ton, 14 SEER, R-454b, 220/3/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 3.653,
+    "price": 3653,
     "brand": "INTENSITY"
   },
   {
@@ -4271,7 +4271,7 @@ export const products = [
     "description": "Paquete res SF 5 ton, 14 SEER, R-454b, 460/3/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 3.916,
+    "price": 3916,
     "brand": "INTENSITY"
   },
   {
@@ -4286,7 +4286,7 @@ export const products = [
     "description": "Paquete res HP 3 ton, 14 SEER, R-454b, 220/3/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 3.391,
+    "price": 3391,
     "brand": "INTENSITY"
   },
   {
@@ -4301,7 +4301,7 @@ export const products = [
     "description": "Paquete res HP 4 ton, 14 SEER, R-454b, 460/3/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 3.916,
+    "price": 3916,
     "brand": ""
   },
   {
@@ -4316,7 +4316,7 @@ export const products = [
     "description": "Paquete res HP 5 ton, 14 SEER, R-454b, 220/3/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 4.047,
+    "price": 4047,
     "brand": ""
   },
   {
@@ -4331,7 +4331,7 @@ export const products = [
     "description": "Paquete res HP 5 ton, 14 SEER, R-454b, 460/3/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 4.047,
+    "price": 4047,
     "brand": ""
   },
   {
@@ -4346,7 +4346,7 @@ export const products = [
     "description": "Paquete res GAS HEAT 3 ton, 14 SEER R-454b, 220/3/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 3.926,
+    "price": 3926,
     "brand": ""
   },
   {
@@ -4361,7 +4361,7 @@ export const products = [
     "description": "Paquete res GAS HEAT 4 ton, 14 SEER R-454b, 220/3/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 4.221,
+    "price": 4221,
     "brand": ""
   },
   {
@@ -4376,7 +4376,7 @@ export const products = [
     "description": "Paquete res GAS HEAT 5 ton, 14 SEER R-454b, 220/3/60, convertible",
     "function": "",
     "voltage": "",
-    "price": 4.692,
+    "price": 4692,
     "brand": ""
   },
   {
@@ -4391,7 +4391,7 @@ export const products = [
     "description": "Paquete Inverter res HP 3 ton, R-410a, 220/1/60",
     "function": "",
     "voltage": "",
-    "price": 1.794,
+    "price": 1794,
     "brand": ""
   },
   {
@@ -4406,7 +4406,7 @@ export const products = [
     "description": "Paquete Inverter res HP 5 ton, R-410a, 220/1/60",
     "function": "",
     "voltage": "",
-    "price": 2.397,
+    "price": 2397,
     "brand": ""
   },
   {
