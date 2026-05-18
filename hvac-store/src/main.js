@@ -64,7 +64,7 @@ function bindGlobalSearch(searchInputId, sugBoxId, searchBtnId) {
 
 function renderHeader() {
   return `<header class="header"><div class="container">
-    <a href="#/" class="logo"><img src="/images/logo.svg" alt="HvacDirecto" class="site-logo"/></a>
+    <a href="#/" class="logo"><span style="color:var(--orange-primary);font-weight:800">Hvac</span><span style="color:var(--blue-primary);font-weight:800;margin-left:6px">Directo</span></a>
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Buscar productos en toda la tienda..." autocomplete="off" />
       <button id="searchBtn"><i class="fas fa-search"></i></button>
