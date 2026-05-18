@@ -37,7 +37,7 @@ h1,h2,h3,h4{font-family:'Outfit',sans-serif}
 .header .container{max-width:1320px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:24px}
 .logo{font-family:'Outfit',sans-serif;font-size:1.7rem;font-weight:800;color:var(--blue-primary);white-space:nowrap}
 .logo span{color:var(--orange-primary)}
-.site-logo{width:44px;height:44px;margin-right:10px;border-radius:8px;vertical-align:middle}
+.site-logo{height:40px;margin-right:12px;vertical-align:middle;width:auto;border-radius:0}
 
 /* SEARCH */
 .search-bar{flex:1;position:relative;max-width:600px}

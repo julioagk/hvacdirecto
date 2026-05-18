@@ -1,6 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="20" fill="#0b74d1" />
-  <g fill="#fff" font-family="Outfit,Inter,Arial" font-weight="700" font-size="56">
-    <text x="12" y="90">HV</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">HvacDirecto</title>
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&display=swap');</style>
+  </defs>
+  <text x="0" y="44" font-family="Outfit, Inter, Arial, sans-serif" font-weight="800" font-size="40">
+    <tspan fill="#ff6b35">Hvac</tspan>
+    <tspan fill="#0b74d1">Directo</tspan>
+  </text>
 </svg>
