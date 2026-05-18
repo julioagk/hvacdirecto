@@ -821,7 +821,7 @@ export const products = [
     "description": "Manejadora residencial 24K Carrier R-454b velocidad variable",
     "function": "",
     "voltage": "",
-    "price": 1.152,
+    "price": 1152,
     "brand": "CARRIER"
   },
   {
@@ -836,7 +836,7 @@ export const products = [
     "description": "Manejadora residencial 36K Carrier R-454b velocidad variable",
     "function": "",
     "voltage": "",
-    "price": 1.282,
+    "price": 1282,
     "brand": "CARRIER"
   },
   {
@@ -851,7 +851,7 @@ export const products = [
     "description": "Manejadora residencial 48K Carrier R-454b velocidad variable",
     "function": "",
     "voltage": "",
-    "price": 1.799,
+    "price": 1799,
     "brand": "CARRIER"
   },
   {
@@ -866,7 +866,7 @@ export const products = [
     "description": "Manejadora residencial 60K Carrier R-454b velocidad variable 1",
     "function": "",
     "voltage": "",
-    "price": 1.928,
+    "price": 1928,
     "brand": "CARRIER"
   },
   {
@@ -881,7 +881,7 @@ export const products = [
     "description": "Condensadora solo frio 1.5 ton Carrier R410a 220/1/60",
     "function": "",
     "voltage": "",
-    "price": 1.539,
+    "price": 1539,
     "brand": "CARRIER"
   },
   {
@@ -896,7 +896,7 @@ export const products = [
     "description": "Condensadora solo frio 2 ton Carrier R410a 220/1/60",
     "function": "",
     "voltage": "",
-    "price": 2.063,
+    "price": 2063,
     "brand": "CARRIER"
   },
   {
@@ -911,7 +911,7 @@ export const products = [
     "description": "Condensadora solo frio 3 ton Carrier R410a 220/1/60",
     "function": "",
     "voltage": "",
-    "price": 2.142,
+    "price": 2142,
     "brand": "CARRIER"
   },
   {
@@ -926,7 +926,7 @@ export const products = [
     "description": "Condensadora solo frio 4 ton Carrier R410a 220/1/60",
     "function": "",
     "voltage": "",
-    "price": 2.298,
+    "price": 2298,
     "brand": "CARRIER"
   },
   {
@@ -941,7 +941,7 @@ export const products = [
     "description": "Condensadora solo frio 5 ton Carrier R410a 220/1/60",
     "function": "",
     "voltage": "",
-    "price": 2.602,
+    "price": 2602,
     "brand": "CARRIER"
   },
   {
@@ -956,7 +956,7 @@ export const products = [
     "description": "Condensadora solo frio 3 ton Carrier R454B 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.017,
+    "price": 2017,
     "brand": "CARRIER"
   },
   {
@@ -971,7 +971,7 @@ export const products = [
     "description": "Condensadora solo frio 3 ton Carrier R454B 440/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.019,
+    "price": 2019,
     "brand": "CARRIER"
   },
   {
@@ -986,7 +986,7 @@ export const products = [
     "description": "Condensadora solo frio 4 ton Carrier R454B 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.619,
+    "price": 2619,
     "brand": "CARRIER"
   },
   {
@@ -1001,7 +1001,7 @@ export const products = [
     "description": "Condensadora solo frio 4 ton Carrier R454B 440/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.62,
+    "price": 2620,
     "brand": "CARRIER"
   },
   {
@@ -1016,7 +1016,7 @@ export const products = [
     "description": "Condensadora solo frio 5 ton Carrier R454B 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.847,
+    "price": 2847,
     "brand": "CARRIER"
   },
   {
@@ -1031,7 +1031,7 @@ export const products = [
     "description": "Condensadora solo frio 5 ton Carrier R454B 440/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.847,
+    "price": 2847,
     "brand": "CARRIER"
   },
   {
@@ -1046,7 +1046,7 @@ export const products = [
     "description": "Condensadora heat pump 3 ton Carrier R454B 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.433,
+    "price": 2433,
     "brand": "CARRIER"
   },
   {
@@ -1061,7 +1061,7 @@ export const products = [
     "description": "Condensadora heat pump 3 ton Carrier R454B 440/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.433,
+    "price": 2433,
     "brand": "CARRIER"
   },
   {
@@ -1076,7 +1076,7 @@ export const products = [
     "description": "Condensadora heat pump 4 ton Carrier R454B 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.789,
+    "price": 2789,
     "brand": "CARRIER"
   },
   {
@@ -1091,7 +1091,7 @@ export const products = [
     "description": "Condensadora heat pump 4 ton Carrier R454B 440/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.789,
+    "price": 2789,
     "brand": "CARRIER"
   },
   {
@@ -1106,7 +1106,7 @@ export const products = [
     "description": "Condensadora heat pump 5 ton Carrier R454B 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.988,
+    "price": 2988,
     "brand": "CARRIER"
   },
   {
@@ -1121,7 +1121,7 @@ export const products = [
     "description": "Condensadora heat pump 5 ton Carrier R454B 440/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.988,
+    "price": 2988,
     "brand": "CARRIER"
   },
   {
@@ -1166,7 +1166,7 @@ export const products = [
     "description": "CONDENSADORA INVERTER 3T 220-1-60 HORIZONTAL",
     "function": "",
     "voltage": "",
-    "price": 1.154,
+    "price": 1154,
     "brand": "CARRIER"
   },
   {
@@ -1181,7 +1181,7 @@ export const products = [
     "description": "CONDENSADORA INVERTER 4T 220-1-60 HORIZONTAL",
     "function": "",
     "voltage": "",
-    "price": 1.65,
+    "price": 1650,
     "brand": "CARRIER"
   },
   {
@@ -1196,7 +1196,7 @@ export const products = [
     "description": "CONDENSADORA INVERTER 5T 220-1-60 HORIZONTAL",
     "function": "",
     "voltage": "",
-    "price": 1.784,
+    "price": 1784,
     "brand": "CARRIER"
   },
   {
@@ -1256,7 +1256,7 @@ export const products = [
     "description": "MANEJADORA MULTIPOSICION INVERTER 4T 220-1-60",
     "function": "",
     "voltage": "",
-    "price": 1.113,
+    "price": 1113,
     "brand": "CARRIER"
   },
   {
@@ -1271,7 +1271,7 @@ export const products = [
     "description": "MANEJADORA MULTIPOSICION INVERTER 5T 220-1-60",
     "function": "",
     "voltage": "",
-    "price": 1.247,
+    "price": 1247,
     "brand": "CARRIER"
   },
   {
