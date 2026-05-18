@@ -26,7 +26,7 @@ export const products = [
     "description": "Paquete comercial HP 3 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 4.211,
+    "price": 4211,
     "brand": "CARRIER"
   },
   {
@@ -41,7 +41,7 @@ export const products = [
     "description": "Paquete comercial HP 3 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 4.341,
+    "price": 4341,
     "brand": "CARRIER"
   },
   {
@@ -56,7 +56,7 @@ export const products = [
     "description": "Paquete comercial HP 3 ton, 430 V Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 4.276,
+    "price": 4276,
     "brand": "CARRIER"
   },
   {
@@ -71,7 +71,7 @@ export const products = [
     "description": "Paquete comercial HP 4 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 4.921,
+    "price": 4921,
     "brand": "CARRIER"
   },
   {
@@ -86,7 +86,7 @@ export const products = [
     "description": "Paquete comercial HP 4 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 4.921,
+    "price": 4921,
     "brand": "CARRIER"
   },
   {
@@ -101,7 +101,7 @@ export const products = [
     "description": "Paquete comercial HP 4 ton, 430 V Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 5.072,
+    "price": 5072,
     "brand": "CARRIER"
   },
   {
@@ -116,7 +116,7 @@ export const products = [
     "description": "Paquete comercial HP 5 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 5.43,
+    "price": 5430,
     "brand": "CARRIER"
   },
   {
@@ -131,7 +131,7 @@ export const products = [
     "description": "Paquete comercial HP 5 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 5.43,
+    "price": 5430,
     "brand": "CARRIER"
   },
   {
@@ -146,7 +146,7 @@ export const products = [
     "description": "Paquete comercial HP 5 ton, 430 V Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 5.545,
+    "price": 5545,
     "brand": "CARRIER"
   },
   {
@@ -161,7 +161,7 @@ export const products = [
     "description": "Paquete comercial HP 6 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 8.917,
+    "price": 8917,
     "brand": "CARRIER"
   },
   {
@@ -176,7 +176,7 @@ export const products = [
     "description": "Paquete comercial HP 6 ton, 430 V Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 8.919,
+    "price": 8919,
     "brand": "CARRIER"
   },
   {
@@ -191,7 +191,7 @@ export const products = [
     "description": "Paquete comercial HP 7.5 ton convertible 220",
     "function": "Packaged",
     "voltage": "220",
-    "price": 11.403,
+    "price": 11403,
     "brand": "CARRIER"
   },
   {
@@ -206,7 +206,7 @@ export const products = [
     "description": "Paquete comercial HP 7.5 ton convertible 430 V",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 11.404,
+    "price": 11404,
     "brand": "CARRIER"
   },
   {
@@ -221,7 +221,7 @@ export const products = [
     "description": "Paquete comercial HP 10 ton convertible 220",
     "function": "Packaged",
     "voltage": "220",
-    "price": 13.113,
+    "price": 13113,
     "brand": "CARRIER"
   },
   {
@@ -236,7 +236,7 @@ export const products = [
     "description": "Paquete comercial HP 10 ton convertible 430 V",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 13.116,
+    "price": 13116,
     "brand": "CARRIER"
   },
   {
@@ -251,7 +251,7 @@ export const products = [
     "description": "Paquete comercial HP 12.5 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 16.168,
+    "price": 16168,
     "brand": "CARRIER"
   },
   {
@@ -266,7 +266,7 @@ export const products = [
     "description": "Paquete comercial HP 12.5 ton, 430 V Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 16.168,
+    "price": 16168,
     "brand": "CARRIER"
   },
   {
@@ -2246,7 +2246,7 @@ export const products = [
     "description": "Paquete comercial SF 3 ton, 220/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 3.862,
+    "price": 3862,
     "brand": "CARRIER"
   },
   {
@@ -2261,7 +2261,7 @@ export const products = [
     "description": "Paquete comercial SF 3 ton, 440/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 4.013,
+    "price": 4013,
     "brand": "CARRIER"
   },
   {
@@ -2276,7 +2276,7 @@ export const products = [
     "description": "Paquete comercial SF 4 ton, 220/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 4.749,
+    "price": 4749,
     "brand": "CARRIER"
   },
   {
@@ -2291,7 +2291,7 @@ export const products = [
     "description": "Paquete comercial SF 4 ton, 440/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 4.847,
+    "price": 4847,
     "brand": "CARRIER"
   },
   {
@@ -2306,7 +2306,7 @@ export const products = [
     "description": "Paquete comercial SF 5 ton, 220/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 5.149,
+    "price": 5149,
     "brand": "CARRIER"
   },
   {
@@ -2321,7 +2321,7 @@ export const products = [
     "description": "Paquete comercial SF 5 ton, 440/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 5.301,
+    "price": 5301,
     "brand": "CARRIER"
   },
   {
@@ -2336,7 +2336,7 @@ export const products = [
     "description": "Paquete comercial SF 6 ton, 220/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 6.71,
+    "price": 6710,
     "brand": "CARRIER"
   },
   {
@@ -2351,7 +2351,7 @@ export const products = [
     "description": "Paquete comercial SF 6 ton, 440/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 6.894,
+    "price": 6894,
     "brand": "CARRIER"
   },
   {
@@ -2366,7 +2366,7 @@ export const products = [
     "description": "Paquete comercial SF 7.5 ton, 220/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 10.938,
+    "price": 10938,
     "brand": "CARRIER"
   },
   {
@@ -2381,7 +2381,7 @@ export const products = [
     "description": "Paquete comercial SF 7.5 ton, 440/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 11.196,
+    "price": 11196,
     "brand": "CARRIER"
   },
   {
@@ -2396,7 +2396,7 @@ export const products = [
     "description": "Paquete comercial SF 10 ton, 220/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 14.544,
+    "price": 14544,
     "brand": "CARRIER"
   },
   {
@@ -2411,7 +2411,7 @@ export const products = [
     "description": "Paquete comercial SF 10 ton, 440/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 14.678,
+    "price": 14678,
     "brand": "CARRIER"
   },
   {
@@ -2426,7 +2426,7 @@ export const products = [
     "description": "Paquete comercial SF 12.5 ton, 220/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 16.292,
+    "price": 16292,
     "brand": "CARRIER"
   },
   {
@@ -2441,7 +2441,7 @@ export const products = [
     "description": "Paquete comercial SF 12.5 ton, 440/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 16.452,
+    "price": 16452,
     "brand": "CARRIER"
   },
   {
@@ -2456,7 +2456,7 @@ export const products = [
     "description": "Paquete comercial SF 15 ton, 220/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 18.872,
+    "price": 18872,
     "brand": "CARRIER"
   },
   {
@@ -2471,7 +2471,7 @@ export const products = [
     "description": "Paquete comercial SF 15 ton, 440/3/60 Al-Cu, convertible",
     "function": "",
     "voltage": "",
-    "price": 19.128,
+    "price": 19128,
     "brand": "CARRIER"
   },
   {
@@ -2486,7 +2486,7 @@ export const products = [
     "description": "Paquete comercial SF 20 ton, 220/3/60 Al-Cu, downflow",
     "function": "",
     "voltage": "",
-    "price": 25.52,
+    "price": 25520,
     "brand": "CARRIER"
   },
   {
@@ -2501,7 +2501,7 @@ export const products = [
     "description": "Paquete comercial SF 20 ton, 440/3/60 Al-Cu, downflow",
     "function": "",
     "voltage": "",
-    "price": 25.874,
+    "price": 25874,
     "brand": "CARRIER"
   },
   {
@@ -2516,7 +2516,7 @@ export const products = [
     "description": "Paquete comercial SF 20 ton, 220/3/60 Al-Cu, horizontal high static",
     "function": "",
     "voltage": "",
-    "price": 25.52,
+    "price": 25520,
     "brand": "CARRIER"
   },
   {
@@ -2531,7 +2531,7 @@ export const products = [
     "description": "Paquete comercial SF 20 ton, 440/3/60 Al-Cu, horizontal high static",
     "function": "",
     "voltage": "",
-    "price": 25.874,
+    "price": 25874,
     "brand": "CARRIER"
   },
   {
@@ -2546,7 +2546,7 @@ export const products = [
     "description": "Paquete comercial SF 25 ton, 220/3/60 Al-Cu, downflow",
     "function": "",
     "voltage": "",
-    "price": 27.854,
+    "price": 27854,
     "brand": "CARRIER"
   },
   {
@@ -2561,7 +2561,7 @@ export const products = [
     "description": "Paquete comercial SF 25 ton, 440/3/60 Al-Cu, downflow",
     "function": "",
     "voltage": "",
-    "price": 28.246,
+    "price": 28246,
     "brand": "CARRIER"
   },
   {
@@ -2576,7 +2576,7 @@ export const products = [
     "description": "Paquete comercial SF 25 ton, 220/3/60 Al-Cu, horizontal high static",
     "function": "",
     "voltage": "",
-    "price": 28.246,
+    "price": 28246,
     "brand": "CARRIER"
   },
   {
@@ -2606,7 +2606,7 @@ export const products = [
     "description": "Paquete comercial SF 27.5 ton, 220/3/60 Al-Cu, downflow",
     "function": "",
     "voltage": "",
-    "price": 33.323,
+    "price": 33323,
     "brand": "CARRIER"
   },
   {
@@ -2621,7 +2621,7 @@ export const products = [
     "description": "Paquete comercial SF 27.5 ton, 440/3/60 Al-Cu, downflow",
     "function": "",
     "voltage": "",
-    "price": 33.791,
+    "price": 33791,
     "brand": "CARRIER"
   },
   {
@@ -2636,7 +2636,7 @@ export const products = [
     "description": "Paquete comercial SF 27.5 ton, 220/3/60 Al-Cu, horizontal high static",
     "function": "",
     "voltage": "",
-    "price": 33.691,
+    "price": 33691,
     "brand": "CARRIER"
   },
   {
@@ -2651,7 +2651,7 @@ export const products = [
     "description": "Paquete comercial SF 27.5 ton, 440/3/60 Al-Cu, horizontal high static",
     "function": "",
     "voltage": "",
-    "price": 34.124,
+    "price": 34124,
     "brand": "CARRIER"
   },
   {
