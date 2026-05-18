@@ -1286,7 +1286,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 6 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.638,
+    "price": 2638,
     "brand": "CARRIER"
   },
   {
@@ -1301,7 +1301,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 6 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 4.175,
+    "price": 4175,
     "brand": "CARRIER"
   },
   {
@@ -1316,7 +1316,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 7.5 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 5.378,
+    "price": 5378,
     "brand": "CARRIER"
   },
   {
@@ -1331,7 +1331,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 7.5 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 5.491,
+    "price": 5491,
     "brand": "CARRIER"
   },
   {
@@ -1346,7 +1346,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 10 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 7.07,
+    "price": 7070,
     "brand": "CARRIER"
   },
   {
@@ -1361,7 +1361,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 10 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 7.2,
+    "price": 7200,
     "brand": "CARRIER"
   },
   {
@@ -1376,7 +1376,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 12.5 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 8.403,
+    "price": 8403,
     "brand": "CARRIER"
   },
   {
@@ -1391,7 +1391,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 12.5 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 8.558,
+    "price": 8558,
     "brand": "CARRIER"
   },
   {
@@ -1406,7 +1406,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 15 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 11.24,
+    "price": 11240,
     "brand": "CARRIER"
   },
   {
@@ -1421,7 +1421,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 15 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 11.131,
+    "price": 11131,
     "brand": "CARRIER"
   },
   {
@@ -1436,7 +1436,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 20 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 13.373,
+    "price": 13373,
     "brand": "CARRIER"
   },
   {
@@ -1451,7 +1451,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 20 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 13.641,
+    "price": 13641,
     "brand": "CARRIER"
   },
   {
@@ -1466,7 +1466,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 25 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 16.839,
+    "price": 16839,
     "brand": "CARRIER"
   },
   {
@@ -1481,7 +1481,7 @@ export const products = [
     "description": "Condensador comercial SF R410a 25 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 17.168,
+    "price": 17168,
     "brand": "CARRIER"
   },
   {
@@ -1496,7 +1496,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 6 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 5.145,
+    "price": 5145,
     "brand": "CARRIER"
   },
   {
@@ -1511,7 +1511,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 6 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 5.145,
+    "price": 5145,
     "brand": "CARRIER"
   },
   {
@@ -1526,7 +1526,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 7.5 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 5.226,
+    "price": 5226,
     "brand": "CARRIER"
   },
   {
@@ -1541,7 +1541,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 7.5 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 5.226,
+    "price": 5226,
     "brand": "CARRIER"
   },
   {
@@ -1556,7 +1556,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 10 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 6.475,
+    "price": 6475,
     "brand": "CARRIER"
   },
   {
@@ -1571,7 +1571,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 10 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 6.475,
+    "price": 6475,
     "brand": "CARRIER"
   },
   {
@@ -1586,7 +1586,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 12.5 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 7.381,
+    "price": 7381,
     "brand": "CARRIER"
   },
   {
@@ -1601,7 +1601,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 12.5 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 7.381,
+    "price": 7381,
     "brand": "CARRIER"
   },
   {
@@ -1616,7 +1616,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 15 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 7.968,
+    "price": 7968,
     "brand": "CARRIER"
   },
   {
@@ -1631,7 +1631,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 15 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 7.968,
+    "price": 7968,
     "brand": "CARRIER"
   },
   {
@@ -1646,7 +1646,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 20 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 9.973,
+    "price": 9973,
     "brand": "CARRIER"
   },
   {
@@ -1661,7 +1661,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 20 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 9.973,
+    "price": 9973,
     "brand": "CARRIER"
   },
   {
@@ -1676,7 +1676,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 25 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 11.736,
+    "price": 11736,
     "brand": "CARRIER"
   },
   {
@@ -1691,7 +1691,7 @@ export const products = [
     "description": "Manejadora comercial SF R410a 25 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 11.736,
+    "price": 11736,
     "brand": "CARRIER"
   },
   {
@@ -1706,7 +1706,7 @@ export const products = [
     "description": "Condensador comercial HP R410a 6 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 6.021,
+    "price": 6021,
     "brand": "CARRIER"
   },
   {
@@ -1721,7 +1721,7 @@ export const products = [
     "description": "Condensador comercial HP R410a 6 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 6.065,
+    "price": 6065,
     "brand": "CARRIER"
   },
   {
@@ -1736,7 +1736,7 @@ export const products = [
     "description": "Condensador comercial HP R410a 7.5 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 8.623,
+    "price": 8623,
     "brand": "CARRIER"
   },
   {
@@ -1751,7 +1751,7 @@ export const products = [
     "description": "Condensador comercial HP R410a 7.5 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 8.773,
+    "price": 8773,
     "brand": "CARRIER"
   },
   {
@@ -1766,7 +1766,7 @@ export const products = [
     "description": "Condensador comercial HP R410a 10 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 9.897,
+    "price": 9897,
     "brand": "CARRIER"
   },
   {
@@ -1781,7 +1781,7 @@ export const products = [
     "description": "Condensador comercial HP R410a 10 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 10.186,
+    "price": 10186,
     "brand": "CARRIER"
   },
   {
@@ -1796,7 +1796,7 @@ export const products = [
     "description": "Condensador comercial HP R410a 15 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 14.686,
+    "price": 14686,
     "brand": "CARRIER"
   },
   {
@@ -1811,7 +1811,7 @@ export const products = [
     "description": "Condensador comercial HP R410a 15 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 14.915,
+    "price": 14915,
     "brand": "CARRIER"
   },
   {
@@ -1826,7 +1826,7 @@ export const products = [
     "description": "Condensador comercial HP R410a 20 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 17.951,
+    "price": 17951,
     "brand": "CARRIER"
   },
   {
@@ -1841,7 +1841,7 @@ export const products = [
     "description": "Condensador comercial HP R410a 20 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 18.296,
+    "price": 18296,
     "brand": "CARRIER"
   },
   {
@@ -1856,7 +1856,7 @@ export const products = [
     "description": "Manejadora comercial HP R410a 6 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 5.249,
+    "price": 5249,
     "brand": "CARRIER"
   },
   {
@@ -1871,7 +1871,7 @@ export const products = [
     "description": "Manejadora comercial HP R410a 6 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 5.249,
+    "price": 5249,
     "brand": "CARRIER"
   },
   {
@@ -1886,7 +1886,7 @@ export const products = [
     "description": "Manejadora comercial HP R410a 7.5 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 5.334,
+    "price": 5334,
     "brand": "CARRIER"
   },
   {
@@ -1901,7 +1901,7 @@ export const products = [
     "description": "Manejadora comercial HP R410a 7.5 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 5.334,
+    "price": 5334,
     "brand": "CARRIER"
   },
   {
@@ -1916,7 +1916,7 @@ export const products = [
     "description": "Manejadora comercial HP R410a 10 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 6.666,
+    "price": 6666,
     "brand": "CARRIER"
   },
   {
@@ -1931,7 +1931,7 @@ export const products = [
     "description": "Manejadora comercial HP R410a 10 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 6.666,
+    "price": 6666,
     "brand": "CARRIER"
   },
   {
@@ -1946,7 +1946,7 @@ export const products = [
     "description": "Manejadora comercial HP R410a 15 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 8.259,
+    "price": 8259,
     "brand": "CARRIER"
   },
   {
@@ -1961,7 +1961,7 @@ export const products = [
     "description": "Manejadora comercial HP R410a 15 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 8.259,
+    "price": 8259,
     "brand": "CARRIER"
   },
   {
@@ -1976,7 +1976,7 @@ export const products = [
     "description": "Manejadora comercial HP R410a 20 ton 230/3/60",
     "function": "",
     "voltage": "",
-    "price": 10.357,
+    "price": 10357,
     "brand": "CARRIER"
   },
   {
@@ -1991,7 +1991,7 @@ export const products = [
     "description": "Manejadora comercial HP R410a 20 ton 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 10.357,
+    "price": 10357,
     "brand": "CARRIER"
   },
   {
@@ -2006,7 +2006,7 @@ export const products = [
     "description": "Paquete comercial 7.5 ton Descarga Horizontal 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 4.057,
+    "price": 4057,
     "brand": "CARRIER"
   },
   {
@@ -2021,7 +2021,7 @@ export const products = [
     "description": "Paquete comercial 10 ton Descarga Horizontal 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 5.638,
+    "price": 5638,
     "brand": "CARRIER"
   },
   {
@@ -2036,7 +2036,7 @@ export const products = [
     "description": "Paquete comercial 15 ton Descarga Horizontal 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 7.975,
+    "price": 7975,
     "brand": "CARRIER"
   },
   {
@@ -2051,7 +2051,7 @@ export const products = [
     "description": "Paquete comercial 20 ton Descarga Horizontal 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 10.12,
+    "price": 10120,
     "brand": "CARRIER"
   },
   {
@@ -2066,7 +2066,7 @@ export const products = [
     "description": "Paquete comercial 20 ton Descarga Horizontal 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 10.12,
+    "price": 10120,
     "brand": "CARRIER"
   },
   {
@@ -2081,7 +2081,7 @@ export const products = [
     "description": "Paquete comercial 25 ton Descarga Horizontal 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 11.724,
+    "price": 11724,
     "brand": "CARRIER"
   },
   {
@@ -2096,7 +2096,7 @@ export const products = [
     "description": "Paquete comercial 25 ton Descarga Horizontal 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 11.724,
+    "price": 11724,
     "brand": "CARRIER"
   },
   {
@@ -2111,7 +2111,7 @@ export const products = [
     "description": "Paquete comercial 30 ton Descarga Horizontal 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 15.263,
+    "price": 15263,
     "brand": "CARRIER"
   },
   {
@@ -2126,7 +2126,7 @@ export const products = [
     "description": "Paquete comercial 30 ton Descarga Horizontal 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 15.263,
+    "price": 15263,
     "brand": "CARRIER"
   },
   {
@@ -2141,7 +2141,7 @@ export const products = [
     "description": "PAQ HP INVERTER 10T 230/3/60 CIAC SIDE",
     "function": "",
     "voltage": "",
-    "price": 6.416,
+    "price": 6416,
     "brand": "CIAC"
   },
   {
@@ -2156,7 +2156,7 @@ export const products = [
     "description": "PAQ HP INVERTER 15T 230/3/60 CIAC SIDE",
     "function": "",
     "voltage": "",
-    "price": 8.743,
+    "price": 8743,
     "brand": "CIAC"
   },
   {
@@ -2171,7 +2171,7 @@ export const products = [
     "description": "PAQ HP INVERTER 20T 230/3/60 CIAC SIDE",
     "function": "",
     "voltage": "",
-    "price": 11.037,
+    "price": 11037,
     "brand": "CIAC"
   },
   {
@@ -2186,7 +2186,7 @@ export const products = [
     "description": "PAQ HP INVERTER 25T 230/3/60 CIAC SIDE",
     "function": "",
     "voltage": "",
-    "price": 13.438,
+    "price": 13438,
     "brand": "CIAC"
   },
   {
@@ -2201,7 +2201,7 @@ export const products = [
     "description": "PAQ SF INVERTER 15T 460/3/60 CIAC DUAL",
     "function": "",
     "voltage": "",
-    "price": 11.682,
+    "price": 11682,
     "brand": "CARRIER"
   },
   {
@@ -2216,7 +2216,7 @@ export const products = [
     "description": "PAQ SF INVERTER 20T 460/3/60 CIAC DUAL",
     "function": "",
     "voltage": "",
-    "price": 14.022,
+    "price": 14022,
     "brand": "CARRIER"
   },
   {
@@ -2231,7 +2231,7 @@ export const products = [
     "description": "PAQ HP INVERTER 30T 460/3/60 CIAC DUAL",
     "function": "",
     "voltage": "",
-    "price": 16.36,
+    "price": 16360,
     "brand": "CARRIER"
   },
   {
