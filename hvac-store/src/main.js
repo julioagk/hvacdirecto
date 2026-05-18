@@ -116,7 +116,7 @@ function renderFooter() {
   return `<footer class="footer"><div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h4>Hvac<span style="color:var(--orange-primary)">Directo</span></h4>
+        <h4><span style="color:var(--orange-primary)">Hvac</span><span style="color:var(--blue-primary)">Directo</span></h4>
         <p>Tu tienda de equipos de climatización con precios de mayorista.</p>
         <div class="footer-social">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
