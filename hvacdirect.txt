@@ -1,0 +1,57 @@
+Rol: Actúa como un Desarrollador Full-Stack experto en E-commerce y Diseñador UX/UI especializado en tiendas de alto rendimiento.
+
+Objetivo: Quiero diseñar y desarrollar la estructura completa de una tienda en línea especializada en la venta de equipos de climatización (HVAC - Calefacción, Ventilación y Aire Acondicionado). La página debe estar fuertemente inspirada en la estructura, categorías y usabilidad del sitio web hvacdirect.com. El público objetivo son tanto consumidores finales (DIY) como contratistas profesionales.
+
+Requisitos de Diseño y Estilo:
+
+Estilo Visual: Limpio, profesional, enfocado en la confianza y la conversión. Los colores deben evocar climatización (tonos azules para frío, rojos/naranjas para calor, fondos blancos/grises claros para limpieza).
+
+Navegación: Un "Mega Menú" superior muy organizado para que los usuarios no se pierdan entre miles de productos.
+
+Categorías Principales (El Menú de Navegación):
+Por favor, incluye exactamente estas categorías y subcategorías en la estructura:
+
+Sistemas de Aire Acondicionado Central (Central Air Conditioning): Sistemas divididos, condensadoras, evaporadoras.
+
+Sistemas Mini Split (Mini Splits): De una zona, multi-zona, ocultos en techo, de pared.
+
+Bombas de Calor (Heat Pumps): Sistemas completos, unidades exteriores.
+
+Calefacción (Furnaces): Hornos a gas, hornos eléctricos, calderas.
+
+Unidades Empacadas (Packaged Units): Empacadas a gas/eléctricas, bombas de calor empacadas.
+
+Calidad del Aire Interior (Indoor Air Quality): Purificadores, humidificadores, deshumidificadores, filtros.
+
+Sistemas Comerciales (Commercial HVAC): Unidades de techo (Rooftop), calentadores de unidad.
+
+Accesorios e Instalación (Accessories & Supplies): Termostatos, tuberías, soportes, cables.
+
+Comprar por Marca (Shop by Brand): (Ej. Goodman, MRCOOL, Mitsubishi, etc.).
+
+Funcionalidades Clave de la Página de Inicio (Home):
+
+Cinta de Anuncios (Top Bar): Teléfono de ventas bien visible, oferta de "Envío Gratis", y enlace a opciones de financiamiento.
+
+Buscador Avanzado: Barra de búsqueda grande en el centro con autocompletado y capacidad de buscar por SKU o número de modelo.
+
+Filtros de Sistema (Hero Section): Un selector rápido donde el usuario pueda elegir qué busca filtrando por: Tipo de sistema, Tonelaje (Tamaño) y Eficiencia (SEER).
+
+Banners Promocionales: Ofertas del día o descuentos por temporada.
+
+Sección de "Más Vendidos" o "Recomendados".
+
+Insignias de Confianza: "Precios de mayorista al público", "Soporte técnico experto", "Compras seguras".
+
+Estructura de la Página de Producto:
+
+Galería de imágenes de alta calidad.
+
+Precio destacado (mostrando el precio regular vs. el precio con descuento).
+
+Botones claros para añadir al carrito y opciones de financiamiento.
+
+Pestañas inferiores con: Descripción general, Especificaciones técnicas (Toneladas, BTUs, SEER, Voltaje), Documentos descargables (Manuales en PDF) y Reseñas de clientes.
+
+
+Como frotend usaremos vercel, como backend railway
