@@ -66,7 +66,43 @@ function bindGlobalSearch(searchInputId, sugBoxId, searchBtnId) {
   document.addEventListener('click', e => { if (!e.target.closest(`.search-bar[data-search-id="${searchInputId}"]`)) sugBox.classList.remove('active'); });
 }
 
+function getAuthUser() {
+  try { return JSON.parse(localStorage.getItem('auth_user') || 'null'); } catch { return null; }
+}
+
 function renderHeader() {
+  const user = getAuthUser();
+  const token = localStorage.getItem('auth_token');
+  const isLoggedIn = !!(user && token);
+  const displayName = isLoggedIn ? (user.firstName || user.name || 'Mi cuenta') : null;
+
+  const userArea = isLoggedIn
+    ? `<div class="header-action user-menu-wrap" id="userMenuWrap">
+        <button class="user-menu-trigger" id="userMenuTrigger" aria-expanded="false" aria-haspopup="true">
+          <span class="user-avatar"><i class="fas fa-user"></i></span>
+          <span class="user-menu-name">${displayName}</span>
+          <i class="fas fa-chevron-down user-menu-arrow"></i>
+        </button>
+        <div class="user-dropdown" id="userDropdown" role="menu">
+          <div class="user-dropdown-header">
+            <span class="user-dropdown-avatar"><i class="fas fa-user-circle"></i></span>
+            <div>
+              <strong>${displayName}</strong>
+              <span>${user.email || ''}</span>
+            </div>
+          </div>
+          <ul class="user-dropdown-list">
+            <li><a href="#/orders" role="menuitem"><i class="fas fa-box"></i> Mis pedidos</a></li>
+            <li><a href="#/account" role="menuitem"><i class="fas fa-sliders"></i> Mi cuenta</a></li>
+            <li><a href="#/favorites" role="menuitem"><i class="fas fa-heart"></i> Favoritos</a></li>
+          </ul>
+          <div class="user-dropdown-footer">
+            <button id="logoutBtn" class="user-logout-btn"><i class="fas fa-right-from-bracket"></i> Cerrar sesión</button>
+          </div>
+        </div>
+      </div>`
+    : `<a href="#/login" class="header-action header-link" id="loginLink"><i class="fas fa-user"></i><span>Ingresar</span></a>`;
+
   return `<header class="header"><div class="container">
     <a href="#/" class="logo"><span style="color:var(--orange-primary);font-weight:800">Hvac</span><span style="color:var(--blue-primary);font-weight:800;margin-left:6px">Directo</span></a>
     <div class="search-bar">
@@ -75,7 +111,7 @@ function renderHeader() {
       <ul class="search-suggestions" id="searchSuggestions"></ul>
     </div>
     <div class="header-actions">
-      <a href="#/login" class="header-action header-link"><i class="fas fa-user"></i><span>Ingresar</span></a>
+      ${userArea}
       <div class="header-action" id="cartToggle">
         <i class="fas fa-shopping-cart"></i><span>Carrito</span>
         <span class="cart-badge" id="cartCount">0</span>
@@ -289,6 +325,56 @@ function bindHomeEvents() {
   bindGlobalSearch('heroSearchInput', 'heroSearchSuggestions', 'heroSearchBtn');
 }
 
+/* ── USER DROPDOWN ── */
+
+function bindUserDropdown() {
+  const trigger = document.getElementById('userMenuTrigger');
+  const dropdown = document.getElementById('userDropdown');
+  if (!trigger || !dropdown) return;
+
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = trigger.getAttribute('aria-expanded') === 'true';
+    trigger.setAttribute('aria-expanded', String(!open));
+    dropdown.classList.toggle('open', !open);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#userMenuWrap')) {
+      trigger.setAttribute('aria-expanded', 'false');
+      dropdown.classList.remove('open');
+    }
+  });
+
+  const logoutBtn = document.getElementById('logoutBtn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+      localStorage.removeItem('auth_token');
+      localStorage.removeItem('auth_user');
+      // Re-render header and re-bind
+      document.querySelector('#app').innerHTML = `
+        ${renderHeader()}
+        ${renderNav()}
+        <main id="pageContent"></main>
+        ${renderFooter()}
+        ${renderCartSidebar()}
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="modal-overlay" id="productModal"></div>
+        <div class="modal-overlay" id="checkoutModal"></div>
+      `;
+      document.getElementById('cartToggle').addEventListener('click', toggleCart);
+      document.getElementById('cartOverlay').addEventListener('click', toggleCart);
+      document.getElementById('checkoutModal').addEventListener('click', e => { if (e.target.id === 'checkoutModal') closeCheckoutSummary(); });
+      bindCartEvents();
+      updateCartUI();
+      bindUserDropdown();
+      bindGlobalSearch('searchInput', 'searchSuggestions', 'searchBtn');
+      window.location.hash = '#/';
+      navigate();
+    });
+  }
+}
+
 /* ── INIT ── */
 
 function initApp() {
@@ -310,6 +396,9 @@ function initApp() {
   document.getElementById('checkoutModal').addEventListener('click', e => { if (e.target.id === 'checkoutModal') closeCheckoutSummary(); });
   bindCartEvents();
   updateCartUI();
+
+  // User dropdown
+  bindUserDropdown();
 
   bindGlobalSearch('searchInput', 'searchSuggestions', 'searchBtn');
   bindGlobalSearch('heroSearchInput', 'heroSearchSuggestions', 'heroSearchBtn');

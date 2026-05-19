@@ -347,3 +347,39 @@ h1,h2,h3,h4{font-family:'Outfit',sans-serif}
   .cart-sidebar{width:100%}
   .footer-grid{grid-template-columns:1fr}
 }
+
+/* ── USER DROPDOWN MENU ── */
+.user-menu-wrap{position:relative;display:flex;flex-direction:column;align-items:center}
+.user-menu-trigger{background:none;border:none;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;color:var(--gray-600);font-size:.75rem;transition:var(--transition);padding:0;font-family:inherit}
+.user-menu-trigger:hover{color:var(--blue-primary)}
+.user-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--blue-primary),var(--blue-dark));display:flex;align-items:center;justify-content:center;color:var(--white);font-size:.9rem;margin-bottom:1px}
+.user-menu-name{font-size:.73rem;font-weight:600;max-width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--gray-700)}
+.user-menu-arrow{font-size:.55rem;opacity:.6;transition:transform .25s ease;margin-top:1px}
+.user-menu-trigger[aria-expanded="true"] .user-menu-arrow{transform:rotate(180deg)}
+
+.user-dropdown{position:absolute;top:calc(100% + 10px);right:0;min-width:230px;background:var(--white);border:1px solid var(--gray-200);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.14);z-index:300;opacity:0;visibility:hidden;transform:translateY(8px) scale(.97);transform-origin:top right;transition:opacity .22s ease,transform .22s ease,visibility .22s}
+.user-dropdown.open{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.user-dropdown-header{padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--gray-100)}
+.user-dropdown-avatar{font-size:2rem;color:var(--blue-primary);flex-shrink:0}
+.user-dropdown-header div{overflow:hidden}
+.user-dropdown-header strong{display:block;font-size:.9rem;color:var(--gray-900);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.user-dropdown-header span{font-size:.75rem;color:var(--gray-500);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.user-dropdown-list{padding:8px 0}
+.user-dropdown-list li a{display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:.87rem;color:var(--gray-700);transition:background .15s,color .15s}
+.user-dropdown-list li a:hover{background:var(--blue-light);color:var(--blue-primary)}
+.user-dropdown-list li a i{width:16px;text-align:center;font-size:.85rem;color:var(--blue-primary)}
+.user-dropdown-footer{padding:10px 12px;border-top:1px solid var(--gray-100)}
+.user-logout-btn{width:100%;padding:9px 14px;border-radius:8px;background:transparent;border:1px solid #fca5a5;color:#ef4444;font-size:.84rem;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .15s,color .15s}
+.user-logout-btn:hover{background:#fef2f2;border-color:#ef4444}
+
+/* ── AUTH FEEDBACK MODAL ── */
+.auth-feedback-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:500;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);opacity:0;transition:opacity .28s ease}
+.auth-feedback-overlay.active{opacity:1}
+.auth-feedback-modal{background:var(--white);border-radius:20px;padding:40px 36px 34px;max-width:400px;width:90%;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.18);transform:scale(.93) translateY(14px);transition:transform .28s cubic-bezier(.34,1.56,.64,1),opacity .28s ease;opacity:0}
+.auth-feedback-overlay.active .auth-feedback-modal{transform:scale(1) translateY(0);opacity:1}
+.auth-feedback-icon{font-size:3.2rem;margin-bottom:16px;line-height:1}
+.auth-feedback-title{font-family:'Outfit',sans-serif;font-size:1.35rem;color:var(--gray-900);margin-bottom:10px}
+.auth-feedback-message{font-size:.92rem;color:var(--gray-600);line-height:1.65;margin-bottom:26px}
+.auth-feedback-btn{background:var(--blue-primary);color:var(--white);border:none;border-radius:10px;padding:12px 36px;font-size:.95rem;font-weight:700;cursor:pointer;transition:background .2s,transform .15s;font-family:inherit}
+.auth-feedback-btn:hover{background:var(--blue-dark);transform:translateY(-1px)}
+.auth-feedback-btn:active{transform:translateY(0)}

@@ -497,6 +497,51 @@ export function bindCategoryPageEvents() {
   if (searchInput?.value) applyFilters();
 }
 
+/* ── AUTH MODAL HELPERS ── */
+
+function showAuthModal({ type = 'success', title, message, onClose = null }) {
+  // Remove any existing auth modal
+  const existing = document.getElementById('authFeedbackModal');
+  if (existing) existing.remove();
+
+  const iconMap = {
+    success: 'fa-circle-check',
+    error: 'fa-circle-xmark',
+    info: 'fa-circle-info',
+  };
+  const colorMap = {
+    success: 'var(--orange-primary)',
+    error: '#ef4444',
+    info: 'var(--blue-primary)',
+  };
+
+  const modal = document.createElement('div');
+  modal.id = 'authFeedbackModal';
+  modal.className = 'auth-feedback-overlay';
+  modal.innerHTML = `
+    <div class="auth-feedback-modal">
+      <div class="auth-feedback-icon" style="color:${colorMap[type]}">
+        <i class="fas ${iconMap[type]}"></i>
+      </div>
+      <h3 class="auth-feedback-title">${title}</h3>
+      <p class="auth-feedback-message">${message}</p>
+      <button class="auth-feedback-btn" id="authFeedbackClose">Aceptar</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  // Animate in
+  requestAnimationFrame(() => modal.classList.add('active'));
+
+  const close = () => {
+    modal.classList.remove('active');
+    setTimeout(() => { modal.remove(); if (onClose) onClose(); }, 280);
+  };
+
+  document.getElementById('authFeedbackClose').addEventListener('click', close);
+  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+}
+
 export function bindAuthEvents() {
   // Login form
   const loginForm = document.querySelector('.auth-login-form');
@@ -505,7 +550,11 @@ export function bindAuthEvents() {
       e.preventDefault();
       const email = (document.getElementById('loginEmail') || {}).value || '';
       const password = (document.getElementById('loginPassword') || {}).value || '';
-      if (!email || !password) return window.alert('Completa correo y contraseña.');
+      if (!email || !password) {
+        return showAuthModal({ type: 'error', title: 'Campos incompletos', message: 'Completa correo y contraseña para continuar.' });
+      }
+      const btn = loginForm.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.textContent = 'Ingresando...'; }
       try {
         const res = await fetch(`${API_BASE}/auth/login`, {
           method: 'POST',
@@ -513,14 +562,23 @@ export function bindAuthEvents() {
           body: JSON.stringify({ email: email.trim(), password }),
         });
         const data = await res.json();
-        if (!res.ok) return window.alert(data?.message || 'Error al iniciar sesión.');
+        if (!res.ok) {
+          if (btn) { btn.disabled = false; btn.textContent = 'Ingresar'; }
+          return showAuthModal({ type: 'error', title: 'Error al ingresar', message: data?.message || 'Credenciales incorrectas. Intenta de nuevo.' });
+        }
         localStorage.setItem('auth_token', data.token);
         localStorage.setItem('auth_user', JSON.stringify(data.user));
-        window.alert('Inicio de sesión correcto.');
-        window.location.hash = '#/';
+        const name = data.user?.firstName || data.user?.name || 'Usuario';
+        showAuthModal({
+          type: 'success',
+          title: '¡Bienvenido de nuevo!',
+          message: `Hola, <strong>${name}</strong>. Tu sesión se inició correctamente.`,
+          onClose: () => { window.location.hash = '#/'; },
+        });
       } catch (err) {
         console.error(err);
-        window.alert('Error de red al iniciar sesión.');
+        if (btn) { btn.disabled = false; btn.textContent = 'Ingresar'; }
+        showAuthModal({ type: 'error', title: 'Error de conexión', message: 'No se pudo conectar con el servidor. Verifica tu internet.' });
       }
     });
   }
@@ -544,8 +602,14 @@ export function bindAuthEvents() {
       const email = (document.getElementById('registerEmail') || {}).value || '';
       const password = (document.getElementById('registerPassword') || {}).value || '';
       const confirm = (document.getElementById('registerConfirmPassword') || {}).value || '';
-      if (!firstName || !lastName || !email || !password) return window.alert('Completa todos los campos obligatorios.');
-      if (password !== confirm) return window.alert('Las contraseñas no coinciden.');
+      if (!firstName || !lastName || !email || !password) {
+        return showAuthModal({ type: 'error', title: 'Campos incompletos', message: 'Completa todos los campos obligatorios antes de continuar.' });
+      }
+      if (password !== confirm) {
+        return showAuthModal({ type: 'error', title: 'Contraseñas distintas', message: 'Las contraseñas que ingresaste no coinciden. Verifica e intenta de nuevo.' });
+      }
+      const btn = registerForm.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.textContent = 'Creando cuenta...'; }
       try {
         const res = await fetch(`${API_BASE}/auth/register`, {
           method: 'POST',
@@ -553,14 +617,22 @@ export function bindAuthEvents() {
           body: JSON.stringify({ firstName, lastName, email: email.trim(), password }),
         });
         const data = await res.json();
-        if (!res.ok) return window.alert(data?.message || 'Error al registrar.');
+        if (!res.ok) {
+          if (btn) { btn.disabled = false; btn.textContent = 'Crear cuenta'; }
+          return showAuthModal({ type: 'error', title: 'Error al registrar', message: data?.message || 'No fue posible crear la cuenta. Intenta con otro correo.' });
+        }
         localStorage.setItem('auth_token', data.token);
         localStorage.setItem('auth_user', JSON.stringify(data.user));
-        window.alert('Registro correcto.');
-        window.location.hash = '#/';
+        showAuthModal({
+          type: 'success',
+          title: '¡Cuenta creada!',
+          message: `Tu cuenta fue registrada exitosamente. Ya puedes empezar a comprar, <strong>${firstName}</strong>.`,
+          onClose: () => { window.location.hash = '#/'; },
+        });
       } catch (err) {
         console.error(err);
-        window.alert('Error de red al registrar.');
+        if (btn) { btn.disabled = false; btn.textContent = 'Crear cuenta'; }
+        showAuthModal({ type: 'error', title: 'Error de conexión', message: 'No se pudo conectar con el servidor. Verifica tu internet.' });
       }
     });
   }
@@ -576,7 +648,7 @@ export function bindAuthEvents() {
     });
   }
 
-  // Forgot password handler: try API endpoint, otherwise fallback to mailto to support
+  // Forgot password handler
   const forgotLink = document.querySelector('.auth-login-forgot');
   if (forgotLink) {
     forgotLink.addEventListener('click', async (e) => {
@@ -585,19 +657,17 @@ export function bindAuthEvents() {
       const email = window.prompt('Introduce tu correo para recuperar contraseña:', defaultEmail) || '';
       if (!email) return;
       const trimmed = email.trim();
-      // Try calling backend forgot endpoint if available
       try {
         const resp = await fetch(`${API_BASE}/auth/forgot`, {
           method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: trimmed })
         });
         if (resp.ok) {
-          window.alert('Si el correo existe, recibirás instrucciones para recuperar la contraseña.');
+          showAuthModal({ type: 'info', title: 'Correo enviado', message: 'Si el correo existe en nuestro sistema, recibirás instrucciones para recuperar tu contraseña.' });
           return;
         }
       } catch (err) {
         // ignore and fallback
       }
-      // Fallback: open mail client addressed to support
       const subject = encodeURIComponent('Recuperar contraseña');
       const body = encodeURIComponent(`Necesito ayuda para recuperar mi contraseña. Mi correo: ${trimmed}`);
       window.location.href = `mailto:ventas@hvacdirecto.mx?subject=${subject}&body=${body}`;
