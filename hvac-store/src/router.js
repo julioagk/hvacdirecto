@@ -35,19 +35,67 @@ function renderSidebarSearch(placeholder = 'Buscar en esta vista...') {
     </div>`;
 }
 
+// Extracts voltage from strings like "220/1/60", "460/3/60", "110/1/60", "208/3/60", etc.
+// Also handles "220V", "220 V", "220", "460 v", etc.
 function normalizeVoltage(value) {
   const raw = String(value || '').trim();
   if (!raw) return '';
   const compact = raw.replace(/\s+/g, '').toUpperCase();
-  if (['110/1/60', '110V', '110'].includes(compact)) return '110 V';
-  if (['220/1/60', '220V', '220'].includes(compact)) return '220 V';
-  return raw;
+
+  // Pattern: VOLTAGE/PHASES/HZ  e.g. 460/3/60, 220/1/60, 208/3/60
+  const slashMatch = compact.match(/^(\d{2,3})\/\d\/\d{2}$/);
+  if (slashMatch) return `${slashMatch[1]} V`;
+
+  // Pattern: plain number or with V suffix
+  const numMatch = compact.match(/^(\d{2,3})V?$/);
+  if (numMatch) {
+    const v = numMatch[1];
+    if (['110', '115', '120'].includes(v)) return '110 V';
+    if (['208', '220', '230', '240'].includes(v)) return '220 V';
+    if (['277'].includes(v)) return '277 V';
+    if (['380', '400', '415', '430', '440', '460', '480'].includes(v)) return `${v} V`;
+    return `${v} V`;
+  }
+
+  // Pattern: "230-460 V", "220/460", "230-430 V" — dual voltage, take the higher
+  const dualMatch = compact.match(/^(\d{2,3})[-\/](\d{2,3})V?$/);
+  if (dualMatch) return `${dualMatch[2]} V`;
+
+  // Already formatted like "430 V"
+  const formatted = compact.match(/^(\d{2,3})\s*V$/);
+  if (formatted) return `${formatted[1]} V`;
+
+  return raw; // return as-is if nothing matched
+}
+
+// Tries to infer voltage from name/model/description when the voltage field is empty
+function inferVoltage(product) {
+  const existing = normalizeVoltage(product.voltage);
+  if (existing) return existing;
+
+  // Search name, model, sku, description for voltage patterns
+  const haystack = [product.name, product.model, product.sku, product.description]
+    .filter(Boolean).join(' ').toUpperCase().replace(/\s+/g, '');
+
+  // Look for V/ph/hz pattern embedded anywhere: e.g. "220/1/60" or "460/3/60"
+  const embeddedSlash = haystack.match(/(\d{2,3})\/[13]\/(?:50|60)/);
+  if (embeddedSlash) return normalizeVoltage(`${embeddedSlash[1]}/1/60`);
+
+  // Look for standalone voltage mention in description text e.g. "voltaje 220" or "220V"
+  const descHay = [product.description].filter(Boolean).join(' ').toUpperCase();
+  const voltMention = descHay.match(/(?:VOLTAJE|VOLTAGE|VOLT\.?)\s*(\d{2,3})/);
+  if (voltMention) return normalizeVoltage(voltMention[1]);
+
+  const inlineV = descHay.match(/\b(\d{2,3})\s*V\b/);
+  if (inlineV) return normalizeVoltage(inlineV[1]);
+
+  return '';
 }
 
 function getFilterOptions(productsList) {
   return {
     brands: [...new Set(productsList.map(p => p.brand))].sort(),
-    voltages: [...new Set(productsList.map(p => normalizeVoltage(p.voltage)).filter(Boolean))].sort(),
+    voltages: [...new Set(productsList.map(p => inferVoltage(p)).filter(Boolean))].sort(),
   };
 }
 
@@ -469,7 +517,7 @@ export function bindCategoryPageEvents() {
         .join(' ');
       return normalizeSearchString(haystack).includes(qNorm);
     }).filter(p => !selectedBrand || p.brand === selectedBrand)
-      .filter(p => !selectedVoltage || normalizeVoltage(p.voltage) === selectedVoltage);
+      .filter(p => !selectedVoltage || inferVoltage(p) === selectedVoltage);
 
     const sortValue = sortSelect?.value || 'default';
     if (sortValue === 'price-asc') filtered.sort((a, b) => a.price - b.price);
