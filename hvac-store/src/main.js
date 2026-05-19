@@ -74,7 +74,7 @@ function renderHeader() {
   const user = getAuthUser();
   const token = localStorage.getItem('auth_token');
   const isLoggedIn = !!(user && token);
-  const displayName = isLoggedIn ? (user.firstName || user.name || 'Mi cuenta') : null;
+  const displayName = isLoggedIn ? (user.firstName || user.first_name || user.name || 'Mi cuenta') : null;
 
   const userArea = isLoggedIn
     ? `<div class="header-action user-menu-wrap" id="userMenuWrap">
@@ -279,7 +279,7 @@ function renderBrandsSection() {
 function renderFavoritesPage() {
   const favoriteProducts = getProductsByIds(favorites);
   const user = getAuthUser();
-  const name = user ? (user.firstName || user.name || 'Usuario') : null;
+  const name = user ? (user.firstName || user.first_name || user.name || 'Usuario') : null;
   return `
     <div class="breadcrumb"><a href="#/">Inicio</a><span>›</span><span>Favoritos</span></div>
     <div class="cat-hero"><div class="container">
@@ -320,7 +320,9 @@ function renderAccountPage() {
     window.location.hash = '#/login';
     return '';
   }
-  const name = user.firstName ? `${user.firstName} ${user.lastName || ''}`.trim() : (user.name || 'Usuario');
+  const name = user.firstName ? `${user.firstName} ${user.lastName || ''}`.trim()
+    : user.first_name ? `${user.first_name} ${user.last_name || ''}`.trim()
+    : (user.name || 'Usuario');
   return `
     <div class="breadcrumb"><a href="#/">Inicio</a><span>›</span><span>Mi cuenta</span></div>
     <section class="auth-page">

@@ -570,7 +570,7 @@ export function bindAuthEvents() {
         }
         localStorage.setItem('auth_token', data.token);
         localStorage.setItem('auth_user', JSON.stringify(data.user));
-        const name = data.user?.firstName || data.user?.name || 'Usuario';
+        const name = data.user?.firstName || data.user?.first_name || data.user?.name || 'Usuario';
         showAuthModal({
           type: 'success',
           title: '¡Bienvenido de nuevo!',
