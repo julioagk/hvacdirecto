@@ -281,7 +281,7 @@ export const products = [
     "description": "Paquete comercial SF 6 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 8.392,
+    "price": 8392,
     "brand": "CARRIER"
   },
   {
@@ -296,7 +296,7 @@ export const products = [
     "description": "Paquete comercial SF 6 ton, 430 V Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 8.597,
+    "price": 8597,
     "brand": "CARRIER"
   },
   {
@@ -311,7 +311,7 @@ export const products = [
     "description": "Paquete comercial SF 7.5 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 12.041,
+    "price": 12041,
     "brand": "CARRIER"
   },
   {
@@ -326,7 +326,7 @@ export const products = [
     "description": "Paquete comercial SF 7.5 ton, 430 V Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 12.318,
+    "price": 12318,
     "brand": "CARRIER"
   },
   {
@@ -341,7 +341,7 @@ export const products = [
     "description": "Paquete comercial SF 10 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 15.534,
+    "price": 15534,
     "brand": "CARRIER"
   },
   {
@@ -356,7 +356,7 @@ export const products = [
     "description": "Paquete comercial SF 10 ton, 430 V Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 15.671,
+    "price": 15671,
     "brand": "CARRIER"
   },
   {
@@ -371,7 +371,7 @@ export const products = [
     "description": "Paquete comercial SF 12.5 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 18.053,
+    "price": 18053,
     "brand": "CARRIER"
   },
   {
@@ -386,7 +386,7 @@ export const products = [
     "description": "Paquete comercial SF 12.5 ton, 430 V Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 18.214,
+    "price": 18214,
     "brand": "CARRIER"
   },
   {
@@ -401,7 +401,7 @@ export const products = [
     "description": "Paquete comercial SF 15 ton, 220 Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "220",
-    "price": 20.428,
+    "price": 20428,
     "brand": "CARRIER"
   },
   {
@@ -416,7 +416,7 @@ export const products = [
     "description": "Paquete comercial SF 15 ton, 430 V Al-Cu, convertible",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 20.706,
+    "price": 20706,
     "brand": "CARRIER"
   },
   {
@@ -431,7 +431,7 @@ export const products = [
     "description": "Paquete comercial SF 20 ton, 220 Al-Cu, downflow",
     "function": "Packaged",
     "voltage": "220",
-    "price": 26.876,
+    "price": 26511,
     "brand": "CARRIER"
   },
   {
@@ -446,7 +446,7 @@ export const products = [
     "description": "Paquete comercial SF 25 ton, 220 Al-Cu, downflow",
     "function": "Packaged",
     "voltage": "220",
-    "price": 28.327,
+    "price": 27939,
     "brand": "CARRIER"
   },
   {
@@ -461,7 +461,7 @@ export const products = [
     "description": "Paquete comercial SF 25 ton, 220 Al-Cu, horizontal high static",
     "function": "Packaged",
     "voltage": "220",
-    "price": 28.245,
+    "price": 28245,
     "brand": "CARRIER"
   },
   {
@@ -476,7 +476,7 @@ export const products = [
     "description": "Paquete comercial SF 25 ton, 430 V Al-Cu, horizontal high static",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 28.604,
+    "price": 28604,
     "brand": "CARRIER"
   },
   {
@@ -491,7 +491,7 @@ export const products = [
     "description": "Paquete comercial SF 27.5 ton, 220 Al-Cu, downflow",
     "function": "Packaged",
     "voltage": "220",
-    "price": 33.408,
+    "price": 33408,
     "brand": "CARRIER"
   },
   {
@@ -506,7 +506,7 @@ export const products = [
     "description": "Paquete comercial SF 27.5 ton, 430 V Al-Cu, downflow",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 33.875,
+    "price": 33875,
     "brand": "CARRIER"
   },
   {
@@ -521,7 +521,7 @@ export const products = [
     "description": "Paquete comercial SF 27.5 ton, 220 Al-Cu, horizontal high static",
     "function": "Packaged",
     "voltage": "220",
-    "price": 33.714,
+    "price": 33714,
     "brand": "CARRIER"
   },
   {
@@ -536,7 +536,7 @@ export const products = [
     "description": "Paquete comercial SF 27.5 ton, 430 V Al-Cu, horizontal high static",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 34.152,
+    "price": 34152,
     "brand": "CARRIER"
   },
   {
@@ -551,7 +551,7 @@ export const products = [
     "description": "Manejadora multiposicion agua helada de 7.5 ton solo frio voltaje 230-430 V",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 3.182,
+    "price": 3182,
     "brand": "CARRIER"
   },
   {
@@ -566,7 +566,7 @@ export const products = [
     "description": "Manejadora multiposicion agua helada de 10 ton solo frio voltaje 230-430 V",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 3.364,
+    "price": 3364,
     "brand": "CARRIER"
   },
   {
@@ -581,7 +581,7 @@ export const products = [
     "description": "Manejadora multiposicion agua helada de 12.5 ton solo frio voltaje 230-430 V",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 4.521,
+    "price": 4521,
     "brand": "CARRIER"
   },
   {
@@ -596,7 +596,7 @@ export const products = [
     "description": "Manejadora multiposicion agua helada de 15 ton solo frio voltaje 230-430 V",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 4.806,
+    "price": 4806,
     "brand": "CARRIER"
   },
   {
@@ -611,7 +611,7 @@ export const products = [
     "description": "Manejadora multiposicion agua helada de 20 ton solo frio voltaje 430 V",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 5.381,
+    "price": 5381,
     "brand": "CARRIER"
   },
   {
@@ -626,7 +626,7 @@ export const products = [
     "description": "Manejadora multiposicion agua helada de 25 ton solo frio voltaje 430 V",
     "function": "Packaged",
     "voltage": "430 V",
-    "price": 8.01,
+    "price": 8010,
     "brand": "CARRIER"
   },
   {
@@ -701,7 +701,7 @@ export const products = [
     "description": "Condensadora vertical On-Off sf marca A/C Cooling de 4 ton voltaje 220",
     "function": "Packaged",
     "voltage": "220",
-    "price": 1.253,
+    "price": 1253,
     "brand": "AC COOLING"
   },
   {
@@ -716,7 +716,7 @@ export const products = [
     "description": "Condensadora vertical On-Off sf marca A/C Cooling de 5 ton voltaje 220",
     "function": "Packaged",
     "voltage": "220",
-    "price": 1.375,
+    "price": 1375,
     "brand": "AC COOLING"
   },
   {
@@ -2591,7 +2591,7 @@ export const products = [
     "description": "Paquete comercial SF 25 ton, 440/3/60 Al-Cu, horizontal high static",
     "function": "",
     "voltage": "",
-    "price": 28.246,
+    "price": 28246,
     "brand": "CARRIER"
   },
   {
@@ -2771,7 +2771,7 @@ export const products = [
     "description": "Paquete horizontal on-off solo frio marca A/C Cooling de 3 ton voltaje 220/1/60",
     "function": "",
     "voltage": "",
-    "price": 1.323,
+    "price": 1323,
     "brand": "AC COOLING"
   },
   {
@@ -2786,7 +2786,7 @@ export const products = [
     "description": "Paquete horizontal on-off solo frio marca A/C Cooling de 5 ton voltaje 220/1/60",
     "function": "",
     "voltage": "",
-    "price": 1.692,
+    "price": 1692,
     "brand": "AC COOLING"
   },
   {
@@ -4421,7 +4421,7 @@ export const products = [
     "description": "Manejadora Comercial SF marca A/C Cooling de 7.5 ton voltaje 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.461,
+    "price": 2461,
     "brand": "AC COOLING"
   },
   {
@@ -4436,7 +4436,7 @@ export const products = [
     "description": "Manejadora Comercial SF marca A/C Cooling de 7.5 ton voltaje 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.461,
+    "price": 2461,
     "brand": "AC COOLING"
   },
   {
@@ -4451,7 +4451,7 @@ export const products = [
     "description": "Manejadora Comercial SF marca A/C Cooling de 10 ton voltaje 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.461,
+    "price": 2461,
     "brand": "AC COOLING"
   },
   {
@@ -4466,7 +4466,7 @@ export const products = [
     "description": "Manejadora Comercial SF marca A/C Cooling de 10 ton voltaje 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 2.461,
+    "price": 2461,
     "brand": "AC COOLING"
   },
   {
@@ -4481,7 +4481,7 @@ export const products = [
     "description": "Manejadora Comercial SF marca A/C Cooling de 15 ton voltaje 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 3.81,
+    "price": 3810,
     "brand": "AC COOLING"
   },
   {
@@ -4496,7 +4496,7 @@ export const products = [
     "description": "Manejadora Comercial SF marca A/C Cooling de 15 ton voltaje 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 3.81,
+    "price": 3810,
     "brand": "AC COOLING"
   },
   {
@@ -4511,7 +4511,7 @@ export const products = [
     "description": "Manejadora Comercial SF marca A/C Cooling de 20 ton voltaje 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 4.951,
+    "price": 4951,
     "brand": "AC COOLING"
   },
   {
@@ -4526,7 +4526,7 @@ export const products = [
     "description": "Manejadora Comercial SF marca A/C Cooling de 20 ton voltaje 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 4.951,
+    "price": 4951,
     "brand": "AC COOLING"
   },
   {
@@ -4541,7 +4541,7 @@ export const products = [
     "description": "Manejadora Comercial SF marca A/C Cooling de 25 ton voltaje 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 6.274,
+    "price": 6274,
     "brand": "AC COOLING"
   },
   {
@@ -4556,7 +4556,7 @@ export const products = [
     "description": "Manejadora Comercial SF marca A/C Cooling de 25 ton voltaje 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 6.274,
+    "price": 6274,
     "brand": "AC COOLING"
   },
   {
@@ -4571,7 +4571,7 @@ export const products = [
     "description": "Condensadora Comercial SF marca A/C Cooling de 7.5 ton voltaje 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 3.913,
+    "price": 3913,
     "brand": "AC COOLING"
   },
   {
@@ -4586,7 +4586,7 @@ export const products = [
     "description": "Condensadora Comercial SF marca A/C Cooling de 7.5 ton voltaje 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 3.913,
+    "price": 3913,
     "brand": "AC COOLING"
   },
   {
@@ -4601,7 +4601,7 @@ export const products = [
     "description": "Condensadora Comercial SF marca A/C Cooling de 10 ton voltaje 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 4.296,
+    "price": 4296,
     "brand": "AC COOLING"
   },
   {
@@ -4616,7 +4616,7 @@ export const products = [
     "description": "Condensadora Comercial SF marca A/C Cooling de 10 ton voltaje 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 4.296,
+    "price": 4296,
     "brand": "AC COOLING"
   },
   {
@@ -4631,7 +4631,7 @@ export const products = [
     "description": "Condensadora Comercial SF marca A/C Cooling de 15 ton voltaje 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 7.266,
+    "price": 7266,
     "brand": "AC COOLING"
   },
   {
@@ -4646,7 +4646,7 @@ export const products = [
     "description": "Condensadora Comercial SF marca A/C Cooling de 15 ton voltaje 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 7.266,
+    "price": 7266,
     "brand": "AC COOLING"
   },
   {
@@ -4661,7 +4661,7 @@ export const products = [
     "description": "Condensadora Comercial SF marca A/C Cooling de 20 ton voltaje 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 8.346,
+    "price": 8346,
     "brand": "AC COOLING"
   },
   {
@@ -4676,7 +4676,7 @@ export const products = [
     "description": "Condensadora Comercial SF marca A/C Cooling de 20 ton voltaje 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 8.346,
+    "price": 8346,
     "brand": "AC COOLING"
   },
   {
@@ -4691,7 +4691,7 @@ export const products = [
     "description": "Condensadora Comercial SF marca A/C Cooling de 25 ton voltaje 220/3/60",
     "function": "",
     "voltage": "",
-    "price": 10.527,
+    "price": 10527,
     "brand": "AC COOLING"
   },
   {
@@ -4706,7 +4706,7 @@ export const products = [
     "description": "Condensadora Comercial SF marca A/C Cooling de 25 ton voltaje 460/3/60",
     "function": "",
     "voltage": "",
-    "price": 10.527,
+    "price": 10527,
     "brand": "AC COOLING"
   },
   {
