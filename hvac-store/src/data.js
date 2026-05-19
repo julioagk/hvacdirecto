@@ -435,6 +435,21 @@ export const products = [
     "brand": "CARRIER"
   },
   {
+    "id": "48FCDM24A2A6-0A0A0",
+    "name": "48FCDM24A2A6-0A0A0",
+    "model": "48FCDM24A2A6-0A0A0",
+    "sku": "48FCDM24A2A6-0A0A0",
+    "img": "/images/Paquete comercial SF Al-Cu.png",
+    "image": "/images/Paquete comercial SF Al-Cu.png",
+    "category": "packaged",
+    "subcategory": "Gas/Eléctricas",
+    "description": "Paquete comercial SF 20 ton, 430 V Al-Cu, downflow",
+    "function": "Packaged",
+    "voltage": "430 V",
+    "price": 26876,
+    "brand": "CARRIER"
+  },
+  {
     "id": "48FCDM28A2A5-0A0A0",
     "name": "48FCDM28A2A5-0A0A0",
     "model": "48FCDM28A2A5-0A0A0",
@@ -447,6 +462,21 @@ export const products = [
     "function": "Packaged",
     "voltage": "220",
     "price": 27939,
+    "brand": "CARRIER"
+  },
+  {
+    "id": "48FCDM28A2A6-0A0A0",
+    "name": "48FCDM28A2A6-0A0A0",
+    "model": "48FCDM28A2A6-0A0A0",
+    "sku": "48FCDM28A2A6-0A0A0",
+    "img": "/images/Paquete comercial SF Al-Cu.png",
+    "image": "/images/Paquete comercial SF Al-Cu.png",
+    "category": "packaged",
+    "subcategory": "Gas/Eléctricas",
+    "description": "Paquete comercial SF 25 ton, 430 V Al-Cu, downflow",
+    "function": "Packaged",
+    "voltage": "430 V",
+    "price": 28327,
     "brand": "CARRIER"
   },
   {
