@@ -1,0 +1,272 @@
+[
+  {
+    "id": "50FCQA04A2A3-0A0A0",
+    "desc": "Paquete comercial HP 3 ton, 220/1/60 Al-Cu, convertible",
+    "price": "4,211"
+  },
+  {
+    "id": "50FCQA04A2A5-0A0A0",
+    "desc": "Paquete comercial HP 3 ton, 220/3/60 Al-Cu, convertible",
+    "price": "4,341"
+  },
+  {
+    "id": "50FCQA04A2A6-0A0A0",
+    "desc": "Paquete comercial HP 3 ton, 440/3/60 Al-Cu, convertible",
+    "price": "4,276"
+  },
+  {
+    "id": "50FCQA05A2A3-0A0A0",
+    "desc": "Paquete comercial HP 4 ton, 220/1/60 Al-Cu, convertible",
+    "price": "4,921"
+  },
+  {
+    "id": "50FCQA05A2A5-0A0A0",
+    "desc": "Paquete comercial HP 4 ton, 220/3/60 Al-Cu, convertible",
+    "price": "4,921"
+  },
+  {
+    "id": "50FCQA05A2A6-0A0A0",
+    "desc": "Paquete comercial HP 4 ton, 440/3/60 Al-Cu, convertible",
+    "price": "5,072"
+  },
+  {
+    "id": "50FCQA06A2A3-0A0A0",
+    "desc": "Paquete comercial HP 5 ton, 220/1/60 Al-Cu, convertible",
+    "price": "5,430"
+  },
+  {
+    "id": "50FCQA06A2A5-0A0A0",
+    "desc": "Paquete comercial HP 5 ton, 220/3/60 Al-Cu, convertible",
+    "price": "5,430"
+  },
+  {
+    "id": "50FCQA06A2A6-0A0A0",
+    "desc": "Paquete comercial HP 5 ton, 440/3/60 Al-Cu, convertible",
+    "price": "5,545"
+  },
+  {
+    "id": "50FCQM07A2A5-0A0A0",
+    "desc": "Paquete comercial HP 6 ton, 220/3/60 Al-Cu, convertible",
+    "price": "8,917"
+  },
+  {
+    "id": "50FCQM07A2A6-0A0A0",
+    "desc": "Paquete comercial HP 6 ton, 440/3/60 Al-Cu, convertible",
+    "price": "8,919"
+  },
+  {
+    "id": "50FCQM08A2A5-0A0A0",
+    "desc": "Paquete comercial HP 7.5 ton convertible 220/3/60",
+    "price": "11,403"
+  },
+  {
+    "id": "50FCQM08A2A6-0A0A0",
+    "desc": "Paquete comercial HP 7.5 ton convertible 460/3/60",
+    "price": "11.404"
+  },
+  {
+    "id": "50FCQM12A2A5-0A0A0",
+    "desc": "Paquete comercial HP 10 ton convertible 220/3/60",
+    "price": "13,113"
+  },
+  {
+    "id": "50FCQM12A2A6-0A0A0",
+    "desc": "Paquete comercial HP 10 ton convertible 460/3/60",
+    "price": "13,116"
+  },
+  {
+    "id": "50FCQM14A2A5-0A0A0",
+    "desc": "Paquete comercial HP 12.5 ton, 220/3/60 Al-Cu, convertible",
+    "price": "16,168"
+  },
+  {
+    "id": "50FCQM14A2A6-0A0A0",
+    "desc": "50FCQM14A2A6-0A0A0 Paquete comercial HP 12.5 ton, 440/3/60 Al-Cu, convertible",
+    "price": "16,168"
+  },
+  {
+    "id": "48FCDM07A1A5-0A0A0",
+    "desc": "Paquete comercial SF 6 ton, 220/3/60 Al-Cu, convertible",
+    "price": "8,392"
+  },
+  {
+    "id": "48FCDM07A1A6-0A0A0",
+    "desc": "Paquete comercial SF 6 ton, 440/3/60 Al-Cu, convertible",
+    "price": "8,597"
+  },
+  {
+    "id": "48FCDM08A2A5-0A0A0",
+    "desc": "Paquete comercial SF 7.5 ton, 220/3/60 Al-Cu, convertible",
+    "price": "12,041"
+  },
+  {
+    "id": "48FCDM08A2A6-0A0A0",
+    "desc": "Paquete comercial SF 7.5 ton, 440/3/60 Al-Cu, convertible",
+    "price": "12,318"
+  },
+  {
+    "id": "48FCDM12A2A5-0A0A0",
+    "desc": "Paquete comercial SF 10 ton, 220/3/60 Al-Cu, convertible",
+    "price": "15,534"
+  },
+  {
+    "id": "48FCDM12A2A6-0A0A0",
+    "desc": "Paquete comercial SF 10 ton, 440/3/60 Al-Cu, convertible",
+    "price": "15,671"
+  },
+  {
+    "id": "48FCDM14A2A5-0A0A0",
+    "desc": "Paquete comercial SF 12.5 ton, 220/3/60 Al-Cu, convertible",
+    "price": "18,053"
+  },
+  {
+    "id": "48FCDM14A2A6-0A0A0",
+    "desc": "Paquete comercial SF 12.5 ton, 440/3/60 Al-Cu, convertible",
+    "price": "18,214"
+  },
+  {
+    "id": "48FCDM16A2A5-0A0A0",
+    "desc": "Paquete comercial SF 15 ton, 220/3/60 Al-Cu, convertible",
+    "price": "20,428"
+  },
+  {
+    "id": "48FCDM16A2A6-0A0A0",
+    "desc": "Paquete comercial SF 15 ton, 440/3/60 Al-Cu, convertible",
+    "price": "20,706"
+  },
+  {
+    "id": "48FCDM24A2A5-0A0A0",
+    "desc": "Paquete comercial SF 20 ton, 220/3/60 Al-Cu, downflow",
+    "price": "26,511"
+  },
+  {
+    "id": "48FCDM24A2A5-0A0A0",
+    "desc": "Paquete comercial SF 20 ton, 440/3/60 Al-Cu, downflow",
+    "price": "26,876"
+  },
+  {
+    "id": "48FCDM28A2A5-0A0A0",
+    "desc": "Paquete comercial SF 25 ton, 220/3/60 Al-Cu, downflow",
+    "price": "27,939"
+  },
+  {
+    "id": "48FCDM28A2A5-0A0A0",
+    "desc": "Paquete comercial SF 25 ton, 440/3/60 Al-Cu, downflow",
+    "price": "28,327"
+  },
+  {
+    "id": "48FCDM28AJA5-0A0A0",
+    "desc": "Paquete comercial SF 25 ton, 220/3/60 Al-Cu, horizontal high static",
+    "price": "28,245"
+  },
+  {
+    "id": "48FCDM28AJA6-0A0A0",
+    "desc": "Paquete comercial SF 25 ton, 440/3/60 Al-Cu, horizontal high static",
+    "price": "28,604"
+  },
+  {
+    "id": "48FCDM30A2A5-0A0A0",
+    "desc": "Paquete comercial SF 27.5 ton, 220/3/60 Al-Cu, downflow",
+    "price": "33,408"
+  },
+  {
+    "id": "48FCDM30A2A6-0A0A0",
+    "desc": "Paquete comercial SF 27.5 ton, 440/3/60 Al-Cu, downflow",
+    "price": "33,875"
+  },
+  {
+    "id": "48FCDM30AJA5-0A0A0",
+    "desc": "Paquete comercial SF 27.5 ton, 220/3/60 Al-Cu, horizontal high static",
+    "price": "33,714"
+  },
+  {
+    "id": "48FCDM30AJA6-0A0A0",
+    "desc": "Paquete comercial SF 27.5 ton, 440/3/60 Al-Cu, horizontal high static",
+    "price": "34,152"
+  },
+  {
+    "id": "40RUSA08A2A6-0A0A0",
+    "desc": "Manejadora multiposicion agua helada de 7.5 ton solo frio voltaje 230-460/3/60",
+    "price": "3,182"
+  },
+  {
+    "id": "40RUSA12A2A6-0A0A0",
+    "desc": "Manejadora multiposicion agua helada de 10 ton solo frio voltaje 230-460/3/60",
+    "price": "3,364"
+  },
+  {
+    "id": "40RUSA14A2A6-0A0A0",
+    "desc": "Manejadora multiposicion agua helada de 12.5 ton solo frio voltaje 230-460/3/60",
+    "price": "4,521"
+  },
+  {
+    "id": "40RUSA16A2A6-0A0A0",
+    "desc": "Manejadora multiposicion agua helada de 15 ton solo frio voltaje 230-460/3/60",
+    "price": "4,806"
+  },
+  {
+    "id": "40RUSA25A5A6-0A0A0",
+    "desc": "Manejadora multiposicion agua helada de 20 ton solo frio voltaje 460/3/60",
+    "price": "5,381"
+  },
+  {
+    "id": "40RUSA28A4A6-0A0A0",
+    "desc": "Manejadora multiposicion agua helada de 25 ton solo frio voltaje 460/3/60",
+    "price": "8,010"
+  },
+  {
+    "id": "40RUSA30A5A6-0A0A0",
+    "desc": "Manejadora multiposicion agua helada de 30 ton solo frio voltaje 460/3/60",
+    "price": "748"
+  },
+  {
+    "id": "38ACCO183-CO",
+    "desc": "Condensadora vertical On-Off sf marca A/C Cooling de 1.5 ton voltaje 220/1/60",
+    "price": "671"
+  },
+  {
+    "id": "38ACCO243-CO",
+    "desc": "Condensadora vertical On-Off sf marca A/C Cooling de 2 ton voltaje 220/1/60",
+    "price": "754"
+  },
+  {
+    "id": "38ACCO363-CO",
+    "desc": "Condensadora vertical On-Off sf marca A/C Cooling de 3 ton voltaje 220/1/60",
+    "price": "916"
+  },
+  {
+    "id": "38ACCO483-CO",
+    "desc": "Condensadora vertical On-Off sf marca A/C Cooling de 4 ton voltaje 220/1/60",
+    "price": "1,253"
+  },
+  {
+    "id": "38ACCO603-CO",
+    "desc": "Condensadora vertical On-Off sf marca A/C Cooling de 5 ton voltaje 220/1/60",
+    "price": "1,375"
+  },
+  {
+    "id": "38ACHP363-CO",
+    "desc": "Condensadora vertical On-Off hp marca A/C Cooling de 3 ton voltaje 220/1/60",
+    "price": "997"
+  },
+  {
+    "id": "40ACCO363-PT",
+    "desc": "Evaporador Piso Techo On-Off sf marca A/C Cooling de 3 ton voltaje 220/1/60",
+    "price": "303"
+  },
+  {
+    "id": "40ACHP363-PT",
+    "desc": "Evaporador Piso Techo On-Off hp marca A/C Cooling de 3 ton voltaje 220/1/60",
+    "price": "331"
+  },
+  {
+    "id": "40ACCO603-PT",
+    "desc": "Evaporador Piso Techo On-Off sf marca A/C Cooling de 5 ton voltaje 220/1/60",
+    "price": "347"
+  },
+  {
+    "id": "40ACHP603-PT",
+    "desc": "Evaporador Piso Techo On-Off hp marca A/C Cooling de 5 ton voltaje 220/1/60",
+    "price": "391"
+  }
+]

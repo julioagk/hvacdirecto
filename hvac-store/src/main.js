@@ -13,19 +13,22 @@ function brandRouteForCategory(catId, brand) {
   return `#/brand/${encodeURIComponent(brand)}`;
 }
 
+function normalizeSearchString(str) { return String(str || '').toLowerCase().replace(/[^a-z0-9]/g, ''); }
+
 function getGlobalSearchSuggestions(query) {
-  const normalizedQuery = query.toLowerCase().trim();
+  const normalizedQuery = String(query || '').toLowerCase().trim();
   if (normalizedQuery.length < 2) return [];
   return products
     .filter(product => {
-      const haystack = [product.name, product.model, product.description, product.brand, product.category, product.subcategory]
+      const haystack = [product.name, product.model, product.sku, product.description, product.brand, product.category, product.subcategory]
         .filter(Boolean)
-        .join(' ')
-        .toLowerCase();
-      return haystack.includes(normalizedQuery);
+        .join(' ');
+      const haystackNorm = normalizeSearchString(haystack);
+      const qNorm = normalizeSearchString(normalizedQuery);
+      return haystackNorm.includes(qNorm);
     })
     .slice(0, 8)
-    .map(product => `${product.name} · ${product.brand}`);
+    .map(product => ({ display: `${product.name} · ${product.model || ''} · ${product.brand}`, query: product.model || product.name }));
 }
 
 function bindGlobalSearch(searchInputId, sugBoxId, searchBtnId) {
@@ -37,12 +40,13 @@ function bindGlobalSearch(searchInputId, sugBoxId, searchBtnId) {
   searchInput.addEventListener('input', () => {
     const matches = getGlobalSearchSuggestions(searchInput.value);
     if (matches.length) {
-      sugBox.innerHTML = matches.map(s => `<li>${s}</li>`).join('');
+      sugBox.innerHTML = matches.map(m => `<li data-query="${encodeURIComponent(m.query)}">${m.display}</li>`).join('');
       sugBox.classList.add('active');
       sugBox.querySelectorAll('li').forEach(li => li.addEventListener('click', () => {
+        const q = decodeURIComponent(li.dataset.query || '') || li.textContent;
         searchInput.value = li.textContent;
         sugBox.classList.remove('active');
-        window.location.hash = '#/search/' + encodeURIComponent(li.textContent);
+        window.location.hash = '#/search/' + encodeURIComponent(q);
       }));
     } else {
       sugBox.classList.remove('active');

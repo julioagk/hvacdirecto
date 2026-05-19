@@ -1,0 +1,64 @@
+export const categories = [
+  { id: 'central-ac', name: 'Aire Acondicionado Central', icon: 'fa-snowflake', desc: 'Sistemas divididos, condensadoras, evaporadoras', subs: ['Sistemas Divididos', 'Condensadoras', 'Evaporadoras'] },
+  { id: 'mini-splits', name: 'Mini Splits', icon: 'fa-wind', desc: 'Una zona, multi-zona, pared, techo', subs: ['Inverter', 'No Inverter'], subsubs: ['MURO', 'PISO-TECHO', 'TIPO DUCTO'] },
+  { id: 'heat-pumps', name: 'Bombas de Calor', icon: 'fa-temperature-half', desc: 'Sistemas completos, unidades exteriores', subs: ['Sistemas Completos', 'Unidades Exteriores'] },
+   { id: 'furnaces', name: 'Calefacción', icon: 'fa-fire', desc: 'Hornos a gas, eléctricos, calderas', subs: ['Hornos a Gas', 'Hornos Eléctricos', 'Calderas'] },
+  { id: 'packaged', name: 'Unidades Empacadas', icon: 'fa-box', desc: 'Gas/eléctricas, bombas empacadas', subs: ['Gas/Eléctricas', 'Bombas de Calor Empacadas'] },
+  { id: 'iaq', name: 'Calidad del Aire', icon: 'fa-leaf', desc: 'Purificadores, humidificadores, filtros', subs: ['Purificadores', 'Humidificadores', 'Deshumidificadores', 'Filtros'] },
+  { id: 'commercial', name: 'Sistemas Comerciales', icon: 'fa-building', desc: 'Unidades de techo, calentadores', subs: ['Unidades de Techo (Rooftop)', 'Calentadores de Unidad'] },
+  { id: 'accessories', name: 'Accesorios e Instalación', icon: 'fa-screwdriver-wrench', desc: 'Termostatos, tuberías, soportes', subs: ['Termostatos', 'Tuberías', 'Soportes', 'Cables'] },
+];
+
+export const brands = ['CARRIER', 'TLC', 'CIAC', 'AC COOLING', 'INTENSITY'];
+
+const imgMap = { 'central-ac': '/images/condenser.png', 'mini-splits': '/images/minisplit.png', 'heat-pumps': '/images/condenser.png', 'furnaces': '/images/furnace.png', 'packaged': '/images/condenser.png', 'iaq': '/images/thermostat.png', 'commercial': '/images/condenser.png', 'accessories': '/images/thermostat.png' };
+
+export const products = [
+  {
+    "id": "50FCQA04A2A3-0A0A0",
+    "name": "50FCQA04A2A3-0A0A0",
+    "model": "50FCQA04A2A3-0A0A0",
+    "sku": "50FCQA04A2A3-0A0A0",
+    "img": "/images/PAQUETE COMERCIA.png",
+    "image": "/images/PAQUETE COMERCIA.png",
+    "category": "packaged",
+    "subcategory": "Gas/Eléctricas",
+    "description": "Paquete comercial HP 3 ton, 220 Al-Cu, convertible",
+    "function": "Packaged",
+    "voltage": "220",
+    "price": 4.211,
+    "brand": "CARRIER"
+  },
+  {
+    "id": "50FCQA04A2A5-0A0A0",
+    "name": "50FCQA04A2A5-0A0A0",
+    "model": "50FCQA04A2A5-0A0A0",
+    "sku": "50FCQA04A2A5-0A0A0",
+    "img": "/images/PAQUETE COMERCIA.png",
+    "image": "/images/PAQUETE COMERCIA.png",
+    "category": "packaged",
+    "subcategory": "Gas/Eléctricas",
+    "description": "Paquete comercial HP 3 ton, 220 Al-Cu, convertible",
+    "function": "Packaged",
+    "voltage": "220",
+    "price": 4.341,
+    "brand": "CARRIER"
+  },
+  ...
+  {
+    "id": "50NL-B60---5",
+    "name": "50NL-B60---5",
+    "model": "50NL-B60---5",
+    "sku": "50NL-B60---5",
+    "img": "/images/PAQUETE COMERCIA.png",
+    "image": "/images/PAQUETE COMERCIA.png",
+    "category": "packaged",
+    "subcategory": "",
+    "description": "Paquete res SF 5 ton, 14 SEER, R-454b, 220/3/60, convertible",
+    "function": "",
+    "voltage": "",
+    "price": 3.784,
+    "brand": "INTENSITY"
+  },
+  ...
+];

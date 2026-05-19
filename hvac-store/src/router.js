@@ -397,11 +397,15 @@ export function renderRegisterPage() {
 }
 
 export function renderSearchPage(query) {
-  const q = query.toLowerCase();
-  const results = products.filter(p =>
-    (p.description || p.name).toLowerCase().includes(q) || p.brand.toLowerCase().includes(q) ||
-    p.category.includes(q) || (p.btus && p.btus.toLowerCase().includes(q))
-  );
+  const q = String(query || '').toLowerCase();
+  const normalizeSearchString = str => String(str || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const qNorm = normalizeSearchString(q);
+  const results = products.filter(p => {
+    const haystack = [p.name, p.model, p.sku, p.description, p.brand, p.category, p.subcategory, p.btus]
+      .filter(Boolean)
+      .join(' ');
+    return normalizeSearchString(haystack).includes(qNorm);
+  });
   return `
     <div class="breadcrumb">
       <a href="#/">Inicio</a><span>›</span><span>Resultados para "${query}"</span>
@@ -452,13 +456,14 @@ export function bindCategoryPageEvents() {
     const query = (searchInput?.value || '').trim().toLowerCase();
     const selectedBrand = (brandFilter?.value || '').trim();
     const selectedVoltage = (voltageFilter?.value || '').trim();
+    const normalizeSearchString = str => String(str || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    const qNorm = normalizeSearchString(query);
     let filtered = baseProducts.filter(p => {
       if (!query) return true;
       const haystack = [p.name, p.model, p.description, p.brand, p.category, p.subcategory, p.voltage, p.function]
         .filter(Boolean)
-        .join(' ')
-        .toLowerCase();
-      return haystack.includes(query);
+        .join(' ');
+      return normalizeSearchString(haystack).includes(qNorm);
     }).filter(p => !selectedBrand || p.brand === selectedBrand)
       .filter(p => !selectedVoltage || normalizeVoltage(p.voltage) === selectedVoltage);
 

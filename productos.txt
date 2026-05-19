@@ -1,0 +1,401 @@
+Modelo			Descripción 	Categoría 	Función 	Voltaje	Precio Venta USD
+S12P-ECV13		Condensadora	Minisplit 12k	Inverter	Solo Frio	110V	$222,00
+		Evaporador					
+S12P-EHV13		Condensadora	Minisplit 12k	Inverter	Heat Pump	110V	$228,75
+		Evaporador					
+S12P-ECV23		Condensadora	Minisplit 12k	Inverter	Solo Frio	220V	$225,00
+		Evaporador					
+S12P-EHV23		Condensadora	Minisplit 12k	Inverter	Heat Pump	220V	$229,00
+		Evaporador					
+S18P-ECV22		Condensadora	Minisplit 12k	Inverter	Solo Frio	220V	$399,00
+		Evaporador					
+S18P-EHV22		Condensadora	Minisplit 12k	Inverter	Heat Pump	220V	$422,00
+		Evaporador					
+S24P-ECV23		Condensadora	Minisplit 12k	Inverter	Solo Frio	220V	$493,00
+		Evaporador					
+S24P-EHV23		Condensadora	Minisplit 12k	Inverter	Heat Pump	220V	$522,00
+		Evaporador					
+S36P-ECV23		Condensadora	Minisplit 12k	Inverter	Solo Frio	220V	$858,00
+		Evaporador					
+S36P-EHV23		Condensadora	Minisplit 12k	Inverter	Heat Pump	220V	$930,00
+		Evaporador						
+
+Modelo	                              Descripcion	                          PRECIO
+
+(CONDENSADORA MINISPLIT INVERTER MARCA CARRIER HEAT PUMP REFRIGERANTE R32 CAPACIDAD 1 TR VOLTAJE 220V/1F/60HZ 	
+EVAPORADOR MINISPLIT INVERTER  MARCA CARRIER HEAT PUMP REFRIGERANTE R32 CAPACIDAD 1 TR VOLTAJE 220V/1F/60HZ) VAN JUNTIS		$399,39
+
+(CONDENSADORA MINISPLIT INVERTER MARCA CARRIER HEAT PUMP REFRIGERANTE R32 CAPACIDAD 2 TR VOLTAJE 220V/1F/60HZ,		
+ EVAPORADOR MINISPLIT INVERTER MARCA CARRIER HEAT PUMP REFRIGERANTE R32 CAPACIDAD 2 TR VOLTAJE 220V/1F/60HZ) VAN JUNTOS	        $787,29					
+53LVC121X	MINISPLIT 1 TON SOLO FRIO LIV-X 110/1/60, SEER 12	$209,00
+53LVC123X	MINISPLIT 1 TON SOLO FRIO LIV-X 220/1/60, SEER 12	$209,00
+53LVC183X	MINISPLIT 1.5 TON SOLO FRIO LIV-X 220/1/60, SEER 12	$392,70
+53LVC243X	MINISPLIT 2 TON SOLO FRIO LIV-X 220/1/60, SEER 12	$523,60
+		
+53LVQ121X	MINISPLIT 1 TON FRIO CALOR LIV-X 110/1/60, SEER 12	$222,20
+53LVQ123X	MINISPLIT 1 TON FRIO CALOR LIV-X 220/1/60, SEER 12	$222,20
+53LVQ183X	MINISPLIT 1.5 TON FRIO CALOR LIV-X 220/1/60, SEER 12	$405,90
+53LVQ243X	MINISPLIT 2 TON FRIO CALOR LIV-X 220/1/60, SEER 12	$536,80
+		
+53PXC121D	 MINISPLIT 1 TON SOLO FRIO CARRIER PURON X, 110/1/60, SEER 18 WIFI	$312,40
+53PXC123D	MINISPLIT 1 TON SOLO FRIO CARRIER PURON X, 220/1/60, SEER 18 WIFI	$312,40
+53PXC183D	MINISPLIT 1.5 TON SOLO FRIO CARRIER PURON X, 220/1/60, SEER 18 WIFI	$449,90
+53PXQ243D	 MINISPLIT 2 TON SOLO FRIO CARRIER PURON X, 220/1/60, SEER 18 WIFI	$624,80
+		
+53PXQ121D	MINISPLIT 1 TON FRIO CALOR CARRIER PURON X, 110/1/60, SEER 18 WIFI	$344,30
+53PXQ123D	MINISPLIT 1 TON FRIO CALOR CARRIER PURON X, 220/1/60, SEER 18 WIFI	$344,30
+53PXQ183D	MINISPLIT 1.5 TON FRIO CALOR CARRIER PURON X, 220/1/60, SEER 18 WIFI	$481,80
+53PXQ243D	MINISPLIT 2 TON FRIO CALOR CARRIER PURON X, 220/1/60, SEER 18 WIFI	$656,70
+		
+53MXC121A	MINISPLIT 1 TON SOLO FRIO CARRIER MAX, 110/1/60, SEER 18	$275,00
+53MXC123A	MINISPLIT 1 TON SOLO FRIO CARRIER MAX, 220/1/60, SEER 19	$275,00
+53MXC183A	MINISPLIT 1.5 TON SOLO FRIO CARRIER MAX, 220/1/60, SEER 22	$432,30
+53MXC243A	MINISPLIT 2 TON SOLO FRIO CARRIER MAX, 220/1/60, SEER 21	$563,20
+		
+53MXQ121A	MINISPLIT 1 TON FRIO CALOR CARRIER MAX, 110/1/60, SEER 18	$288,20
+53MXQ123A	 MINISPLIT 1 TON FRIO CALOR CARRIER MAX, 220/1/60, SEER 19	$288,20
+53MXQ183A	MINISPLIT 1.5 TON FRIO CALOR CARRIER MAX, 220/1/60, SEER 22	$445,50
+53MXQ243A	 MINISPLIT 2 TON FRIO CALOR CARRIER MAX, 220/1/60, SEER 21	$576,40
+		
+53UTQ121D	MINISPLIT 1 TON FRIO CALOR CARRIER ULTRA, 110/1/60, SEER 21 WIFI	$500,50
+53UTQ123D	MINISPLIT 1 TON FRIO CALOR CARRIER ULTRA, 220/1/60, SEER 21 WIFI	$500,50
+53UTQ183D	 MINISPLIT 1.5 TON FRIO CALOR CARRIER ULTRA, 220/1/60, SEER 21 WIFI	$687,50
+53UTQ243D	MINISPLIT 2 TON FRIO CALOR CARRIER ULTRA, 220/1/60, SEER 21 WIFI	$812,90
+		
+53AEQ363A	 MINISPLIT 3 TON FRIO CALOR CARRIER COOL EASY, 220/1/60, SEER 17 WIFI	$1.437,70
+
+38LVMB18A32-C	Condensadora 1.5 ton R32 HP xpower 220/1/60	$733,70
+38LVMB27A32-C	Condensadora 2.25 ton R32 HP xpower 220/1/60	$864,60
+38LVMB36A32-C	Condensadora 3 ton R32 HP xpower 220/1/60	$1.388,20
+38LVMB42A32-C	Condensadora 3.5 ton R32 HP xpower 220/1/60	$1.650,00
+42QHG009A32-E	Evaporador high wall 0.75 ton R32 xpower 220/1/60	$156,20
+42QHG012A32-E	Evaporador high wall 1 ton R32 xpower 220/1/60	$169,40
+42QHG018A32-E	Evaporador high wall 1.5 ton R32 xpower 220/1/60 	$207,90
+42QHG024A32-E	Evaporador high wall 2 ton R32 xpower 220/1/60 	$260,70
+42QSS012A32-E	Evaporador inverter fan coil R32 HP de 1 ton 220/1/60	$325,60
+42QSS018A32-E	 Evaporador inverter fan coil R32 HP de 1.5 ton 220/1/60	$418,00
+42QSS024A32-E	Evaporador inverter fan coil R32 HP de 2 ton 220/1/60	$456,50
+		
+38INQ183A32-C	Condensadora inverter easy match 1.5 ton R32 voltaje 220/1/60	$655,60
+42QSS018A32-E	Fan coil inverter 1.5 ton R32 voltaje 220/1/60	$353,10
+38INQ243A32-C	Condensadora inverter easy match 2 ton R32voltaje 220/1/60	$731,50
+42QSS024A32-E	Fan coil inverter 2 ton R32 voltaje 220/1/60	$394,90
+38INQ363A32-C	Condensadora inverter easy match 3 ton R32 voltaje 220/1/60	$959,20
+40EIQ363A32-E	Fan coil inverter easy match 3 ton R32 voltaje2 220/1/60	$515,90
+38INQ603A32-C	Condensadora inverter easy match 5 ton R32 voltaje 220/1/60	$1.422,30
+40EIQ603A32-E	Fan coil inverter easy match 5 ton R32 voltaje 220/1/60	$764,50
+		
+38INQ183A32-C	Condensadora inverter easy match 1.5 ton R32 voltaje 220/1/60	$655,60
+42QTD018A32	Cassette inverter easy match 1.5 ton R32 voltaje 220/1/60	$301,40
+40CAS-S5	Panel Cassette	$51,70
+38INQ243A32-C	Condensadora inverter easy match 2 ton R32voltaje 220/1/60	$731,50
+42QTD024A32	Cassette inverter easy match 2 ton R32 voltaje 220/1/60	$330,00
+40CAS-L6	Panel Cassette	$64,90
+38INQ363A32-C	Condensadora inverter easy match 3 ton R32 voltaje 220/1/60	$959,20
+40KIQ363A32-E	Cassette inverter easy match 3 ton R32 voltaje 220/1/60	$567,60
+40CAS-L6	Panel Cassette	$64,90
+38INQ603A32-C	 Condensadora inverter easy match 5 ton R32 voltaje 220/1/60	$1.422,30
+40KIQ603A32-E	Cassette inverter easy match 5 ton R32 voltaje 220/1/60	$816,20
+40CAS-L6	Panel Cassette	$64,90
+		
+38INQ363A32-C	Condensadora inverter easy match 3 ton R32 voltaje 220/1/60	$959,20
+40VIQ363A32-E	Piso techo inverter esay match 3 ton R32 voltaje 220/1/60	$515,90
+38INQ603A32-C	Condensadora inverter easy match 5 ton R32 voltaje 220/1/60	$1.422,30
+40VIQ603A32-E	Piso techo inverter esay match 5 ton R32 voltaje 220/1/60	$764,50
+		
+53VSQ180363GA-FC	Sist F&C inverter 36k HP marca CIAC 220/1/60 R410a	$1.423,40
+53VSQ180603GA-FC	Sist F&C inverter 60k HP marca CIAC 220/1/60 R410a	$2.006,40
+		
+53VSQ180363GA-PT	Sist Piso Techo inverter 36k HP marca CIAC 220/1/60 R410a	$1.423,40
+53VSQ180603GA-PT	Sist Piso Techo inverter 60k HP marca CIAC 220/1/60 R410a	$2.006,40
+		
+53VSQ180363GA-KC	Sist Cassette inverter 36k HP marca CIAC 220/1/60 R410a	$1.553,20
+53VSQ180603GA-KC	Sist Cassette inverter 60k HP marca CIAC 220/1/60 R410a	$2.135,10
+		
+53VSQ180363GA-AH	Sist Dividido Manejadora inverter 36k HP marca CIAC 220/1/60 R410a	$1.941,50
+53VSQ180603GA-AH	 Sist Dividido Manejadora inverter 60k HP marca CIAC 220/1/60 R410a	$2.458,50
+		
+38VSQ180243MA-C	Condensadora inverter 2 ton R410a marca CIAC 220/1/60           	$723,80
+42FC40243MA-E	Fan Coil inverter 2 ton R410A marca CIAC 220/1/60 (no incluye termostato 24v)	$311,30
+53VSQ180363MA-FC	Condensadora inverter 3 ton R410a marca CIAC 220/1/60	       $893,20
+42FC40363MA-E	Fan Coil inverter 3 ton R410A marca CIAC 220/1/60 (no incluye termostato 24v)	$382,80
+53VSQ180603MA-FC	Condensadora inverter 5 ton R410a marca CIAC 220/1/60	       $1.230,90
+42FC40603MA-E	Fan Coil inverter 5 ton R410A marca CIAC 220/1/60 (no incluye termostato 24v)	$526,90
+		
+53VSQ180363MA-FC	Condensadora inverter 3 ton R410a marca CIAC 220/1/60	      $893,20
+42KC40363MA-E	Cassette inverter 3 ton R410A marca CIAC 220/1/60 (no incluye termostato 24v)	$330,00
+T-MBQ4-01E	Panel Cassette	$52,80
+53VSQ180603MA-FC	Condensadora inverter 5 ton R410a marca CIAC 220/1/60	          $1.230,90
+42KC40603MA-E	Cassette inverter 5 ton R410A marca CIAC 220/1/60 (no incluye termostato 24v)	$474,10
+T-MBQ4-01E	Panel Cassette	$52,80
+
+50NPB024---3	Paquete res SF 2 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal	1.738
+50NPB036---3	Paquete res SF 3 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal	1.862
+50NPB048---3	Paquete res SF 4 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal	2.363
+50NPB060---3	Paquete res SF 5 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal	2.487
+		
+50NHB024---3	 Paquete res HP 2 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal	2.112
+50NHB036---3	 Paquete res HP 3 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal	2.237
+50NHB048---3	Paquete res HP 4 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal	2.738
+50NHB060---3	Paquete res HP 5 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal	2.862
+
+48NL-B360603	Paquete res GAS HEAT 3 ton, 14 SEER R-454b, 220/1/60, convertible	3.807
+48NL-B480903	Paquete res GAS HEAT 4 ton, 14 SEER R-454b, 220/1/60, convertible	4.133
+48NL-B601153	Paquete res GAS HEAT 5 ton, 14 SEER R-454b, 220/1/60, convertible	4.463
+		
+
+50NL-B36---5	Paquete res SF 3 ton, 14 SEER, R-454b, 220/3/60, convertible	2.999
+50NL-B48---5 	Paquete res SF 4 ton, 14 SEER, R-454b, 220/3/60, convertible	3.653
+50NL-B60---5	Paquete res SF 5 ton, 14 SEER, R-454b, 220/3/60, convertible	3.784
+50NL-B60---6	Paquete res SF 5 ton, 14 SEER, R-454b, 460/3/60, convertible	3.916
+		
+50NT-B36---5	Paquete res HP 3 ton, 14 SEER, R-454b, 220/3/60, convertible	3.391
+50NT-B48---5	Paquete res HP 4 ton, 14 SEER, R-454b, 460/3/60, convertible	3.916
+50NT-B60---5 	Paquete res HP 5 ton, 14 SEER, R-454b, 220/3/60, convertible	4.047
+50NT-B60---6	Paquete res HP 5 ton, 14 SEER, R-454b, 460/3/60, convertible	4.047
+		
+48NL-B3660605	Paquete res GAS HEAT 3 ton, 14 SEER R-454b, 220/3/60, convertible	3.926
+48NL-B480905 	Paquete res GAS HEAT 4 ton, 14 SEER R-454b, 220/3/60, convertible	4.221
+48NL-B601155 	Paquete res GAS HEAT 5 ton, 14 SEER R-454b, 220/3/60, convertible	4.692
+		
+50VSQ180363GA	Paquete Inverter res HP 3 ton, R-410a, 220/1/60	1.794
+50VSQ180603GA	Paquete Inverter res HP 5 ton, R-410a, 220/1/60	2.397
+
+FJ5ANXA18L00	Manejadora residencial 18K Carrier R-454b velocidad variable	1021.9
+FJ5ANXB24L00	Manejadora residencial 24K Carrier R-454b velocidad variable	1,152
+FJ5ANXB36L00	Manejadora residencial 36K Carrier R-454b velocidad variable	1,282
+FJ5ANXC48L00	Manejadora residencial 48K Carrier R-454b velocidad variable	1,799
+FJ5ANXD60L00	Manejadora residencial 60K Carrier R-454b velocidad variable	1,928
+		
+24SCB418N003	Condensadora solo frio 1.5 ton Carrier R410a 220/1/60	1.539
+24SCB424N003	Condensadora solo frio 2 ton Carrier R410a 220/1/60	2.063
+24SCB436N003	Condensadora solo frio 3 ton Carrier R410a 220/1/60	2.142
+24SCB448N003	Condensadora solo frio 4 ton Carrier R410a 220/1/60 	2.298
+24SCB460N003	Condensadora solo frio 5 ton Carrier R410a 220/1/60	2.602
+		
+26SCA436N005	Condensadora solo frio 3 ton Carrier R454B 220/3/60	2.017
+26SCA436N006	Condensadora solo frio 3 ton Carrier R454B 440/3/60	2.019
+26SCA448N005 	Condensadora solo frio 4 ton Carrier R454B 220/3/60 	2.619
+26SCA448N006 	Condensadora solo frio 4 ton Carrier R454B 440/3/60	2.620
+26SCA460N005 	Condensadora solo frio 5 ton Carrier R454B 220/3/60 	2.847
+26SCA460N006	Condensadora solo frio 5 ton Carrier R454B 440/3/60	2.847
+		
+27SCA536A005	Condensadora heat pump 3 ton Carrier R454B 220/3/60	2.433
+27SCA536A006	Condensadora heat pump 3 ton Carrier R454B 440/3/60	2.433
+27SCA548A005	Condensadora heat pump 4 ton Carrier R454B 220/3/60	2.789
+27SCA548A006	Condensadora heat pump 4 ton Carrier R454B 440/3/60 	2.789
+27SCA560A005	Condensadora heat pump 5 ton Carrier R454B 220/3/60 	2.988
+27SCA560A006	Condensadora heat pump 5 ton Carrier R454B 440/3/60	2.988
+		
+38MURAQ18AA3 	CONDENSADORA INVERTER 1.5T 220-1-60 HORIZONTAL 	886
+38MURAQ24AA3	CONDENSADORA INVERTER 2T 220-1-60 HORIZONTAL	925
+38MURAQ36AA3	CONDENSADORA INVERTER 3T 220-1-60 HORIZONTAL 	1.154
+38MURAQ48AA3 	CONDENSADORA INVERTER 4T 220-1-60 HORIZONTAL 	1.650
+38MURAQ60AA3 	CONDENSADORA INVERTER 5T 220-1-60 HORIZONTAL 	1.784
+		
+40MUAAQ18XA3	MANEJADORA MULTIPOSICION INVERTER 1.5T 220-1-60 	697
+40MUAAQ24XA3	MANEJADORA MULTIPOSICION INVERTER 2T 220-1-60 	751
+40MUAAQ36XA3 	MANEJADORA MULTIPOSICION INVERTER 3T 220-1-60 	925
+40MUAAQ48XA3	MANEJADORA MULTIPOSICION INVERTER 4T 220-1-60 	1.113
+40MUAAQ60XA3	MANEJADORA MULTIPOSICION INVERTER 5T 220-1-60	1.247
+
+38AUZD07A0A5-0A0A0 	Condensador comercial SF R410a 6 ton 230/3/60          	2.638
+38AUZD07A0A6-0A0A0	Condensador comercial SF R410a 6 ton 460/3/60 	     4.175
+38AUZD08A0A5-0A0A0 	Condensador comercial SF R410a 7.5 ton 230/3/60 	5.378
+38AUZD08A0A6-0A0A0 	Condensador comercial SF R410a 7.5 ton 460/3/60 	5.491
+38AUZM12A0A5-0A0A0 	Condensador comercial SF R410a 10 ton 230/3/60 	      7.070
+38AUZM12A0A6-0A0A0 	Condensador comercial SF R410a 10 ton 460/3/60  	7.200
+38AUZM14A0A5-0A0A0 	Condensador comercial SF R410a 12.5 ton 230/3/60 	8.403
+38AUZM14A0A6-0A0A0 	Condensador comercial SF R410a 12.5 ton 460/3/60 	8.558
+38AUZA16A0A5-0A0A0 	Condensador comercial SF R410a 15 ton 230/3/60 	       11.240
+38AUZA16A0A6-0A0A0 	Condensador comercial SF R410a 15 ton 460/3/60	 11.131
+38AUZA25A0A5-0A0A0	 Condensador comercial SF R410a 20 ton 230/3/60 	13.373
+38AUZA25A0A6-0A0A0 	Condensador comercial SF R410a 20 ton 460/3/60	  13.641
+38AUDT28A0A5-0A0A0 	Condensador comercial SF R410a 25 ton 230/3/60 	  16.839
+38AUDT28A0A6-0A0A0 	Condensador comercial SF R410a 25 ton 460/3/60 	   17.168
+40RFAA07A2A5-UA0A0 	Manejadora comercial SF R410a 6 ton 230/3/60 	  5.145
+40RFAA07A2A6-UA0A0	Manejadora comercial SF R410a 6 ton 460/3/60 	  5.145
+40RFAA08A2A5-UA0A0 	Manejadora comercial SF R410a 7.5 ton 230/3/60  	5.226
+40RFAA08A2A6-UA0A0 	Manejadora comercial SF R410a 7.5 ton 460/3/60 	  5.226
+40RFAA12A2A5-UA0A0 	Manejadora comercial SF R410a 10 ton 230/3/60 	  6.475
+40RFAA12A2A6-UA0A0 	Manejadora comercial SF R410a 10 ton 460/3/60 	 6.475
+40RUAA14T2A5-UA0A0 	Manejadora comercial SF R410a 12.5 ton 230/3/60 	7.381
+40RUAA14T2A6-UA0A0 	Manejadora comercial SF R410a 12.5 ton 460/3/60 	7.381
+40RUAA16T2A5-UA0A0 	Manejadora comercial SF R410a 15 ton 230/3/60 	7.968
+40RUAA16T2A6-UA0A0 	Manejadora comercial SF R410a 15 ton 460/3/60 	7.968
+40RUAA25T2A5-UA0A0 	Manejadora comercial SF R410a 20 ton 230/3/60 	9.973
+40RUAA25T2A6-UA0A0 	Manejadora comercial SF R410a 20 ton 460/3/60 	9.973
+40RUAA28T2A5-UA0A0 	Manejadora comercial SF R410a 25 ton 230/3/60 	11.736
+40RUAA28T2A6-UA0A0 	Manejadora comercial SF R410a 25 ton 460/3/60	11.736
+		
+38AUQD07A0A5-0A0A0 	Condensador comercial HP R410a 6 ton 230/3/60 	6.021
+38AUQD07A0A6-0A0A0	 Condensador comercial HP R410a 6 ton 460/3/60 	6.065
+38AUQM08A0A5-0A0A0 	Condensador comercial HP R410a 7.5 ton 230/3/60 	8.623
+38AUQM08A0A6-0A0A0 	Condensador comercial HP R410a 7.5 ton 460/3/60 	8.773
+38AUQD12A0A5-0A0A0 	Condensador comercial HP R410a 10 ton 230/3/60 	9.897
+38AUQD12A0A6-0A0A0 	Condensador comercial HP R410a 10 ton 460/3/60 	10.186
+38AUQA16A0A5-0A0A0 	Condensador comercial HP R410a 15 ton 230/3/60 	14.686
+38AUQA16A0A6-0A0A0 	Condensador comercial HP R410a 15 ton 460/3/60 	14.915
+38AUQA25A0A5-0A0A0 	Condensador comercial HP R410a 20 ton 230/3/60 	17.951
+38AUQA25A0A6-0A0A0 	Condensador comercial HP R410a 20 ton 460/3/60 	18.296
+40RFQA07A2A5-UA0A0 	Manejadora comercial HP R410a 6 ton 230/3/60 	5.249
+40RFQA07A2A6-UA0A0 	Manejadora comercial HP R410a 6 ton 460/3/60 	5.249
+40RFQA08A2A5-UA0A0 	Manejadora comercial HP R410a 7.5 ton 230/3/60 	5.334
+40RFQA08A2A6-UA0A0	 Manejadora comercial HP R410a 7.5 ton 460/3/60 	5.334
+40RFQA12A2A5-UA0A0 	Manejadora comercial HP R410a 10 ton 230/3/60 	6.666
+40RFQA12A2A6-UA0A0 	Manejadora comercial HP R410a 10 ton 460/3/60 	6.666
+40RUQA16T2A5-UA0A0 	Manejadora comercial HP R410a 15 ton 230/3/60 	8.259
+40RUQA16T2A6-UA0A0 	Manejadora comercial HP R410a 15 ton 460/3/60 	8.259
+40RUQA25T2A5-UA0A0 	Manejadora comercial HP R410a 20 ton 230/3/60 	10.357
+40RUQA25T2A6-UA0A0 	Manejadora comercial HP R410a 20 ton 460/3/60 	10.357
+		
+50ZPX08M-5A 	Paquete comercial 7.5 ton Descarga Horizontal 220/3/60 	4.057
+50ZPX12M-5A 	Paquete comercial 10 ton Descarga Horizontal 220/3/60 	5.638
+50ZPX16M-5A 	Paquete comercial 15 ton Descarga Horizontal 220/3/60 	7.975
+50ZPX24M-5A 	Paquete comercial 20 ton Descarga Horizontal 220/3/60 	10.120
+50ZPX24M-6A 	Paquete comercial 20 ton Descarga Horizontal 460/3/60 	10.120
+50ZPX28M-5A 	Paquete comercial 25 ton Descarga Horizontal 220/3/60 	11.724
+50ZPX28M-6A 	Paquete comercial 25 ton Descarga Horizontal 460/3/60 	11.724
+50ZPX30M-5A 	Paquete comercial 30 ton Descarga Horizontal 220/3/60 	15.263
+50ZPX30M-6A 	Paquete comercial 30 ton Descarga Horizontal 460/3/60 	15.263
+		
+CP400A-X120DH5H1H	PAQ HP INVERTER 10T 230/3/60 CIAC SIDE 	6.416
+CP400A-X180AH5H1H 	PAQ HP INVERTER 15T 230/3/60 CIAC SIDE 	8.743
+CP400A-X240AH5H1H 	PAQ HP INVERTER 20T 230/3/60 CIAC SIDE 	11.037
+CP400A-X300AH5H1H 	PAQ HP INVERTER 25T 230/3/60 CIAC SIDE 	13.438
+		
+CP400A-X180AM6H1C 	PAQ SF INVERTER 15T 460/3/60 CIAC DUAL 	11.682
+CP400A-X240AM6H1C 	PAQ SF INVERTER 20T 460/3/60 CIAC DUAL 	14.022
+CP400A-X360AM6H1H 	PAQ HP INVERTER 30T 460/3/60 CIAC DUAL 	16.360
+
+50FC-A04A2A5-0A0A0	Paquete comercial SF 3 ton, 220/3/60 Al-Cu, convertible	    3.862
+50FC-A04A2A6-0A0A0 	Paquete comercial SF 3 ton, 440/3/60 Al-Cu, convertible 	4.013
+50FC-A05A2A5-0A0A0 	Paquete comercial SF 4 ton, 220/3/60 Al-Cu, convertible 	4.749
+50FC-A05A2A6-0A0A0 	Paquete comercial SF 4 ton, 440/3/60 Al-Cu, convertible 	4.847
+50FC-A06A2A5-0A0A0 	Paquete comercial SF 5 ton, 220/3/60 Al-Cu, convertible 	5.149
+50FC-A06A2A6-0A0A0 	Paquete comercial SF 5 ton, 440/3/60 Al-Cu, convertible 	5.301
+50FC-M07A2A5-0A0A0 	Paquete comercial SF 6 ton, 220/3/60 Al-Cu, convertible 	6.710
+50FC-M07A2A6-0A0A0 	Paquete comercial SF 6 ton, 440/3/60 Al-Cu, convertible	      6.894
+50FC-M08A2A5-0A0A0 	Paquete comercial SF 7.5 ton, 220/3/60 Al-Cu, convertible 	10.938
+50FC-M08A2A6-0A0A0 	Paquete comercial SF 7.5 ton, 440/3/60 Al-Cu, convertible	11.196
+50FC-M12A2A5-0A0A0 	Paquete comercial SF 10 ton, 220/3/60 Al-Cu, convertible	14.544
+50FC-M12A2A6-0A0A0 	Paquete comercial SF 10 ton, 440/3/60 Al-Cu, convertible	14.678
+50FC-M14A2A5-0A0A0	Paquete comercial SF 12.5 ton, 220/3/60 Al-Cu, convertible	16.292
+50FC-M14A2A6-0A0A0 	Paquete comercial SF 12.5 ton, 440/3/60 Al-Cu, convertible	16.452
+50FC-M16A2A5-0A0A0 	Paquete comercial SF 15 ton, 220/3/60 Al-Cu, convertible 	18.872
+50FC-M16A2A6-0A0A0	Paquete comercial SF 15 ton, 440/3/60 Al-Cu, convertible	19.128
+50FC-M24A2A5-0A0A0 	Paquete comercial SF 20 ton, 220/3/60 Al-Cu, downflow 	          25.520
+50FC-M24A2A6-0A0A0 	Paquete comercial SF 20 ton, 440/3/60 Al-Cu, downflow 	            25.874
+50FC-M24AJA5-0A0A0 	Paquete comercial SF 20 ton, 220/3/60 Al-Cu, horizontal high static 	25.520
+50FC-M24AJA6-0A0A0 	Paquete comercial SF 20 ton, 440/3/60 Al-Cu, horizontal high static	25.874
+50FC-M28A2A5-0A0A0	Paquete comercial SF 25 ton, 220/3/60 Al-Cu, downflow	                27.854
+50FC-M28A2A6-0A0A0 	Paquete comercial SF 25 ton, 440/3/60 Al-Cu, downflow 	                 28.246
+50FC-M28AJA5-0A0A0 	Paquete comercial SF 25 ton, 220/3/60 Al-Cu, horizontal high static	28.246
+50FC-M28AJA6-0A0A0 	Paquete comercial SF 25 ton, 440/3/60 Al-Cu, horizontal high static 	28.246
+50FC-M30A2A5-0A0A0 	Paquete comercial SF 27.5 ton, 220/3/60 Al-Cu, downflow 	        33.323
+50FC-M30A2A6-0A0A0 	Paquete comercial SF 27.5 ton, 440/3/60 Al-Cu, downflow	                 33.791
+50FC-M30AJA5-0A0A0 	Paquete comercial SF 27.5 ton, 220/3/60 Al-Cu, horizontal high static 	33.691
+50FC-M30AJA6-0A0A0 	Paquete comercial SF 27.5 ton, 440/3/60 Al-Cu, horizontal high static 	34.124
+		 
+50FCQA04A2A3-0A0A0 	Paquete comercial HP 3 ton, 220/1/60 Al-Cu, convertible	        4.211
+50FCQA04A2A5-0A0A0 	Paquete comercial HP 3 ton, 220/3/60 Al-Cu, convertible 	4.341
+50FCQA04A2A6-0A0A0	 Paquete comercial HP 3 ton, 440/3/60 Al-Cu, convertible	4.276
+50FCQA05A2A3-0A0A0 	Paquete comercial HP 4 ton, 220/1/60 Al-Cu, convertible 	4.921
+50FCQA05A2A5-0A0A0 	Paquete comercial HP 4 ton, 220/3/60 Al-Cu, convertible	        4.921
+50FCQA05A2A6-0A0A0 	Paquete comercial HP 4 ton, 440/3/60 Al-Cu, convertible 	5.072
+50FCQA06A2A3-0A0A0 	Paquete comercial HP 5 ton, 220/1/60 Al-Cu, convertible 	5.430
+50FCQA06A2A5-0A0A0	 Paquete comercial HP 5 ton, 220/3/60 Al-Cu, convertible 	5.430
+50FCQA06A2A6-0A0A0 	Paquete comercial HP 5 ton, 440/3/60 Al-Cu, convertible 	5.545
+50FCQM07A2A5-0A0A0 	Paquete comercial HP 6 ton, 220/3/60 Al-Cu, convertible 	8.917
+50FCQM07A2A6-0A0A0 	Paquete comercial HP 6 ton, 440/3/60 Al-Cu, convertible 	8.919
+50FCQM08A2A5-0A0A0 	Paquete comercial HP 7.5 ton convertible 220/3/60 		11.403
+50FCQM08A2A6-0A0A0 	Paquete comercial HP 7.5 ton convertible 460/3/60 	11.404
+50FCQM12A2A5-0A0A0 	Paquete comercial HP 10 ton convertible 220/3/60	13.113
+50FCQM12A2A6-0A0A0	 Paquete comercial HP 10 ton convertible 460/3/60	13.116
+50FCQM14A2A5-0A0A0 	Paquete comercial HP 12.5 ton, 220/3/60 Al-Cu, convertible	16.168
+50FCQM14A2A6-0A0A0 	50FCQM14A2A6-0A0A0 Paquete comercial HP 12.5 ton, 440/3/60 Al-Cu, convertible	16.168
+		
+48FCDM07A1A5-0A0A0 	Paquete comercial SF 6 ton, 220/3/60 Al-Cu, convertible 	8.392
+48FCDM07A1A6-0A0A0 	Paquete comercial SF 6 ton, 440/3/60 Al-Cu, convertible 	8.597
+48FCDM08A2A5-0A0A0 	Paquete comercial SF 7.5 ton, 220/3/60 Al-Cu, convertible 	12.041
+48FCDM08A2A6-0A0A0 	Paquete comercial SF 7.5 ton, 440/3/60 Al-Cu, convertible	12.318
+48FCDM12A2A5-0A0A0	 Paquete comercial SF 10 ton, 220/3/60 Al-Cu, convertible	15.534
+48FCDM12A2A6-0A0A0 	Paquete comercial SF 10 ton, 440/3/60 Al-Cu, convertible	15.671
+48FCDM14A2A5-0A0A0	Paquete comercial SF 12.5 ton, 220/3/60 Al-Cu, convertible	18.053
+48FCDM14A2A6-0A0A0 	Paquete comercial SF 12.5 ton, 440/3/60 Al-Cu, convertible 	18.214
+48FCDM16A2A5-0A0A0 	Paquete comercial SF 15 ton, 220/3/60 Al-Cu, convertible 	20.428
+48FCDM16A2A6-0A0A0	 Paquete comercial SF 15 ton, 440/3/60 Al-Cu, convertible 	20.706
+48FCDM24A2A5-0A0A0 	Paquete comercial SF 20 ton, 220/3/60 Al-Cu, downflow	26.511
+48FCDM24A2A5-0A0A0	Paquete comercial SF 20 ton, 440/3/60 Al-Cu, downflow	26.876
+48FCDM28A2A5-0A0A0	 Paquete comercial SF 25 ton, 220/3/60 Al-Cu, downflow 	27.939
+48FCDM28A2A5-0A0A0	 Paquete comercial SF 25 ton, 440/3/60 Al-Cu, downflow 	28.327
+48FCDM28AJA5-0A0A0 	Paquete comercial SF 25 ton, 220/3/60 Al-Cu, horizontal high static 	28.245
+48FCDM28AJA6-0A0A0 	Paquete comercial SF 25 ton, 440/3/60 Al-Cu, horizontal high static	28.604
+48FCDM30A2A5-0A0A0 	Paquete comercial SF 27.5 ton, 220/3/60 Al-Cu, downflow	33.408
+48FCDM30A2A6-0A0A0 	Paquete comercial SF 27.5 ton, 440/3/60 Al-Cu, downflow	33.875
+48FCDM30AJA5-0A0A0	Paquete comercial SF 27.5 ton, 220/3/60 Al-Cu, horizontal high static 	33.714
+48FCDM30AJA6-0A0A0	Paquete comercial SF 27.5 ton, 440/3/60 Al-Cu, horizontal high static	34.152
+		
+42CT004405AR60A	Fan & Coil para agua helada de 400 CFM, solo frio 4 hileras voltaje 115/1/60	273
+42CT006405AR60B 	Fan & Coil para agua helada de 600 CFM, solo frio 4 hileras voltaje 115/1/60 	292
+42CT008405AR60A 	Fan & Coil para agua helada de 800 CFM, solo frio 4 hileras voltaje 115/1/60 	428
+42CT010405AR60A 	Fan & Coil para agua helada de 1000 CFM, solo frio 4 hileras voltaje 115/1/60 	440
+42CT012405AR60A 	Fan & Coil para agua helada de 1200 CFM, solo frio 4 hileras voltaje 115/1/60 	470
+42BBA044A510KDCM	Fan & Coil para agua helada de 1600 CFM, solo frio 4 hileras voltaje 220/1/60	903,1
+42BBA055A510KDCM 	Fan & Coil para agua helada de 2000 CFM, solo frio 4 hileras voltaje 220/1/60	959
+		
+40RUSA08A2A6-0A0A0	Manejadora multiposicion agua helada de 7.5 ton solo frio voltaje 230-460/3/60 	3.182
+40RUSA12A2A6-0A0A0 	Manejadora multiposicion agua helada de 10 ton solo frio voltaje 230-460/3/60 	3.364
+40RUSA14A2A6-0A0A0	Manejadora multiposicion agua helada de 12.5 ton solo frio voltaje 230-460/3/60	4.521
+40RUSA16A2A6-0A0A0	Manejadora multiposicion agua helada de 15 ton solo frio voltaje 230-460/3/60 	4.806
+40RUSA25A5A6-0A0A0 	Manejadora multiposicion agua helada de 20 ton solo frio voltaje 460/3/60	5.381
+40RUSA28A4A6-0A0A0 	Manejadora multiposicion agua helada de 25 ton solo frio voltaje 460/3/60 	8.010
+40RUSA30A5A6-0A0A0 	Manejadora multiposicion agua helada de 30 ton solo frio voltaje 460/3/60 	748
+		
+38ACCO183-CO	Condensadora vertical On-Off sf marca A/C Cooling de 1.5 ton voltaje 220/1/60 	671
+38ACCO243-CO 	Condensadora vertical On-Off sf marca A/C Cooling de 2 ton voltaje 220/1/60 	754
+38ACCO363-CO 	Condensadora vertical On-Off sf marca A/C Cooling de 3 ton voltaje 220/1/60	916
+38ACCO483-CO 	Condensadora vertical On-Off sf marca A/C Cooling de 4 ton voltaje 220/1/60 	1.253
+38ACCO603-CO 	Condensadora vertical On-Off sf marca A/C Cooling de 5 ton voltaje 220/1/60	1.375
+38ACHP363-CO 	Condensadora vertical On-Off hp marca A/C Cooling de 3 ton voltaje 220/1/60 	997
+		
+40ACCO363-PT 	Evaporador Piso Techo On-Off sf marca A/C Cooling de 3 ton voltaje 220/1/60 	303
+40ACHP363-PT 	Evaporador Piso Techo On-Off hp marca A/C Cooling de 3 ton voltaje 220/1/60 	331
+40ACCO603-PT 	Evaporador Piso Techo On-Off sf marca A/C Cooling de 5 ton voltaje 220/1/60 	347
+40ACHP603-PT	Evaporador Piso Techo On-Off hp marca A/C Cooling de 5 ton voltaje 220/1/60	391
+		
+50PAC363HOT1 	Paquete horizontal on-off solo frio marca A/C Cooling de 3 ton voltaje 220/1/60 	1.323
+50PAC603HOT1 	Paquete horizontal on-off solo frio marca A/C Cooling de 5 ton voltaje 220/1/60 	1.692
+		
+ACADX08CY 	Manejadora Comercial SF marca A/C Cooling de 7.5 ton voltaje 220/3/60 	2.461
+ACADX08EY 	Manejadora Comercial SF marca A/C Cooling de 7.5 ton voltaje 460/3/60	2.461
+ACADX10CY	Manejadora Comercial SF marca A/C Cooling de 10 ton voltaje 220/3/60	2.461
+ACADX10EY	Manejadora Comercial SF marca A/C Cooling de 10 ton voltaje 460/3/60 	2.461
+ACADX15CY 	Manejadora Comercial SF marca A/C Cooling de 15 ton voltaje 220/3/60 	3.810
+ACADX15EY	Manejadora Comercial SF marca A/C Cooling de 15 ton voltaje 460/3/60	3.810
+ACADX20CY 	Manejadora Comercial SF marca A/C Cooling de 20 ton voltaje 220/3/60	4.951
+ACADX20EY 	Manejadora Comercial SF marca A/C Cooling de 20 ton voltaje 460/3/60 	4.951
+ACADX25CY	 Manejadora Comercial SF marca A/C Cooling de 25 ton voltaje 220/3/60 	6.274
+ACADX25EY 	Manejadora Comercial SF marca A/C Cooling de 25 ton voltaje 460/3/60 	6.274
+		
+ACCC08COCY	Condensadora Comercial SF marca A/C Cooling de 7.5 ton voltaje 220/3/60	3.913
+ACCC08COEY 	Condensadora Comercial SF marca A/C Cooling de 7.5 ton voltaje 460/3/60 	3.913
+ACCC10COCY	Condensadora Comercial SF marca A/C Cooling de 10 ton voltaje 220/3/60 	4.296
+ACCC10COEY 	Condensadora Comercial SF marca A/C Cooling de 10 ton voltaje 460/3/60	4.296
+ACCC15COCY 	Condensadora Comercial SF marca A/C Cooling de 15 ton voltaje 220/3/60 	7.266
+ACCC15COEY 	Condensadora Comercial SF marca A/C Cooling de 15 ton voltaje 460/3/60 	7.266
+ACCC20COCY 	Condensadora Comercial SF marca A/C Cooling de 20 ton voltaje 220/3/60	8.346
+ACCC20COEY 	Condensadora Comercial SF marca A/C Cooling de 20 ton voltaje 460/3/60 	8.346
+ACCC25COCY	Condensadora Comercial SF marca A/C Cooling de 25 ton voltaje 220/3/60	10.527
+ACCC25COEY 	Condensadora Comercial SF marca A/C Cooling de 25 ton voltaje 460/3/60 	10.527
+
+MODELO                 DESCRIPCION                                                                                  CANTIDAD   PRECIO
+                                     
+MSHWIS612KC-1   MINISPLIT INVERTER WIFI DE 1 TONELADA, FRIO CALOR, R-410A, VOLTAJE 115V-1F60HZ, MARCA INTENSITY."	1	 $ 316,50 
+MSHWIS612KC-3   MINISPLIT INVERTER WIFI DE 1 TONELADA, FRIO CALOR, R-410A, VOLTAJE 220V-1F60HZ, MARCA INTENSITY"	1	 $ 310,07 
+MSHWIS924KC-3   Minisplit Inverter de 2 Toneladas, Heat Pump, R-32, Voltaje 220V-1F-60Hz, Marca Intensity."	      1	        $ 659,49 
+MSHWIS936KC-3   Minisplit Inverter de 3 Toneladas, HeatBPump, R-32, Voltaje 220V-1F-60Hz, Marca Intensity"	      1	       $ 1.052,62 
+IDUSPTIC24KC-3  SISTEMA DIVIDIDO UNIVERSAL INVERTER CON PISO TECHO DE 2 TONELADAS, FRIO CALOR, R-410A, VOLTAJE 220V-1F-60HZ, MARCA INTENSITY."	1	 $1.289,27 
+IDUSPTIC36KC-3  SISTEMA DIVIDIDO UNIVERSAL INVERTER CON PISO TECHO DE 3 TONELADAS, FRIO CALOR, R-410A, VOLTAJE 220V-1F-60HZ, MARCA INTENSITY."	1	 $1.515,98 
+IDUSPTIC60KC-3  SISTEMA DIVIDIDO UNIVERSAL INVERTER CON PISO TECHO DE 5 TONELADAS, FRIO CALOR, R-410A, VOLTAJE 220V-1F-60HZ, MARCA INTENSITY."	1	 $1.845,35 
+IPRHI3616KC-3  	UNIDAD TIPO PAQUETE RESIDENCIAL INVERTER 18SEER, 3 TONELADAS, FRIO CALOR, R-410A, DESCARGA HORIZONTAL, VOLTAJE 220V-1F-60HZ, MARCA INTENSITY." 1	 $ 1.798,14 

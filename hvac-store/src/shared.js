@@ -57,7 +57,11 @@ function updateFavoritesUI() {
   if (badge) badge.textContent = favorites.length;
 }
 
-export function formatPrice(n) { return 'US$ ' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+export function formatPrice(n) {
+  const num = Number(n);
+  if (n === null || n === undefined || !isFinite(num)) return '';
+  return 'US$ ' + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
 
 export function productCard(p) {
   const specs = [p.tons, p.seer, p.btus].filter(Boolean);
@@ -266,7 +270,20 @@ export function closeCheckoutSummary() {
 }
 
 export function openProductModal(id) {
-  const p = products.find(x => x.id === id);
+  let p = products.find(x => x.id === id);
+  // Fallback: match by model (case-insensitive) and prefer entries with price/img/brand
+  if (!p) {
+    const idLower = String(id).toLowerCase();
+    const matches = products.filter(x => x.model && String(x.model).toLowerCase() === idLower);
+    if (matches.length) p = matches.find(m => (m.price || m.img || m.brand)) || matches[0];
+  }
+  // If we found by id but it's missing details, try to find a sibling record with the same model that has data
+  if (p && p.model) {
+    if (!p.price || !p.img || !p.brand) {
+      const alt = products.find(x => x.model && String(x.model).toLowerCase() === String(p.model).toLowerCase() && (x.price || x.img || x.brand));
+      if (alt) p = alt;
+    }
+  }
   if (!p) return;
   recordRecentlyViewed(id);
   const cat = categories.find(c => c.id === p.category);
@@ -284,6 +301,7 @@ export function openProductModal(id) {
           <span class="price-current">${formatPrice(p.price)}</span>
         </div>
         <ul class="modal-specs-list">
+          ${p.model ? `<li><span>Modelo</span><span>${p.model}</span></li>` : ''}
           ${p.voltage ? `<li><span>Voltaje</span><span>${p.voltage}</span></li>` : ''}
           ${p.function ? `<li><span>Función</span><span>${p.function}</span></li>` : ''}
           <li><span>Categoría</span><span>${cat ? cat.name : ''}</span></li>
