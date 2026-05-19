@@ -92,7 +92,6 @@ function renderHeader() {
             </div>
           </div>
           <ul class="user-dropdown-list">
-            <li><a href="#/orders" role="menuitem"><i class="fas fa-box"></i> Mis pedidos</a></li>
             <li><a href="#/account" role="menuitem"><i class="fas fa-sliders"></i> Mi cuenta</a></li>
             <li><a href="#/favorites" role="menuitem"><i class="fas fa-heart"></i> Favoritos</a></li>
           </ul>
@@ -277,6 +276,93 @@ function renderBrandsSection() {
 
 /* ── PAGE RENDERERS ── */
 
+function renderFavoritesPage() {
+  const favoriteProducts = getProductsByIds(favorites);
+  const user = getAuthUser();
+  const name = user ? (user.firstName || user.name || 'Usuario') : null;
+  return `
+    <div class="breadcrumb"><a href="#/">Inicio</a><span>›</span><span>Favoritos</span></div>
+    <div class="cat-hero"><div class="container">
+      <div><h1>Favoritos</h1><p>${name ? `Lista de deseos de ${name}` : 'Productos que guardaste para revisar después.'}</p></div>
+      <i class="fas fa-heart cat-hero-icon"></i>
+    </div></div>
+    <section class="section"><div class="container">
+      ${favoriteProducts.length
+        ? `<div class="products-grid">${favoriteProducts.map(p => {
+            const { productCard } = window.__hvac || {};
+            // re-import via global — handled by bindProductCards
+            return `<div class="product-card" data-id="${p.id}">
+              <div class="product-img"><img src="${p.image || ''}" alt="${p.name}" loading="lazy" /></div>
+              <div class="product-info">
+                <div class="product-brand">${p.brand}</div>
+                <div class="product-name">${p.description || p.name}</div>
+                <div class="product-pricing"><span class="price-current">$${Number(p.price).toLocaleString('es-MX', {minimumFractionDigits:2})}</span></div>
+                <div class="product-actions">
+                  <button class="btn-cart" data-id="${p.id}"><i class="fas fa-cart-plus"></i> Agregar</button>
+                  <button class="btn-wish active" data-id="${p.id}" title="Quitar de favoritos"><i class="fas fa-heart"></i></button>
+                </div>
+              </div>
+            </div>`;
+          }).join('')}</div>`
+        : `<div class="home-empty-state">
+            <i class="fas fa-heart"></i>
+            <h3>Aún no tienes favoritos</h3>
+            <p>Toca el corazón en cualquier producto para guardarlo aquí y compararlo después.</p>
+            <a href="#/brands" style="display:inline-block;margin-top:14px;padding:10px 22px;border-radius:8px;background:var(--blue-primary);color:var(--white);font-weight:600;">Explorar catálogo</a>
+          </div>`}
+    </div></section>`;
+}
+
+function renderAccountPage() {
+  const user = getAuthUser();
+  if (!user) {
+    // Not logged in — redirect to login
+    window.location.hash = '#/login';
+    return '';
+  }
+  const name = user.firstName ? `${user.firstName} ${user.lastName || ''}`.trim() : (user.name || 'Usuario');
+  return `
+    <div class="breadcrumb"><a href="#/">Inicio</a><span>›</span><span>Mi cuenta</span></div>
+    <section class="auth-page">
+      <div class="container auth-register-shell">
+        <div class="auth-panel auth-register-card">
+          <div style="display:flex;align-items:center;gap:18px;margin-bottom:28px">
+            <span style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--blue-primary),var(--blue-dark));display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.8rem;flex-shrink:0">
+              <i class="fas fa-user"></i>
+            </span>
+            <div>
+              <h1 style="font-size:1.6rem;margin-bottom:4px">${name}</h1>
+              <p style="color:var(--gray-600);font-size:.9rem">${user.email || ''}</p>
+            </div>
+          </div>
+
+          <div class="auth-section">
+            <h2>Información de la cuenta</h2>
+            <div style="display:grid;gap:14px">
+              <div class="auth-field">
+                <label>Nombre completo</label>
+                <input type="text" value="${name}" disabled style="background:var(--gray-100);cursor:not-allowed;margin-top:6px" />
+              </div>
+              <div class="auth-field">
+                <label>Correo electrónico</label>
+                <input type="email" value="${user.email || ''}" disabled style="background:var(--gray-100);cursor:not-allowed;margin-top:6px" />
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+            <a href="#/favorites" style="display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:10px;background:var(--blue-light);color:var(--blue-primary);font-weight:600;font-size:.9rem">
+              <i class="fas fa-heart"></i> Ver favoritos
+            </a>
+            <button id="accountLogoutBtn" style="display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:10px;border:1px solid #fca5a5;color:#ef4444;background:transparent;font-weight:600;font-size:.9rem;cursor:pointer;font-family:inherit">
+              <i class="fas fa-right-from-bracket"></i> Cerrar sesión
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>`;
+}
+
 function renderHomePage() {
   return renderHero() + renderCategoriesGrid() + renderFavoritesSection() + renderRecentlyViewedSection() + renderAllProducts() + renderBrandsSection();
 }
@@ -314,6 +400,20 @@ function navigate() {
   } else if (route.page === 'register') {
     content.innerHTML = renderRegisterPage();
     bindAuthEvents();
+  } else if (route.page === 'account') {
+    content.innerHTML = renderAccountPage();
+    const accLogout = document.getElementById('accountLogoutBtn');
+    if (accLogout) {
+      accLogout.addEventListener('click', () => {
+        localStorage.removeItem('auth_token');
+        localStorage.removeItem('auth_user');
+        window.location.hash = '#/';
+        location.reload();
+      });
+    }
+  } else if (route.page === 'favorites') {
+    content.innerHTML = renderFavoritesPage();
+    bindProductCards();
   } else {
     content.innerHTML = renderHomePage();
     bindHomeEvents();

@@ -103,6 +103,8 @@ export function getRoute() {
   const type = new URLSearchParams(queryPart).get('type') || '';
   if (parts[0] === 'login') return { page: 'login' };
   if (parts[0] === 'register') return { page: 'register' };
+  if (parts[0] === 'account') return { page: 'account' };
+  if (parts[0] === 'favorites') return { page: 'favorites' };
   if (parts[0] === 'brands') return { page: 'brands' };
   if (parts[0] === 'category' && parts[3]) return { page: 'subcategory', id: parts[1], sub: decodeURIComponent(parts[2]), brand: decodeURIComponent(parts[3]), type };
   if (parts[0] === 'category' && parts[2]) return { page: 'subcategory', id: parts[1], sub: decodeURIComponent(parts[2]), type };
