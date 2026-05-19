@@ -13,9 +13,27 @@ const port = process.env.PORT || 3000;
 const jwtExpiresIn = process.env.JWT_EXPIRES_IN || '7d';
 const corsOrigin = process.env.CORS_ORIGIN || '*';
 
+// Normalize allowed origins (support comma-separated list) and remove trailing slashes
+const allowedOrigins = String(corsOrigin)
+  .split(',')
+  .map(s => s.trim())
+  .filter(Boolean)
+  .map(s => s.replace(/\/+$/, ''));
+
 app.use(helmet());
 app.use(express.json());
-app.use(cors({ origin: corsOrigin, credentials: true }));
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Allow non-browser requests (curl, server-to-server)
+      if (!origin) return callback(null, true);
+      const originNormalized = origin.replace(/\/+$/, '');
+      if (allowedOrigins.includes('*') || allowedOrigins.includes(originNormalized)) return callback(null, true);
+      return callback(new Error('Not allowed by CORS'));
+    },
+    credentials: true,
+  })
+);
 
 app.get('/health', (_req, res) => {
   res.json({ ok: true, service: 'hvacdirecto-backend' });
