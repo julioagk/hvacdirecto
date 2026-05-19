@@ -1,7 +1,7 @@
 import './style.css';
 import { categories, brands, products } from './data.js';
 import { productCard, formatPrice, renderCartSidebar, toggleCart, bindCartEvents, bindProductCards, addToCart, favorites, getRecentlyViewedIds, restoreCart, updateCartUI, closeCheckoutSummary } from './shared.js';
-import { getRoute, renderCategoryPage, renderSubcategoryPage, renderBrandPage, renderSearchPage, renderBrandsList, renderLoginPage, renderRegisterPage, bindCategoryPageEvents } from './router.js';
+import { getRoute, renderCategoryPage, renderSubcategoryPage, renderBrandPage, renderSearchPage, renderBrandsList, renderLoginPage, renderRegisterPage, bindCategoryPageEvents, bindAuthEvents } from './router.js';
 
 function slugify(str) { return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); }
 
@@ -274,8 +274,10 @@ function navigate() {
     bindCategoryPageEvents();
   } else if (route.page === 'login') {
     content.innerHTML = renderLoginPage();
+    bindAuthEvents();
   } else if (route.page === 'register') {
     content.innerHTML = renderRegisterPage();
+    bindAuthEvents();
   } else {
     content.innerHTML = renderHomePage();
     bindHomeEvents();

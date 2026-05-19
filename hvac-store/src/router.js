@@ -1,6 +1,8 @@
 import { categories, brands, products } from './data.js';
 import { productCard, formatPrice, bindProductCards, openProductModal, addToCart } from './shared.js';
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+
 function slugify(str) { return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); }
 
 function getSubsubcategoryForProduct(p) {
@@ -493,4 +495,112 @@ export function bindCategoryPageEvents() {
 
   // Apply once on load so persisted searches are restored after refresh.
   if (searchInput?.value) applyFilters();
+}
+
+export function bindAuthEvents() {
+  // Login form
+  const loginForm = document.querySelector('.auth-login-form');
+  if (loginForm) {
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = (document.getElementById('loginEmail') || {}).value || '';
+      const password = (document.getElementById('loginPassword') || {}).value || '';
+      if (!email || !password) return window.alert('Completa correo y contraseña.');
+      try {
+        const res = await fetch(`${API_BASE}/auth/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email.trim(), password }),
+        });
+        const data = await res.json();
+        if (!res.ok) return window.alert(data?.message || 'Error al iniciar sesión.');
+        localStorage.setItem('auth_token', data.token);
+        localStorage.setItem('auth_user', JSON.stringify(data.user));
+        window.alert('Inicio de sesión correcto.');
+        window.location.hash = '#/';
+      } catch (err) {
+        console.error(err);
+        window.alert('Error de red al iniciar sesión.');
+      }
+    });
+  }
+
+  // Show/hide password toggle for login
+  const showLoginPwd = document.getElementById('showLoginPassword');
+  if (showLoginPwd) {
+    showLoginPwd.addEventListener('change', (e) => {
+      const pwd = document.getElementById('loginPassword');
+      if (pwd) pwd.type = e.currentTarget.checked ? 'text' : 'password';
+    });
+  }
+
+  // Register form
+  const registerForm = document.querySelector('.auth-register-form');
+  if (registerForm) {
+    registerForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const firstName = (document.getElementById('registerFirstName') || {}).value || '';
+      const lastName = (document.getElementById('registerLastName') || {}).value || '';
+      const email = (document.getElementById('registerEmail') || {}).value || '';
+      const password = (document.getElementById('registerPassword') || {}).value || '';
+      const confirm = (document.getElementById('registerConfirmPassword') || {}).value || '';
+      if (!firstName || !lastName || !email || !password) return window.alert('Completa todos los campos obligatorios.');
+      if (password !== confirm) return window.alert('Las contraseñas no coinciden.');
+      try {
+        const res = await fetch(`${API_BASE}/auth/register`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ firstName, lastName, email: email.trim(), password }),
+        });
+        const data = await res.json();
+        if (!res.ok) return window.alert(data?.message || 'Error al registrar.');
+        localStorage.setItem('auth_token', data.token);
+        localStorage.setItem('auth_user', JSON.stringify(data.user));
+        window.alert('Registro correcto.');
+        window.location.hash = '#/';
+      } catch (err) {
+        console.error(err);
+        window.alert('Error de red al registrar.');
+      }
+    });
+  }
+
+  // Show/hide password toggle for register (affects both password fields)
+  const showRegisterPwd = document.getElementById('showRegisterPassword');
+  if (showRegisterPwd) {
+    showRegisterPwd.addEventListener('change', (e) => {
+      const p1 = document.getElementById('registerPassword');
+      const p2 = document.getElementById('registerConfirmPassword');
+      if (p1) p1.type = e.currentTarget.checked ? 'text' : 'password';
+      if (p2) p2.type = e.currentTarget.checked ? 'text' : 'password';
+    });
+  }
+
+  // Forgot password handler: try API endpoint, otherwise fallback to mailto to support
+  const forgotLink = document.querySelector('.auth-login-forgot');
+  if (forgotLink) {
+    forgotLink.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const defaultEmail = (document.getElementById('loginEmail') || {}).value || '';
+      const email = window.prompt('Introduce tu correo para recuperar contraseña:', defaultEmail) || '';
+      if (!email) return;
+      const trimmed = email.trim();
+      // Try calling backend forgot endpoint if available
+      try {
+        const resp = await fetch(`${API_BASE}/auth/forgot`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: trimmed })
+        });
+        if (resp.ok) {
+          window.alert('Si el correo existe, recibirás instrucciones para recuperar la contraseña.');
+          return;
+        }
+      } catch (err) {
+        // ignore and fallback
+      }
+      // Fallback: open mail client addressed to support
+      const subject = encodeURIComponent('Recuperar contraseña');
+      const body = encodeURIComponent(`Necesito ayuda para recuperar mi contraseña. Mi correo: ${trimmed}`);
+      window.location.href = `mailto:ventas@hvacdirecto.mx?subject=${subject}&body=${body}`;
+    });
+  }
 }
