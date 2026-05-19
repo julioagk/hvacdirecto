@@ -477,6 +477,18 @@ function bindUserDropdown() {
 
 /* ── INIT ── */
 
+function refreshHeader() {
+  const oldHeader = document.querySelector('.header');
+  if (!oldHeader) return;
+  const temp = document.createElement('div');
+  temp.innerHTML = renderHeader();
+  oldHeader.replaceWith(temp.firstElementChild);
+  bindGlobalSearch('searchInput', 'searchSuggestions', 'searchBtn');
+  bindUserDropdown();
+}
+
+window.addEventListener('hvac:auth:changed', refreshHeader);
+
 function initApp() {
   restoreCart();
   document.querySelector('#app').innerHTML = `

@@ -575,7 +575,10 @@ export function bindAuthEvents() {
           type: 'success',
           title: '¡Bienvenido de nuevo!',
           message: `Hola, <strong>${name}</strong>. Tu sesión se inició correctamente.`,
-          onClose: () => { window.location.hash = '#/'; },
+          onClose: () => {
+            window.dispatchEvent(new CustomEvent('hvac:auth:changed'));
+            window.location.hash = '#/';
+          },
         });
       } catch (err) {
         console.error(err);
@@ -629,7 +632,10 @@ export function bindAuthEvents() {
           type: 'success',
           title: '¡Cuenta creada!',
           message: `Tu cuenta fue registrada exitosamente. Ya puedes empezar a comprar, <strong>${firstName}</strong>.`,
-          onClose: () => { window.location.hash = '#/'; },
+          onClose: () => {
+            window.dispatchEvent(new CustomEvent('hvac:auth:changed'));
+            window.location.hash = '#/';
+          },
         });
       } catch (err) {
         console.error(err);
