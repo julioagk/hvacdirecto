@@ -6,9 +6,7 @@ import { getRoute, renderCategoryPage, renderSubcategoryPage, renderBrandPage, r
 function slugify(str) { return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); }
 
 function brandRouteForCategory(catId, brand) {
-  const category = categories.find(c => c.id === catId);
-  const subSlug = category?.subs?.[0] ? slugify(category.subs[0]) : '';
-  if (catId && subSlug) return `#/category/${catId}/${subSlug}/${encodeURIComponent(brand)}`;
+  if (catId && brand) return `#/category/${catId}?brand=${encodeURIComponent(brand)}`;
   if (catId) return `#/category/${catId}`;
   return `#/brand/${encodeURIComponent(brand)}`;
 }
@@ -382,7 +380,7 @@ function navigate() {
   _lastRoutePage = route.page;
 
   if (route.page === 'category') {
-    content.innerHTML = renderCategoryPage(route.id);
+    content.innerHTML = renderCategoryPage(route.id, route.brand || '');
     bindCategoryPageEvents();
   } else if (route.page === 'subcategory') {
     content.innerHTML = renderSubcategoryPage(route.id, route.sub, route.brand, route.type);

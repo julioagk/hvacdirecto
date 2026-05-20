@@ -20,9 +20,10 @@ function subTypeRouteForCategory(catId, subSlug, typeSlug = '', brand = '') {
 }
 
 function brandRouteForCategory(catId, brand, subSlug = '') {
-  const category = categories.find(c => c.id === catId);
-  const selectedSubSlug = subSlug || (category?.subs?.[0] ? slugify(category.subs[0]) : '');
-  if (catId && selectedSubSlug) return `#/category/${catId}/${selectedSubSlug}/${encodeURIComponent(brand)}`;
+  // If a specific sub is given, use the subcategory+brand URL
+  if (catId && subSlug) return `#/category/${catId}/${subSlug}/${encodeURIComponent(brand)}`;
+  // Otherwise go to the category page with brand as a query param (shows all subs)
+  if (catId && brand) return `#/category/${catId}?brand=${encodeURIComponent(brand)}`;
   if (catId) return `#/category/${catId}`;
   return `#/brand/${encodeURIComponent(brand)}`;
 }
@@ -122,7 +123,8 @@ function renderCatalogFilters(productsList, routeBrand = '') {
 
 function getVisibleProductsForRoute(route = getRoute()) {
   if (route.page === 'category') {
-    return products.filter(p => p.category === route.id);
+    const base = products.filter(p => p.category === route.id);
+    return route.brand ? base.filter(p => p.brand === route.brand) : base;
   }
   if (route.page === 'subcategory') {
     const cat = categories.find(c => c.id === route.id);
@@ -148,7 +150,9 @@ export function getRoute() {
   const hash = window.location.hash.slice(1) || '/';
   const [pathPart, queryPart = ''] = hash.split('?');
   const parts = pathPart.split('/').filter(Boolean);
-  const type = new URLSearchParams(queryPart).get('type') || '';
+  const params = new URLSearchParams(queryPart);
+  const type = params.get('type') || '';
+  const brandParam = params.get('brand') || '';
   if (parts[0] === 'login') return { page: 'login' };
   if (parts[0] === 'register') return { page: 'register' };
   if (parts[0] === 'account') return { page: 'account' };
@@ -156,27 +160,27 @@ export function getRoute() {
   if (parts[0] === 'brands') return { page: 'brands' };
   if (parts[0] === 'category' && parts[3]) return { page: 'subcategory', id: parts[1], sub: decodeURIComponent(parts[2]), brand: decodeURIComponent(parts[3]), type };
   if (parts[0] === 'category' && parts[2]) return { page: 'subcategory', id: parts[1], sub: decodeURIComponent(parts[2]), type };
-  if (parts[0] === 'category' && parts[1]) return { page: 'category', id: parts[1] };
+  if (parts[0] === 'category' && parts[1]) return { page: 'category', id: parts[1], brand: brandParam };
   if (parts[0] === 'brand' && parts[1]) return { page: 'brand', id: decodeURIComponent(parts[1]) };
   if (parts[0] === 'search' && parts[1]) return { page: 'search', query: decodeURIComponent(parts[1]) };
   return { page: 'home' };
 }
 
-export function renderCategoryPage(catId) {
+export function renderCategoryPage(catId, filterBrand = '') {
   const cat = categories.find(c => c.id === catId);
   if (!cat) return '<p>Categoría no encontrada</p>';
-  const categoryProducts = products.filter(p => p.category === catId);
-  const relatedBrands = [...new Set(categoryProducts.map(p => p.brand))];
-  const route = getRoute();
-  const currentBrand = route.brand || '';
+  const allCatProducts = products.filter(p => p.category === catId);
+  const categoryProducts = filterBrand ? allCatProducts.filter(p => p.brand === filterBrand) : allCatProducts;
+  const relatedBrands = [...new Set(allCatProducts.map(p => p.brand))];
+  const brandLabel = filterBrand ? ` — ${filterBrand}` : '';
 
   return `
     <div class="breadcrumb">
-      <a href="#/">Inicio</a><span>›</span><span>${cat.name}</span>
+      <a href="#/">Inicio</a><span>›</span><span>${cat.name}</span>${filterBrand ? `<span>›</span><span>${filterBrand}</span>` : ''}
     </div>
     <div class="cat-hero">
       <div class="container">
-        <div><h1>${cat.name}</h1><p>${cat.desc}</p></div>
+        <div><h1>${cat.name}${brandLabel}</h1><p>${cat.desc}</p></div>
         <i class="fas ${cat.icon} cat-hero-icon"></i>
       </div>
     </div>
@@ -184,13 +188,23 @@ export function renderCategoryPage(catId) {
       <aside class="cat-sidebar">
         <h3>Subcategorías</h3>
         <ul>
-          <li><a href="#/category/${catId}" class="active">Todos los ${cat.name} <span class="count">${categoryProducts.length}</span></a></li>
-          ${cat.subs.map(s => `<li><a href="#/category/${catId}/${slugify(s)}">${s}</a></li>`).join('')}
+          <li><a href="#/category/${catId}${filterBrand ? `?brand=${encodeURIComponent(filterBrand)}` : ''}" class="active">Todos${brandLabel} <span class="count">${categoryProducts.length}</span></a></li>
+          ${cat.subs.map(s => {
+            const sSlug = slugify(s);
+            const subCount = filterBrand
+              ? allCatProducts.filter(p => p.brand === filterBrand && slugify(p.subcategory) === sSlug).length
+              : allCatProducts.filter(p => slugify(p.subcategory) === sSlug).length;
+            const href = filterBrand
+              ? `#/category/${catId}/${sSlug}/${encodeURIComponent(filterBrand)}`
+              : `#/category/${catId}/${sSlug}`;
+            return `<li><a href="${href}">${s} <span class="count">${subCount}</span></a></li>`;
+          }).join('')}
         </ul>
         <div class="sidebar-section">
           <h4>Marcas en ${cat.name}</h4>
           <div class="sidebar-brands">
-            ${relatedBrands.map(b => `<a href="${brandRouteForCategory(catId, b)}" class="${b === currentBrand ? 'active' : ''}">${b}</a>`).join('')}
+            ${filterBrand ? `<a href="#/category/${catId}" >Todas las marcas</a>` : ''}
+            ${relatedBrands.map(b => `<a href="${brandRouteForCategory(catId, b)}" class="${b === filterBrand ? 'active' : ''}">${b}</a>`).join('')}
           </div>
         </div>
         <div class="sidebar-section">
@@ -216,7 +230,7 @@ export function renderCategoryPage(catId) {
             <option value="name">Nombre A-Z</option>
           </select></div>
         </div>
-        ${renderCatalogFilters(categoryProducts)}
+        ${renderCatalogFilters(categoryProducts, filterBrand)}
           <div class="products-grid" id="catProductsGrid">
           ${categoryProducts.length ? categoryProducts.map(productCard).join('') :
             '<div class="cat-no-products"><i class="fas fa-box-open"></i><p>No hay productos en esta categoría aún.</p></div>'}
