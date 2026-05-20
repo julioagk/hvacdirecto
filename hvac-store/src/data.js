@@ -4332,7 +4332,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 3916,
-    "brand": ""
+    "brand": "CARRIER"
   },
   {
     "id": "50NT-B60---5",
@@ -4347,7 +4347,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 4047,
-    "brand": ""
+    "brand": "CARRIER"
   },
   {
     "id": "50NT-B60---6",
@@ -4362,7 +4362,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 4047,
-    "brand": ""
+    "brand": "CARRIER"
   },
   {
     "id": "48NL-B3660605",
@@ -4377,7 +4377,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 3926,
-    "brand": ""
+    "brand": "CARRIER"
   },
   {
     "id": "48NL-B480905",
@@ -4392,7 +4392,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 4221,
-    "brand": ""
+    "brand": "CARRIER"
   },
   {
     "id": "48NL-B601155",
@@ -4407,7 +4407,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 4692,
-    "brand": ""
+    "brand": "CARRIER"
   },
   {
     "id": "50VSQ180363GA",
@@ -4422,7 +4422,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 1794,
-    "brand": ""
+    "brand": "CARRIER"
   },
   {
     "id": "50VSQ180603GA",
@@ -4437,7 +4437,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 2397,
-    "brand": ""
+    "brand": "CARRIER"
   },
   {
     "id": "ACADX08CY",
@@ -4763,7 +4763,7 @@ export const products = [
     "subcategory": "Heat Pump",
     "description": "",
     "price": 228.75,
-    "brand": "N/D"
+    "brand": "TLC"
   },
   {
     "id": "S36P-ECV23",
@@ -4789,7 +4789,7 @@ export const products = [
     "subcategory": "Heat Pump",
     "description": "",
     "price": 930,
-    "brand": "N/D"
+    "brand": "TLC"
   },
   {
     "id": "CONDENSADORA MINISPLIT INVERTER MARCA CARRIER HEAT PUMP REFRIGERANTE R32 CAPACIDAD 1 TR VOLTAJE 220V/1F/60HZ",
@@ -4798,11 +4798,11 @@ export const products = [
     "sku": "CONDENSADORA MINISPLIT INVERTER MARCA CARRIER HEAT PUMP REFRIGERANTE R32 CAPACIDAD 1 TR VOLTAJE 220V/1F/60HZ",
     "img": "",
     "image": "",
-    "category": "",
-    "subcategory": "",
+    "category": "mini-splits",
+    "subcategory": "Heat Pump",
     "description": "",
     "price": null,
-    "brand": ""
+    "brand": "CARRIER"
   },
   {
     "id": "EVAPORADOR MINISPLIT INVERTER  MARCA CARRIER HEAT PUMP REFRIGERANTE R32 CAPACIDAD 1 TR VOLTAJE 220V/1F/60HZ) VAN JUNTIS",
@@ -4811,11 +4811,11 @@ export const products = [
     "sku": "EVAPORADOR MINISPLIT INVERTER  MARCA CARRIER HEAT PUMP REFRIGERANTE R32 CAPACIDAD 1 TR VOLTAJE 220V/1F/60HZ) VAN JUNTIS",
     "img": "",
     "image": "",
-    "category": "",
-    "subcategory": "",
+    "category": "mini-splits",
+    "subcategory": "Heat Pump",
     "description": "",
     "price": null,
-    "brand": ""
+    "brand": "CARRIER"
   },
   {
     "id": "CONDENSADORA MINISPLIT INVERTER MARCA CARRIER HEAT PUMP REFRIGERANTE R32 CAPACIDAD 2 TR VOLTAJE 220V/1F/60HZ",
@@ -4824,11 +4824,11 @@ export const products = [
     "sku": "CONDENSADORA MINISPLIT INVERTER MARCA CARRIER HEAT PUMP REFRIGERANTE R32 CAPACIDAD 2 TR VOLTAJE 220V/1F/60HZ",
     "img": "",
     "image": "",
-    "category": "",
-    "subcategory": "",
+    "category": "mini-splits",
+    "subcategory": "Heat Pump",
     "description": "",
     "price": null,
-    "brand": ""
+    "brand": "CARRIER"
   },
   {
     "id": "EVAPORADOR MINISPLIT INVERTER MARCA CARRIER HEAT PUMP REFRIGERANTE R32 CAPACIDAD 2 TR VOLTAJE 220V/1F/60HZ) VAN JUNTOS",
@@ -4837,37 +4837,11 @@ export const products = [
     "sku": "EVAPORADOR MINISPLIT INVERTER MARCA CARRIER HEAT PUMP REFRIGERANTE R32 CAPACIDAD 2 TR VOLTAJE 220V/1F/60HZ) VAN JUNTOS",
     "img": "",
     "image": "",
-    "category": "",
-    "subcategory": "",
+    "category": "mini-splits",
+    "subcategory": "Heat Pump",
     "description": "",
     "price": null,
-    "brand": ""
-  },
-  {
-    "id": "Modelo",
-    "name": "Modelo",
-    "model": "Modelo",
-    "sku": "Modelo",
-    "img": "/images/1.png",
-    "image": "/images/1.png",
-    "category": "uncategorized",
-    "subcategory": "",
-    "description": "Entrada agregada desde productos.txt — sin modelo",
-    "price": null,
-    "brand": ""
-  },
-  {
-    "id": "MODELO_HEADER",
-    "name": "MODELO                 DESCRIPCION   CANTIDAD   PRECIO",
-    "model": "MODELO                 DESCRIPCION                                                                                  CANTIDAD   PRECIO",
-    "sku": "MODELO_HEADER",
-    "img": "/images/1.png",
-    "image": "/images/1.png",
-    "category": "header",
-    "subcategory": "",
-    "description": "Encabezado de tabla (no es producto)",
-    "price": null,
-    "brand": ""
+    "brand": "CARRIER"
   }
 ];;
 
