@@ -4750,7 +4750,7 @@ export const products = [
     "subcategory": "Frio",
     "description": "",
     "price": 222,
-    "brand": "N/D"
+    "brand": "TLC"
   },
   {
     "id": "S12P-EHV13",
@@ -4776,7 +4776,7 @@ export const products = [
     "subcategory": "Frio",
     "description": "",
     "price": 858,
-    "brand": "N/D"
+    "brand": "TLC"
   },
   {
     "id": "S36P-EHV23",
