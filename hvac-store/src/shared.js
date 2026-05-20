@@ -4,7 +4,7 @@ export let cart = [];
 export let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 const RECENTLY_VIEWED_KEY = 'recentlyViewed';
 const CART_STORAGE_KEY = 'cart';
-export const WHATSAPP_NUMBER = '+52 55 0000 0000'; // REEMPLAZA CON TU NÚMERO DE WHATSAPP REAL (Ej: +52 1 55 1234 5678 sin espacios ni signos +)
+export const WHATSAPP_NUMBER = '+528110238465';
 
 export function restoreCart() {
   try {
@@ -133,7 +133,7 @@ export function renderCartSidebar() {
     <div class="cart-items">${empty ? '<div class="cart-empty"><i class="fas fa-cart-arrow-down"></i><p>Tu carrito está vacío</p></div>' : items}</div>
     ${!empty ? `<div class="cart-footer">
       <div class="cart-total"><span>Total:</span><span>${formatPrice(total)}</span></div>
-      <button class="btn-checkout">Comprar por WhatsApp <i class="fab fa-whatsapp"></i></button>
+      <button class="btn-checkout" id="cartWhatsAppBtn"><i class="fab fa-whatsapp"></i> Comprar por WhatsApp</button>
     </div>` : ''}
   </aside>`;
 }
@@ -175,8 +175,8 @@ export function bindCartEvents() {
   document.querySelectorAll('[data-remove]').forEach(b => b.addEventListener('click', () => {
     cart = cart.filter(c => c.id !== +b.dataset.remove); updateCartUI();
   }));
-  const checkout = document.querySelector('.btn-checkout');
-  if (checkout) checkout.addEventListener('click', openCheckoutSummary);
+  const checkout = document.getElementById('cartWhatsAppBtn');
+  if (checkout) checkout.addEventListener('click', sendWhatsAppOrder);
   const close = document.getElementById('cartClose');
   if (close) close.addEventListener('click', toggleCart);
 }
@@ -202,11 +202,15 @@ function buildCheckoutMessage() {
     `¡Hola! Vengo de la tienda en línea y me gustaría cotizar/comprar los equipos detallados arriba. ¿Me podrían indicar disponibilidad y el proceso de compra?`
   ].join('\n\n');
 
-  // Display lines for the HTML modal summary (unformatted plain text)
+  // Structured lines for the premium HTML modal summary
   const displayLines = cart.map(ci => {
     const product = products.find(x => x.id === ci.id);
     const displayName = product.description || product.name;
-    return `${ci.qty}x ${displayName} - ${formatPrice(product.price * ci.qty)}`;
+    return {
+      qty: ci.qty,
+      name: displayName,
+      price: formatPrice(product.price * ci.qty)
+    };
   });
 
   return { lines: displayLines, total, text: textMessage };
@@ -220,21 +224,49 @@ function renderCheckoutSummary() {
     <button class="modal-close" id="checkoutClose"><i class="fas fa-times"></i></button>
     <div class="modal-body checkout-body">
       <div class="checkout-summary-panel">
-        <h2>Resumen de compra</h2>
-        <p>Revisa tu pedido antes de enviarlo.</p>
+        <h2><i class="fas fa-receipt"></i> Resumen de compra</h2>
+        <p>Por favor revisa los productos agregados antes de proceder.</p>
         <div class="checkout-lines">
-          ${lines.map(line => `<div class="checkout-line">${line}</div>`).join('')}
+          ${lines.map(item => `
+            <div class="checkout-line">
+              <div class="checkout-line-details">
+                <span class="checkout-line-qty">${item.qty}x</span>
+                <span class="checkout-line-name">${item.name}</span>
+              </div>
+              <span class="checkout-line-price">${item.price}</span>
+            </div>
+          `).join('')}
         </div>
       </div>
       <div class="checkout-actions-panel">
-        <div class="checkout-total">
-          <span>Total</span>
-          <strong>${formatPrice(total)}</strong>
+        <div class="checkout-total-box">
+          <div class="checkout-total-row">
+            <span>Método de compra</span>
+            <span style="font-weight:600;color:var(--gray-800)">WhatsApp Directo</span>
+          </div>
+          <div class="checkout-total-row">
+            <span>Envío</span>
+            <span style="color:var(--orange-primary);font-weight:600">A cotizar</span>
+          </div>
+          <div class="checkout-total-row grand-total">
+            <span>Total estimado</span>
+            <strong>${formatPrice(total)}</strong>
+          </div>
         </div>
-        <button class="btn-checkout" id="checkoutCopyBtn"><i class="fas fa-copy"></i> Copiar pedido</button>
-        <button class="btn-checkout btn-checkout-secondary" id="checkoutWhatsAppBtn" ${WHATSAPP_NUMBER ? '' : 'disabled'}>
-          <i class="fab fa-whatsapp"></i> ${WHATSAPP_NUMBER ? 'Abrir WhatsApp' : 'WhatsApp no configurado'}
+        
+        <button class="btn-checkout-whatsapp" id="checkoutWhatsAppBtn" ${WHATSAPP_NUMBER ? '' : 'disabled'}>
+          <i class="fab fa-whatsapp"></i> ${WHATSAPP_NUMBER ? 'Enviar por WhatsApp' : 'WhatsApp no configurado'}
         </button>
+        
+        <button class="btn-checkout-copy" id="checkoutCopyBtn">
+          <i class="fas fa-copy"></i> Copiar resumen
+        </button>
+        
+        <div class="checkout-disclaimer">
+          <i class="fab fa-whatsapp"></i>
+          <span>Se abrirá WhatsApp para chatear con un agente de ventas.</span>
+        </div>
+        
         <textarea id="checkoutMessage" readonly style="position:absolute;left:-9999px;top:-9999px;">${text}</textarea>
       </div>
     </div>
@@ -271,12 +303,21 @@ function bindCheckoutSummaryEvents() {
   }
 }
 
+export function sendWhatsAppOrder() {
+  if (!cart.length) {
+    window.alert('Tu carrito está vacío.');
+    return;
+  }
+  const { text } = buildCheckoutMessage();
+  const phone = WHATSAPP_NUMBER.replace(/\D/g, '');
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+}
+
 export function openCheckoutSummary() {
   if (!cart.length) {
     window.alert('Tu carrito está vacío.');
     return;
   }
-  closeCart(); // Cerrar automáticamente el carrito lateral para que no tape el modal
   const modal = document.getElementById('checkoutModal');
   if (!modal) return;
   modal.innerHTML = renderCheckoutSummary();
