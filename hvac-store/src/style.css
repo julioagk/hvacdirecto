@@ -977,6 +977,12 @@ body.cart-open .wa-float {
   color: var(--gray-600);
   text-decoration: none;
   transition: var(--transition);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  width: 100%;
 }
 .account-nav-link:hover { background: var(--blue-light); color: var(--blue-primary); }
 .account-nav-link.active { background: var(--blue-primary); color: var(--white); }

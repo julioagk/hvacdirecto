@@ -226,12 +226,6 @@ export function renderProductPage(id) {
               <span class="product-detail-tax">+ IVA • Precio de mayorista</span>
             </div>
 
-            <div class="product-detail-badges">
-              <span class="detail-badge"><i class="fas fa-shield-halved"></i> Garantía de fábrica</span>
-              <span class="detail-badge"><i class="fas fa-truck"></i> Envío a todo México</span>
-              <span class="detail-badge"><i class="fas fa-headset"></i> Soporte técnico</span>
-            </div>
-
             <div class="product-detail-actions">
               <button class="btn-cart btn-cart-detail" data-add="${p.id}">
                 <i class="fas fa-cart-plus"></i> Agregar al carrito

@@ -340,17 +340,17 @@ function renderAccountPage() {
               </div>
             </div>
             <nav class="account-nav">
-              <a href="#account-profile" class="account-nav-link active">
+              <button class="account-nav-link active" data-scroll-to="account-profile">
                 <i class="fas fa-sliders"></i> Perfil
-              </a>
-              <a href="#account-favorites" class="account-nav-link">
+              </button>
+              <button class="account-nav-link" data-scroll-to="account-favorites">
                 <i class="fas fa-heart"></i> Favoritos
                 <span class="account-nav-badge">${favProds.length}</span>
-              </a>
-              <a href="#account-recent" class="account-nav-link">
+              </button>
+              <button class="account-nav-link" data-scroll-to="account-recent">
                 <i class="fas fa-clock-rotate-left"></i> Vistos recientemente
                 <span class="account-nav-badge">${recentProds.length}</span>
-              </a>
+              </button>
             </nav>
             <button id="accountLogoutBtn" class="account-logout-btn">
               <i class="fas fa-right-from-bracket"></i> Cerrar sesión
@@ -444,6 +444,15 @@ function navigate() {
   } else if (route.page === 'account') {
     content.innerHTML = renderAccountPage();
     bindProductCards();
+    // Smooth scroll nav (buttons instead of hash links to avoid router redirect)
+    document.querySelectorAll('[data-scroll-to]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.scrollTo);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.querySelectorAll('[data-scroll-to]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
     const accLogout = document.getElementById('accountLogoutBtn');
     if (accLogout) {
       accLogout.addEventListener('click', () => {
