@@ -157,6 +157,7 @@ export function getRoute() {
   if (parts[0] === 'register') return { page: 'register' };
   if (parts[0] === 'account') return { page: 'account' };
   if (parts[0] === 'favorites') return { page: 'favorites' };
+  if (parts[0] === 'recent' || parts[0] === 'recently-viewed') return { page: 'recent' };
   if (parts[0] === 'brands') return { page: 'brands' };
   if (parts[0] === 'product' && parts[1]) return { page: 'product', id: decodeURIComponent(parts[1]) };
   if (parts[0] === 'category' && parts[3]) return { page: 'subcategory', id: parts[1], sub: decodeURIComponent(parts[2]), brand: decodeURIComponent(parts[3]), type };

@@ -77,13 +77,13 @@ function renderHeader() {
   const userArea = isLoggedIn
     ? `<div class="header-action user-menu-wrap" id="userMenuWrap">
         <button class="user-menu-trigger" id="userMenuTrigger" aria-expanded="false" aria-haspopup="true">
-          <span class="user-avatar"><i class="fas fa-user"></i></span>
+          <span class="user-avatar">${displayName.charAt(0).toUpperCase()}</span>
           <span class="user-menu-name">${displayName}</span>
           <i class="fas fa-chevron-down user-menu-arrow"></i>
         </button>
         <div class="user-dropdown" id="userDropdown" role="menu">
           <div class="user-dropdown-header">
-            <span class="user-dropdown-avatar"><i class="fas fa-user-circle"></i></span>
+            <span class="user-dropdown-avatar">${displayName.charAt(0).toUpperCase()}</span>
             <div>
               <strong>${displayName}</strong>
               <span>${user.email || ''}</span>
@@ -92,6 +92,7 @@ function renderHeader() {
           <ul class="user-dropdown-list">
             <li><a href="#/account" role="menuitem"><i class="fas fa-sliders"></i> Mi cuenta</a></li>
             <li><a href="#/favorites" role="menuitem"><i class="fas fa-heart"></i> Favoritos</a></li>
+            <li><a href="#/recent" role="menuitem"><i class="fas fa-clock-rotate-left"></i> Vistos recientemente</a></li>
           </ul>
           <div class="user-dropdown-footer">
             <button id="logoutBtn" class="user-logout-btn"><i class="fas fa-right-from-bracket"></i> Cerrar sesión</button>
@@ -274,44 +275,7 @@ function renderBrandsSection() {
 
 /* ── PAGE RENDERERS ── */
 
-function renderFavoritesPage() {
-  const favoriteProducts = getProductsByIds(favorites);
-  const user = getAuthUser();
-  const name = user ? (user.firstName || user.first_name || user.name || 'Usuario') : null;
-  return `
-    <div class="breadcrumb"><a href="#/">Inicio</a><span>›</span><span>Favoritos</span></div>
-    <div class="cat-hero"><div class="container">
-      <div><h1>Favoritos</h1><p>${name ? `Lista de deseos de ${name}` : 'Productos que guardaste para revisar después.'}</p></div>
-      <i class="fas fa-heart cat-hero-icon"></i>
-    </div></div>
-    <section class="section"><div class="container">
-      ${favoriteProducts.length
-        ? `<div class="products-grid">${favoriteProducts.map(p => {
-            const { productCard } = window.__hvac || {};
-            // re-import via global — handled by bindProductCards
-            return `<div class="product-card" data-id="${p.id}">
-              <div class="product-img"><img src="${p.image || ''}" alt="${p.name}" loading="lazy" /></div>
-              <div class="product-info">
-                <div class="product-brand">${p.brand}</div>
-                <div class="product-name">${p.description || p.name}</div>
-                <div class="product-pricing"><span class="price-current">$${Number(p.price).toLocaleString('es-MX', {minimumFractionDigits:2})}</span></div>
-                <div class="product-actions">
-                  <button class="btn-cart" data-id="${p.id}"><i class="fas fa-cart-plus"></i> Agregar</button>
-                  <button class="btn-wish active" data-id="${p.id}" title="Quitar de favoritos"><i class="fas fa-heart"></i></button>
-                </div>
-              </div>
-            </div>`;
-          }).join('')}</div>`
-        : `<div class="home-empty-state">
-            <i class="fas fa-heart"></i>
-            <h3>Aún no tienes favoritos</h3>
-            <p>Toca el corazón en cualquier producto para guardarlo aquí y compararlo después.</p>
-            <a href="#/brands" style="display:inline-block;margin-top:14px;padding:10px 22px;border-radius:8px;background:var(--blue-primary);color:var(--white);font-weight:600;">Explorar catálogo</a>
-          </div>`}
-    </div></section>`;
-}
-
-function renderAccountPage() {
+function renderAccountLayout(activeTab, contentHTML) {
   const user = getAuthUser();
   if (!user) {
     window.location.hash = '#/login';
@@ -320,37 +284,36 @@ function renderAccountPage() {
   const name = user.firstName ? `${user.firstName} ${user.lastName || ''}`.trim()
     : user.first_name ? `${user.first_name} ${user.last_name || ''}`.trim()
     : (user.name || 'Usuario');
-
+  
   const favProds = getProductsByIds(favorites);
   const recentProds = getProductsByIds(getRecentlyViewedIds());
-
+  
   return `
     <div class="breadcrumb"><a href="#/">Inicio</a><span>›</span><span>Mi cuenta</span></div>
-    <div class="account-page">
+    <div class="account-page" style="margin-top: 20px;">
       <div class="container">
         <div class="account-layout">
-
           <!-- Sidebar -->
           <aside class="account-sidebar">
             <div class="account-avatar">
-              <span class="account-avatar-icon"><i class="fas fa-user"></i></span>
+              <span class="account-avatar-icon">${name.charAt(0).toUpperCase()}</span>
               <div>
                 <strong>${name}</strong>
                 <span>${user.email || ''}</span>
               </div>
             </div>
             <nav class="account-nav">
-              <button class="account-nav-link active" data-scroll-to="account-profile">
+              <a href="#/account" class="account-nav-link ${activeTab === 'profile' ? 'active' : ''}">
                 <i class="fas fa-sliders"></i> Perfil
-              </button>
-              <button class="account-nav-link" data-scroll-to="account-favorites">
+              </a>
+              <a href="#/favorites" class="account-nav-link ${activeTab === 'favorites' ? 'active' : ''}">
                 <i class="fas fa-heart"></i> Favoritos
                 <span class="account-nav-badge">${favProds.length}</span>
-              </button>
-              <button class="account-nav-link" data-scroll-to="account-recent">
+              </a>
+              <a href="#/recent" class="account-nav-link ${activeTab === 'recent' ? 'active' : ''}">
                 <i class="fas fa-clock-rotate-left"></i> Vistos recientemente
                 <span class="account-nav-badge">${recentProds.length}</span>
-              </button>
+              </a>
             </nav>
             <button id="accountLogoutBtn" class="account-logout-btn">
               <i class="fas fa-right-from-bracket"></i> Cerrar sesión
@@ -359,45 +322,78 @@ function renderAccountPage() {
 
           <!-- Main content -->
           <div class="account-content">
-
-            <!-- Perfil -->
-            <section class="account-section" id="account-profile">
-              <h2><i class="fas fa-sliders"></i> Información de perfil</h2>
-              <div class="account-form-grid">
-                <div class="auth-field">
-                  <label>Nombre completo</label>
-                  <input type="text" value="${name}" disabled />
-                </div>
-                <div class="auth-field">
-                  <label>Correo electrónico</label>
-                  <input type="email" value="${user.email || ''}" disabled />
-                </div>
-              </div>
-              <p class="account-edit-note"><i class="fas fa-info-circle"></i> Para actualizar tus datos, contacta a soporte.</p>
-            </section>
-
-            <!-- Favoritos -->
-            <section class="account-section" id="account-favorites">
-              <h2><i class="fas fa-heart"></i> Favoritos (${favProds.length})</h2>
-              ${favProds.length
-                ? `<div class="products-grid account-mini-grid">${favProds.map(productCard).join('')}</div>`
-                : `<div class="account-empty"><i class="fas fa-heart"></i><p>Aún no tienes favoritos guardados.</p><a href="#/" class="account-empty-link">Explorar productos</a></div>`
-              }
-            </section>
-
-            <!-- Vistos recientemente -->
-            <section class="account-section" id="account-recent">
-              <h2><i class="fas fa-clock-rotate-left"></i> Vistos recientemente (${recentProds.length})</h2>
-              ${recentProds.length
-                ? `<div class="products-grid account-mini-grid">${recentProds.map(productCard).join('')}</div>`
-                : `<div class="account-empty"><i class="fas fa-clock-rotate-left"></i><p>Aún no has visitado ningún producto.</p></div>`
-              }
-            </section>
-
+            ${contentHTML}
           </div>
         </div>
       </div>
-    </div>`;
+    </div>
+  `;
+}
+
+function renderProfileTab() {
+  const user = getAuthUser();
+  const name = user.firstName ? `${user.firstName} ${user.lastName || ''}`.trim()
+    : user.first_name ? `${user.first_name} ${user.last_name || ''}`.trim()
+    : (user.name || 'Usuario');
+  return `
+    <section class="account-section" id="account-profile" style="border:none;padding:0;margin:0">
+      <h2 style="margin-bottom:20px"><i class="fas fa-sliders"></i> Información de perfil</h2>
+      <div class="account-form-grid">
+        <div class="auth-field">
+          <label>Nombre completo</label>
+          <input type="text" value="${name}" disabled />
+        </div>
+        <div class="auth-field">
+          <label>Correo electrónico</label>
+          <input type="email" value="${user.email || ''}" disabled />
+        </div>
+      </div>
+      <p class="account-edit-note" style="margin-top:20px"><i class="fas fa-info-circle"></i> Para actualizar tus datos, contacta a soporte.</p>
+    </section>
+  `;
+}
+
+function renderFavoritesTab() {
+  const favoriteProducts = getProductsByIds(favorites);
+  return `
+    <section class="account-section" id="account-favorites" style="border:none;padding:0;margin:0">
+      <h2 style="margin-bottom:20px"><i class="fas fa-heart"></i> Mis Favoritos (${favoriteProducts.length})</h2>
+      ${favoriteProducts.length
+        ? `<div class="products-grid account-mini-grid">${favoriteProducts.map(productCard).join('')}</div>`
+        : `<div class="account-empty" style="padding:40px 20px">
+            <i class="fas fa-heart" style="font-size:2.5rem;color:var(--gray-300);margin-bottom:12px;display:block;text-align:center"></i>
+            <p style="text-align:center;color:var(--gray-500)">Aún no tienes favoritos guardados.</p>
+            <a href="#/" class="account-empty-link" style="display:inline-block;margin-top:14px;padding:8px 20px;border-radius:8px;background:var(--blue-primary);color:var(--white);font-weight:600;text-decoration:none">Explorar productos</a>
+          </div>`}
+    </section>
+  `;
+}
+
+function renderRecentTab() {
+  const recentProducts = getProductsByIds(getRecentlyViewedIds());
+  return `
+    <section class="account-section" id="account-recent" style="border:none;padding:0;margin:0">
+      <h2 style="margin-bottom:20px"><i class="fas fa-clock-rotate-left"></i> Vistos recientemente (${recentProducts.length})</h2>
+      ${recentProducts.length
+        ? `<div class="products-grid account-mini-grid">${recentProducts.map(productCard).join('')}</div>`
+        : `<div class="account-empty" style="padding:40px 20px">
+            <i class="fas fa-clock-rotate-left" style="font-size:2.5rem;color:var(--gray-300);margin-bottom:12px;display:block;text-align:center"></i>
+            <p style="text-align:center;color:var(--gray-500)">Aún no has visitado ningún producto.</p>
+          </div>`}
+    </section>
+  `;
+}
+
+function renderAccountPage() {
+  return renderAccountLayout('profile', renderProfileTab());
+}
+
+function renderFavoritesPage() {
+  return renderAccountLayout('favorites', renderFavoritesTab());
+}
+
+function renderRecentPage() {
+  return renderAccountLayout('recent', renderRecentTab());
 }
 
 function renderHomePage() {
@@ -444,30 +440,30 @@ function navigate() {
   } else if (route.page === 'account') {
     content.innerHTML = renderAccountPage();
     bindProductCards();
-    // Smooth scroll nav (buttons instead of hash links to avoid router redirect)
-    document.querySelectorAll('[data-scroll-to]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = document.getElementById(btn.dataset.scrollTo);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        document.querySelectorAll('[data-scroll-to]').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      });
-    });
-    const accLogout = document.getElementById('accountLogoutBtn');
-    if (accLogout) {
-      accLogout.addEventListener('click', () => {
-        localStorage.removeItem('auth_token');
-        localStorage.removeItem('auth_user');
-        window.location.hash = '#/';
-        location.reload();
-      });
-    }
+    bindAccountEvents();
   } else if (route.page === 'favorites') {
     content.innerHTML = renderFavoritesPage();
     bindProductCards();
+    bindAccountEvents();
+  } else if (route.page === 'recent') {
+    content.innerHTML = renderRecentPage();
+    bindProductCards();
+    bindAccountEvents();
   } else {
     content.innerHTML = renderHomePage();
     bindHomeEvents();
+  }
+}
+
+function bindAccountEvents() {
+  const accLogout = document.getElementById('accountLogoutBtn');
+  if (accLogout) {
+    accLogout.addEventListener('click', () => {
+      localStorage.removeItem('auth_token');
+      localStorage.removeItem('auth_user');
+      window.location.hash = '#/';
+      location.reload();
+    });
   }
 }
 
