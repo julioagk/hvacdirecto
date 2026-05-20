@@ -131,7 +131,7 @@ function getVisibleProductsForRoute(route = getRoute()) {
     const brand = route.brand || '';
     const type = route.type || '';
     const allSubProducts = products.filter(p => p.category === route.id && slugify(p.subcategory) === subSlug);
-    const isMiniSplitSub = route.id === 'mini-splits' && ['frio', 'heat-pump', 'inverter'].includes(subSlug);
+    const isMiniSplitSub = route.id === 'mini-splits' && ['inverter'].includes(subSlug);
     const currentTypeSlug = isMiniSplitSub ? slugify(type) : '';
     const typeFilteredProducts = currentTypeSlug
       ? allSubProducts.filter(p => slugify((p.subsubcategory || (p.category === 'mini-splits' ? 'MURO' : ''))) === currentTypeSlug)
@@ -230,7 +230,7 @@ export function renderSubcategoryPage(catId, subSlug, brand = '', type = '') {
   if (!cat) return '<p>Categoría no encontrada</p>';
   const subName = cat.subs.find(s => slugify(s) === subSlug) || subSlug;
   const allSubProducts = products.filter(p => p.category === catId && slugify(p.subcategory) === subSlug);
-  const isMiniSplitSub = catId === 'mini-splits' && ['frio', 'heat-pump', 'inverter'].includes(subSlug);
+  const isMiniSplitSub = catId === 'mini-splits' && ['inverter'].includes(subSlug);
   const miniSplitSubsubs = cat.subsubs || ['MURO', 'PISO-TECHO', 'TIPO DUCTO'];
   const currentTypeSlug = isMiniSplitSub ? slugify(type || '') : '';
   const typeFilteredProducts = currentTypeSlug
