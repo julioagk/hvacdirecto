@@ -4,7 +4,7 @@ export let cart = [];
 export let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 const RECENTLY_VIEWED_KEY = 'recentlyViewed';
 const CART_STORAGE_KEY = 'cart';
-export const WHATSAPP_NUMBER = '';
+export const WHATSAPP_NUMBER = '+52 55 0000 0000'; // REEMPLAZA CON TU NÚMERO DE WHATSAPP REAL (Ej: +52 1 55 1234 5678 sin espacios ni signos +)
 
 export function restoreCart() {
   try {
@@ -185,10 +185,31 @@ function buildCheckoutMessage() {
   const lines = cart.map(ci => {
     const product = products.find(x => x.id === ci.id);
     const displayName = product.description || product.name;
-    return `${ci.qty} x ${displayName} - ${formatPrice(product.price * ci.qty)}`;
+    const itemTotal = product.price * ci.qty;
+    return `• *${ci.qty}x* ${displayName} (Modelo: ${product.model || 'N/A'}) - _${formatPrice(itemTotal)}_`;
   });
+  
   const total = cart.reduce((s, ci) => s + products.find(x => x.id === ci.id).price * ci.qty, 0);
-  return { lines, total, text: `Hola, quiero comprar estos productos de HvacDirecto:\n${lines.join('\n')}\nTotal: ${formatPrice(total)}` };
+  
+  const textMessage = [
+    `📱 *NUEVO PEDIDO - HVACDIRECTO* 📱`,
+    `----------------------------------------`,
+    `*Productos solicitados:*`,
+    lines.join('\n'),
+    `----------------------------------------`,
+    `💰 *TOTAL ESTIMADO:* *${formatPrice(total)}*`,
+    `----------------------------------------`,
+    `¡Hola! Vengo de la tienda en línea y me gustaría cotizar/comprar los equipos detallados arriba. ¿Me podrían indicar disponibilidad y el proceso de compra?`
+  ].join('\n\n');
+
+  // Display lines for the HTML modal summary (unformatted plain text)
+  const displayLines = cart.map(ci => {
+    const product = products.find(x => x.id === ci.id);
+    const displayName = product.description || product.name;
+    return `${ci.qty}x ${displayName} - ${formatPrice(product.price * ci.qty)}`;
+  });
+
+  return { lines: displayLines, total, text: textMessage };
 }
 
 function renderCheckoutSummary() {
