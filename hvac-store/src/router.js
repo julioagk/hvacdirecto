@@ -269,9 +269,15 @@ export function renderSubcategoryPage(catId, subSlug, brand = '', type = '') {
     <div class="cat-page-layout">
       <aside class="cat-sidebar">
         <h3>Subcategorías</h3>
-          <ul>
-          <li><a href="#/category/${catId}">Todos los ${cat.name} <span class="count">${allSubProducts.length}</span></a></li>
-          ${cat.subs.map(s => `<li><a href="#/category/${catId}/${slugify(s)}" class="${slugify(s) === subSlug ? 'active' : ''}">${s}</a></li>`).join('')}
+        <ul>
+          <li><a href="${brand ? `#/category/${catId}?brand=${encodeURIComponent(brand)}` : `#/category/${catId}`}">Todos los ${cat.name}${brand ? ` — ${brand}` : ''} <span class="count">${brand ? products.filter(p => p.category === catId && p.brand === brand).length : products.filter(p => p.category === catId).length}</span></a></li>
+          ${cat.subs.map(s => {
+            const sSlug = slugify(s);
+            const subHref = brand ? `#/category/${catId}/${sSlug}/${encodeURIComponent(brand)}` : `#/category/${catId}/${sSlug}`;
+            const subProducts = products.filter(p => p.category === catId && slugify(p.subcategory) === sSlug);
+            const count = brand ? subProducts.filter(p => p.brand === brand).length : subProducts.length;
+            return `<li><a href="${subHref}" class="${sSlug === subSlug ? 'active' : ''}">${s} <span class="count">${count}</span></a></li>`;
+          }).join('')}
         </ul>
         <div class="sidebar-section">
           ${isMiniSplitSub ? `
