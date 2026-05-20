@@ -27,9 +27,39 @@ app.use(
     origin: (origin, callback) => {
       // Allow non-browser requests (curl, server-to-server)
       if (!origin) return callback(null, true);
-      const originNormalized = origin.replace(/\/+$/, '');
-      if (allowedOrigins.includes('*') || allowedOrigins.includes(originNormalized)) return callback(null, true);
-      return callback(new Error('Not allowed by CORS'));
+      
+      try {
+        const originNormalized = origin.replace(/\/+$/, '');
+        
+        // 1. Check explicitly allowed origins from env (includes '*')
+        if (allowedOrigins.includes('*') || allowedOrigins.includes(originNormalized)) {
+          return callback(null, true);
+        }
+        
+        // 2. Check if host is hvacdirecto.com or a subdomain of it
+        const parsedUrl = new URL(originNormalized);
+        const hostname = parsedUrl.hostname;
+        if (hostname === 'hvacdirecto.com' || hostname.endsWith('.hvacdirecto.com')) {
+          return callback(null, true);
+        }
+        
+        // 3. Check for localhost/local network IPs for local testing
+        if (
+          hostname === 'localhost' ||
+          hostname === '127.0.0.1' ||
+          hostname.endsWith('.localhost') ||
+          hostname.startsWith('192.168.') ||
+          hostname.startsWith('10.')
+        ) {
+          return callback(null, true);
+        }
+        
+        // Default: not allowed (passes false instead of throwing a 500 error)
+        return callback(null, false);
+      } catch (err) {
+        console.error('CORS Origin Parsing Error:', err);
+        return callback(null, false);
+      }
     },
     credentials: true,
   })
