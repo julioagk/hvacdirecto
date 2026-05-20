@@ -276,6 +276,7 @@ export function openCheckoutSummary() {
     window.alert('Tu carrito está vacío.');
     return;
   }
+  closeCart(); // Cerrar automáticamente el carrito lateral para que no tape el modal
   const modal = document.getElementById('checkoutModal');
   if (!modal) return;
   modal.innerHTML = renderCheckoutSummary();
