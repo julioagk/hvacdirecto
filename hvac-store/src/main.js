@@ -1,7 +1,7 @@
 import './style.css';
 import { categories, brands, products } from './data.js';
 import { productCard, formatPrice, renderCartSidebar, toggleCart, bindCartEvents, bindProductCards, addToCart, favorites, getRecentlyViewedIds, restoreCart, updateCartUI, closeCheckoutSummary, sendWhatsAppOrder } from './shared.js';
-import { getRoute, renderCategoryPage, renderSubcategoryPage, renderBrandPage, renderSearchPage, renderBrandsList, renderLoginPage, renderRegisterPage, bindCategoryPageEvents, bindAuthEvents } from './router.js';
+import { getRoute, renderCategoryPage, renderSubcategoryPage, renderBrandPage, renderSearchPage, renderBrandsList, renderLoginPage, renderRegisterPage, bindCategoryPageEvents, bindAuthEvents, renderProductPage, bindProductPageEvents } from './router.js';
 
 function slugify(str) { return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); }
 
@@ -314,53 +314,103 @@ function renderFavoritesPage() {
 function renderAccountPage() {
   const user = getAuthUser();
   if (!user) {
-    // Not logged in — redirect to login
     window.location.hash = '#/login';
     return '';
   }
   const name = user.firstName ? `${user.firstName} ${user.lastName || ''}`.trim()
     : user.first_name ? `${user.first_name} ${user.last_name || ''}`.trim()
     : (user.name || 'Usuario');
+
+  const favProds = getProductsByIds(favorites);
+  const recentProds = getProductsByIds(getRecentlyViewedIds());
+
   return `
     <div class="breadcrumb"><a href="#/">Inicio</a><span>›</span><span>Mi cuenta</span></div>
-    <section class="auth-page">
-      <div class="container auth-register-shell">
-        <div class="auth-panel auth-register-card">
-          <div style="display:flex;align-items:center;gap:18px;margin-bottom:28px">
-            <span style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--blue-primary),var(--blue-dark));display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.8rem;flex-shrink:0">
-              <i class="fas fa-user"></i>
-            </span>
-            <div>
-              <h1 style="font-size:1.6rem;margin-bottom:4px">${name}</h1>
-              <p style="color:var(--gray-600);font-size:.9rem">${user.email || ''}</p>
-            </div>
-          </div>
+    <div class="account-page">
+      <div class="container">
+        <div class="account-layout">
 
-          <div class="auth-section">
-            <h2>Información de la cuenta</h2>
-            <div style="display:grid;gap:14px">
-              <div class="auth-field">
-                <label>Nombre completo</label>
-                <input type="text" value="${name}" disabled style="background:var(--gray-100);cursor:not-allowed;margin-top:6px" />
-              </div>
-              <div class="auth-field">
-                <label>Correo electrónico</label>
-                <input type="email" value="${user.email || ''}" disabled style="background:var(--gray-100);cursor:not-allowed;margin-top:6px" />
+          <!-- Sidebar -->
+          <aside class="account-sidebar">
+            <div class="account-avatar">
+              <span class="account-avatar-icon"><i class="fas fa-user"></i></span>
+              <div>
+                <strong>${name}</strong>
+                <span>${user.email || ''}</span>
               </div>
             </div>
-          </div>
-
-          <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
-            <a href="#/favorites" style="display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:10px;background:var(--blue-light);color:var(--blue-primary);font-weight:600;font-size:.9rem">
-              <i class="fas fa-heart"></i> Ver favoritos
-            </a>
-            <button id="accountLogoutBtn" style="display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:10px;border:1px solid #fca5a5;color:#ef4444;background:transparent;font-weight:600;font-size:.9rem;cursor:pointer;font-family:inherit">
+            <nav class="account-nav">
+              <a href="#account-profile" class="account-nav-link active">
+                <i class="fas fa-sliders"></i> Perfil
+              </a>
+              <a href="#account-favorites" class="account-nav-link">
+                <i class="fas fa-heart"></i> Favoritos
+                <span class="account-nav-badge">${favProds.length}</span>
+              </a>
+              <a href="#account-recent" class="account-nav-link">
+                <i class="fas fa-clock-rotate-left"></i> Vistos recientemente
+                <span class="account-nav-badge">${recentProds.length}</span>
+              </a>
+              <a href="#account-quotes" class="account-nav-link">
+                <i class="fas fa-file-invoice"></i> Cotizaciones
+              </a>
+            </nav>
+            <button id="accountLogoutBtn" class="account-logout-btn">
               <i class="fas fa-right-from-bracket"></i> Cerrar sesión
             </button>
+          </aside>
+
+          <!-- Main content -->
+          <div class="account-content">
+
+            <!-- Perfil -->
+            <section class="account-section" id="account-profile">
+              <h2><i class="fas fa-sliders"></i> Información de perfil</h2>
+              <div class="account-form-grid">
+                <div class="auth-field">
+                  <label>Nombre completo</label>
+                  <input type="text" value="${name}" disabled />
+                </div>
+                <div class="auth-field">
+                  <label>Correo electrónico</label>
+                  <input type="email" value="${user.email || ''}" disabled />
+                </div>
+              </div>
+              <p class="account-edit-note"><i class="fas fa-info-circle"></i> Para actualizar tus datos, contacta a soporte.</p>
+            </section>
+
+            <!-- Favoritos -->
+            <section class="account-section" id="account-favorites">
+              <h2><i class="fas fa-heart"></i> Favoritos (${favProds.length})</h2>
+              ${favProds.length
+                ? `<div class="products-grid account-mini-grid">${favProds.map(productCard).join('')}</div>`
+                : `<div class="account-empty"><i class="fas fa-heart"></i><p>Aún no tienes favoritos guardados.</p><a href="#/" class="account-empty-link">Explorar productos</a></div>`
+              }
+            </section>
+
+            <!-- Vistos recientemente -->
+            <section class="account-section" id="account-recent">
+              <h2><i class="fas fa-clock-rotate-left"></i> Vistos recientemente (${recentProds.length})</h2>
+              ${recentProds.length
+                ? `<div class="products-grid account-mini-grid">${recentProds.map(productCard).join('')}</div>`
+                : `<div class="account-empty"><i class="fas fa-clock-rotate-left"></i><p>Aún no has visitado ningún producto.</p></div>`
+              }
+            </section>
+
+            <!-- Cotizaciones -->
+            <section class="account-section" id="account-quotes">
+              <h2><i class="fas fa-file-invoice"></i> Mis Cotizaciones</h2>
+              <div class="account-empty">
+                <i class="fas fa-file-invoice"></i>
+                <p>Aquí aparecerá tu historial de cotizaciones enviadas.</p>
+                <span class="account-empty-note">Próximamente disponible</span>
+              </div>
+            </section>
+
           </div>
         </div>
       </div>
-    </section>`;
+    </div>`;
 }
 
 function renderHomePage() {
@@ -379,7 +429,11 @@ function navigate() {
   }
   _lastRoutePage = route.page;
 
-  if (route.page === 'category') {
+  if (route.page === 'product') {
+    content.innerHTML = renderProductPage(route.id);
+    bindProductCards();
+    bindProductPageEvents();
+  } else if (route.page === 'category') {
     content.innerHTML = renderCategoryPage(route.id, route.brand || '');
     bindCategoryPageEvents();
   } else if (route.page === 'subcategory') {
@@ -402,6 +456,7 @@ function navigate() {
     bindAuthEvents();
   } else if (route.page === 'account') {
     content.innerHTML = renderAccountPage();
+    bindProductCards();
     const accLogout = document.getElementById('accountLogoutBtn');
     if (accLogout) {
       accLogout.addEventListener('click', () => {
@@ -500,8 +555,12 @@ function initApp() {
     <div class="cart-overlay" id="cartOverlay"></div>
     <div class="modal-overlay" id="productModal"></div>
     <div class="modal-overlay" id="checkoutModal"></div>
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/528110238465?text=${encodeURIComponent('Hola, necesito ayuda con un producto de HvacDirecto 👋')}" target="_blank" rel="noopener noreferrer" class="wa-float" id="waFloat" title="Chatea con nosotros">
+      <i class="fab fa-whatsapp"></i>
+      <span class="wa-float-label">¿Necesitas ayuda?</span>
+    </a>
   `;
-
   // Global events (always active)
   document.getElementById('cartToggle').addEventListener('click', toggleCart);
   document.getElementById('cartOverlay').addEventListener('click', toggleCart);

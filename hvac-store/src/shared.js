@@ -11,8 +11,8 @@ export function restoreCart() {
     const saved = JSON.parse(localStorage.getItem(CART_STORAGE_KEY));
     cart = Array.isArray(saved)
       ? saved
-          .filter(item => item && typeof item.id === 'string' && Number.isFinite(Number(item.qty)))
-          .map(item => ({ id: item.id, qty: Math.max(1, Number(item.qty)) }))
+          .filter(item => item && item.id != null && Number.isFinite(Number(item.qty)))
+          .map(item => ({ id: String(item.id), qty: Math.max(1, Number(item.qty)) }))
       : [];
   } catch {
     cart = [];
@@ -85,9 +85,10 @@ export function productCard(p) {
 }
 
 export function addToCart(id) {
-  const existing = cart.find(c => c.id === id);
+  const sid = String(id);
+  const existing = cart.find(c => c.id === sid);
   if (existing) existing.qty++;
-  else cart.push({ id, qty: 1 });
+  else cart.push({ id: sid, qty: 1 });
   updateCartUI();
   openCart();
 }
@@ -165,15 +166,15 @@ export function closeCart() {
 
 export function bindCartEvents() {
   document.querySelectorAll('[data-qty-plus]').forEach(b => b.addEventListener('click', () => {
-    const ci = cart.find(c => c.id === +b.dataset.qtyPlus);
+    const ci = cart.find(c => c.id === String(b.dataset.qtyPlus));
     if (ci) { ci.qty++; updateCartUI(); }
   }));
   document.querySelectorAll('[data-qty-minus]').forEach(b => b.addEventListener('click', () => {
-    const ci = cart.find(c => c.id === +b.dataset.qtyMinus);
+    const ci = cart.find(c => c.id === String(b.dataset.qtyMinus));
     if (ci) { ci.qty--; if (ci.qty <= 0) cart = cart.filter(c => c.id !== ci.id); updateCartUI(); }
   }));
   document.querySelectorAll('[data-remove]').forEach(b => b.addEventListener('click', () => {
-    cart = cart.filter(c => c.id !== +b.dataset.remove); updateCartUI();
+    cart = cart.filter(c => c.id !== String(b.dataset.remove)); updateCartUI();
   }));
   const checkout = document.getElementById('cartWhatsAppBtn');
   if (checkout) checkout.addEventListener('click', sendWhatsAppOrder);

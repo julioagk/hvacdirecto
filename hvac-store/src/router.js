@@ -158,12 +158,185 @@ export function getRoute() {
   if (parts[0] === 'account') return { page: 'account' };
   if (parts[0] === 'favorites') return { page: 'favorites' };
   if (parts[0] === 'brands') return { page: 'brands' };
+  if (parts[0] === 'product' && parts[1]) return { page: 'product', id: decodeURIComponent(parts[1]) };
   if (parts[0] === 'category' && parts[3]) return { page: 'subcategory', id: parts[1], sub: decodeURIComponent(parts[2]), brand: decodeURIComponent(parts[3]), type };
   if (parts[0] === 'category' && parts[2]) return { page: 'subcategory', id: parts[1], sub: decodeURIComponent(parts[2]), type };
   if (parts[0] === 'category' && parts[1]) return { page: 'category', id: parts[1], brand: brandParam };
   if (parts[0] === 'brand' && parts[1]) return { page: 'brand', id: decodeURIComponent(parts[1]) };
   if (parts[0] === 'search' && parts[1]) return { page: 'search', query: decodeURIComponent(parts[1]) };
   return { page: 'home' };
+}
+
+export function renderProductPage(id) {
+  let p = products.find(x => String(x.id) === String(id));
+  if (!p) {
+    const idLower = String(id).toLowerCase();
+    const matches = products.filter(x => x.model && String(x.model).toLowerCase() === idLower);
+    if (matches.length) p = matches.find(m => (m.price || m.img || m.brand)) || matches[0];
+  }
+  if (!p) return '<div class="container" style="padding:60px 20px;text-align:center"><h2>Producto no encontrado</h2><a href="#/">Volver al inicio</a></div>';
+
+  const cat = categories.find(c => c.id === p.category);
+  const displayName = p.description || p.name;
+  const specs = [
+    p.model && { label: 'Modelo', val: p.model },
+    p.sku && p.sku !== p.model && { label: 'SKU', val: p.sku },
+    p.voltage && { label: 'Voltaje', val: p.voltage },
+    p.tons && { label: 'Toneladas', val: p.tons },
+    p.btus && { label: 'BTUs', val: p.btus },
+    p.seer && { label: 'SEER', val: p.seer },
+    p.function && { label: 'Función', val: p.function },
+    cat && { label: 'Categoría', val: cat.name },
+    p.brand && { label: 'Marca', val: p.brand },
+  ].filter(Boolean);
+
+  const relatedProducts = products
+    .filter(x => x.category === p.category && String(x.id) !== String(p.id) && x.brand === p.brand)
+    .slice(0, 4);
+
+  const PHONE = '528110238465';
+  const quoteMsg = encodeURIComponent(`Hola, me interesa cotizar el siguiente producto:\n\n*${displayName}*\nModelo: ${p.model || 'N/A'}\nMarca: ${p.brand}\nPrecio: ${formatPrice(p.price)}\n\n¿Podrían darme más información?`);
+
+  return `
+    <div class="breadcrumb">
+      <a href="#/">Inicio</a><span>›</span>
+      ${cat ? `<a href="#/category/${cat.id}">${cat.name}</a><span>›</span>` : ''}
+      <span>${displayName}</span>
+    </div>
+
+    <div class="product-detail-page">
+      <div class="container">
+        <div class="product-detail-grid">
+
+          <!-- Galería -->
+          <div class="product-detail-gallery">
+            <div class="product-detail-img-wrap">
+              <img src="${p.img || p.image || ''}" alt="${displayName}" id="productDetailMainImg" />
+            </div>
+          </div>
+
+          <!-- Info principal -->
+          <div class="product-detail-info">
+            <div class="product-brand product-detail-brand">${p.brand}</div>
+            <h1 class="product-detail-name">${displayName}</h1>
+            ${p.model ? `<div class="product-detail-model">Modelo: <strong>${p.model}</strong></div>` : ''}
+
+            <div class="product-detail-price">
+              <span class="price-current">${formatPrice(p.price)}</span>
+              <span class="product-detail-tax">+ IVA • Precio de mayorista</span>
+            </div>
+
+            <div class="product-detail-badges">
+              <span class="detail-badge"><i class="fas fa-shield-halved"></i> Garantía de fábrica</span>
+              <span class="detail-badge"><i class="fas fa-truck"></i> Envío a todo México</span>
+              <span class="detail-badge"><i class="fas fa-headset"></i> Soporte técnico</span>
+            </div>
+
+            <div class="product-detail-actions">
+              <button class="btn-cart btn-cart-detail" data-add="${p.id}">
+                <i class="fas fa-cart-plus"></i> Agregar al carrito
+              </button>
+              <a href="https://wa.me/${PHONE}?text=${quoteMsg}" target="_blank" rel="noopener" class="btn-whatsapp-detail">
+                <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+              </a>
+            </div>
+
+            <!-- Especificaciones -->
+            ${specs.length ? `
+            <div class="product-detail-specs">
+              <h3>Especificaciones</h3>
+              <ul>
+                ${specs.map(s => `<li><span>${s.label}</span><strong>${s.val}</strong></li>`).join('')}
+              </ul>
+            </div>` : ''}
+          </div>
+        </div>
+
+        <!-- Formulario de cotización -->
+        <div class="quote-form-section">
+          <div class="quote-form-inner">
+            <div class="quote-form-header">
+              <i class="fas fa-file-invoice"></i>
+              <div>
+                <h2>Solicitar cotización formal</h2>
+                <p>Déjanos tus datos y te enviamos precios especiales, disponibilidad y opciones de instalación.</p>
+              </div>
+            </div>
+            <form class="quote-form" id="quoteForm" data-product-id="${p.id}" data-product-name="${displayName}" data-product-model="${p.model || ''}">
+              <div class="quote-form-grid">
+                <div class="auth-field">
+                  <label for="quoteName">Nombre completo <span>*</span></label>
+                  <input id="quoteName" type="text" placeholder="Tu nombre" required />
+                </div>
+                <div class="auth-field">
+                  <label for="quoteEmail">Correo electrónico <span>*</span></label>
+                  <input id="quoteEmail" type="email" placeholder="tu@email.com" required />
+                </div>
+                <div class="auth-field">
+                  <label for="quotePhone">Teléfono / WhatsApp</label>
+                  <input id="quotePhone" type="tel" placeholder="+52 81 0000 0000" />
+                </div>
+                <div class="auth-field">
+                  <label for="quoteQty">Cantidad requerida</label>
+                  <input id="quoteQty" type="number" min="1" placeholder="1" value="1" />
+                </div>
+              </div>
+              <div class="auth-field">
+                <label for="quoteMsg">Comentarios adicionales</label>
+                <textarea id="quoteMsg" rows="3" placeholder="¿Alguna duda sobre instalación, voltaje, garantía...?"></textarea>
+              </div>
+              <div class="quote-form-footer">
+                <button type="submit" class="btn-quote-submit" id="quoteSubmitBtn">
+                  <i class="fab fa-whatsapp"></i> Enviar cotización por WhatsApp
+                </button>
+                <p class="quote-disclaimer">Al enviar se abrirá WhatsApp con el resumen de tu solicitud. Respondemos en minutos.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Productos relacionados -->
+        ${relatedProducts.length ? `
+        <div class="product-related">
+          <h2>Productos relacionados</h2>
+          <div class="products-grid">${relatedProducts.map(productCard).join('')}</div>
+        </div>` : ''}
+      </div>
+    </div>`;
+}
+
+export function bindProductPageEvents() {
+  const quoteForm = document.getElementById('quoteForm');
+  if (!quoteForm) return;
+  quoteForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('quoteName')?.value.trim() || '';
+    const email = document.getElementById('quoteEmail')?.value.trim() || '';
+    const phone = document.getElementById('quotePhone')?.value.trim() || '';
+    const qty = document.getElementById('quoteQty')?.value.trim() || '1';
+    const msg = document.getElementById('quoteMsg')?.value.trim() || '';
+    const productName = quoteForm.dataset.productName || '';
+    const productModel = quoteForm.dataset.productModel || '';
+    if (!name || !email) {
+      alert('Por favor ingresa tu nombre y correo.');
+      return;
+    }
+    const PHONE = '528110238465';
+    const text = [
+      `📋 *SOLICITUD DE COTIZACIÓN - HVACDIRECTO*`,
+      ``,
+      `*Producto:* ${productName}`,
+      productModel ? `*Modelo:* ${productModel}` : '',
+      `*Cantidad:* ${qty}`,
+      ``,
+      `*Datos del cliente:*`,
+      `• Nombre: ${name}`,
+      `• Email: ${email}`,
+      phone ? `• Teléfono: ${phone}` : '',
+      msg ? `• Comentarios: ${msg}` : '',
+    ].filter(l => l !== undefined && l !== null && l !== false).join('\n');
+    window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+  });
 }
 
 export function renderCategoryPage(catId, filterBrand = '') {
