@@ -68,6 +68,7 @@ export function productCard(p) {
   const displayName = p.description || p.name;
   const isFav = isFavorite(p.id);
   return `<div class="product-card" data-id="${p.id}">
+    <a href="#/product/${encodeURIComponent(p.id)}" class="product-card-link" title="Ver página del producto" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
     <div class="product-img"><img src="${p.img}" alt="${displayName}" /></div>
     <div class="product-info">
       <div class="product-brand">${p.brand}</div>
@@ -146,6 +147,7 @@ export function toggleCart() {
   const shouldOpen = !sidebar.classList.contains('active');
   sidebar.classList.toggle('active', shouldOpen);
   overlay.classList.toggle('active', shouldOpen);
+  document.body.classList.toggle('cart-open', shouldOpen);
 }
 
 export function openCart() {
@@ -154,6 +156,7 @@ export function openCart() {
   if (!sidebar || !overlay) return;
   sidebar.classList.add('active');
   overlay.classList.add('active');
+  document.body.classList.add('cart-open');
 }
 
 export function closeCart() {
@@ -162,6 +165,7 @@ export function closeCart() {
   if (!sidebar || !overlay) return;
   sidebar.classList.remove('active');
   overlay.classList.remove('active');
+  document.body.classList.remove('cart-open');
 }
 
 export function bindCartEvents() {
@@ -374,6 +378,9 @@ export function openProductModal(id) {
           <button class="btn-cart" data-add="${p.id}"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
           <button class="btn-wish" data-fav="${p.id}"><i class="${isFav ? 'fas' : 'far'} fa-heart"></i></button>
         </div>
+        <a href="#/product/${encodeURIComponent(p.id)}" class="modal-detail-link" onclick="document.getElementById('productModal').classList.remove('active')">
+          <i class="fas fa-arrow-up-right-from-square"></i> Ver página completa del producto
+        </a>
       </div>
     </div>
   </div>`;
@@ -393,7 +400,7 @@ export function bindProductCards() {
   document.querySelectorAll('[data-add]').forEach(b => b.addEventListener('click', e => {
     e.stopPropagation();
     addToCart(b.dataset.add);
-    b.textContent = '✓ Agregado';
+    b.textContent = '\u2713 Agregado';
     setTimeout(() => { b.innerHTML = '<i class="fas fa-cart-plus"></i> Agregar'; }, 1200);
   }));
   document.querySelectorAll('[data-fav]').forEach(b => b.addEventListener('click', e => {
@@ -403,9 +410,12 @@ export function bindProductCards() {
     const icon = b.querySelector('i');
     icon.className = isFavorite(id) ? 'fas fa-heart' : 'far fa-heart';
   }));
+  document.querySelectorAll('.product-card-link').forEach(a => a.addEventListener('click', e => {
+    e.stopPropagation();
+  }));
   document.querySelectorAll('.product-card').forEach(card => {
     card.addEventListener('click', e => {
-      if (e.target.closest('[data-add]') || e.target.closest('[data-fav]')) return;
+      if (e.target.closest('[data-add]') || e.target.closest('[data-fav]') || e.target.closest('.product-card-link')) return;
       openProductModal(card.dataset.id);
     });
   });

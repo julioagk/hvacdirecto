@@ -351,9 +351,6 @@ function renderAccountPage() {
                 <i class="fas fa-clock-rotate-left"></i> Vistos recientemente
                 <span class="account-nav-badge">${recentProds.length}</span>
               </a>
-              <a href="#account-quotes" class="account-nav-link">
-                <i class="fas fa-file-invoice"></i> Cotizaciones
-              </a>
             </nav>
             <button id="accountLogoutBtn" class="account-logout-btn">
               <i class="fas fa-right-from-bracket"></i> Cerrar sesión
@@ -395,16 +392,6 @@ function renderAccountPage() {
                 ? `<div class="products-grid account-mini-grid">${recentProds.map(productCard).join('')}</div>`
                 : `<div class="account-empty"><i class="fas fa-clock-rotate-left"></i><p>Aún no has visitado ningún producto.</p></div>`
               }
-            </section>
-
-            <!-- Cotizaciones -->
-            <section class="account-section" id="account-quotes">
-              <h2><i class="fas fa-file-invoice"></i> Mis Cotizaciones</h2>
-              <div class="account-empty">
-                <i class="fas fa-file-invoice"></i>
-                <p>Aquí aparecerá tu historial de cotizaciones enviadas.</p>
-                <span class="account-empty-note">Próximamente disponible</span>
-              </div>
             </section>
 
           </div>

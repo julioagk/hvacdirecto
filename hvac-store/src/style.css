@@ -653,7 +653,7 @@ h1,h2,h3,h4{font-family:'Outfit',sans-serif}
   text-decoration: none;
   font-weight: 700;
   font-size: .9rem;
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
   animation: waPulse 2.5s ease-in-out infinite;
 }
 .wa-float i { font-size: 1.5rem; }
@@ -661,6 +661,11 @@ h1,h2,h3,h4{font-family:'Outfit',sans-serif}
   transform: translateY(-3px) scale(1.04);
   box-shadow: 0 8px 28px rgba(37,211,102,.55);
   animation: none;
+}
+/* Ocultar cuando el carrito está abierto */
+body.cart-open .wa-float {
+  opacity: 0;
+  pointer-events: none;
 }
 @keyframes waPulse {
   0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,.45); }
@@ -670,6 +675,52 @@ h1,h2,h3,h4{font-family:'Outfit',sans-serif}
   .wa-float { padding: 13px; border-radius: 50%; }
   .wa-float-label { display: none; }
 }
+
+/* Icono de link en tarjeta de producto */
+.product-card { position: relative; }
+.product-card-link {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.9);
+  color: var(--blue-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .72rem;
+  opacity: 0;
+  transition: opacity .2s ease;
+  z-index: 2;
+  text-decoration: none;
+  box-shadow: 0 1px 6px rgba(0,0,0,.12);
+}
+.product-card:hover .product-card-link { opacity: 1; }
+.product-card-link:hover { background: var(--blue-primary); color: #fff; }
+
+/* Link "Ver página completa" en el modal */
+.modal-detail-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1.5px solid var(--blue-primary);
+  color: var(--blue-primary);
+  font-weight: 600;
+  font-size: .88rem;
+  text-decoration: none;
+  transition: var(--transition);
+  justify-content: center;
+}
+.modal-detail-link:hover {
+  background: var(--blue-primary);
+  color: #fff;
+}
+
 
 /* ── PRODUCT DETAIL PAGE ── */
 .product-detail-page { padding: 32px 0 60px; }
