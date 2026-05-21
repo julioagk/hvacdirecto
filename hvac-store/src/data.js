@@ -4212,7 +4212,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 3807,
-    "brand": "INTENSITY"
+    "brand": "CARRIER"
   },
   {
     "id": "48NL-B480903",
@@ -4227,7 +4227,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 4133,
-    "brand": "INTENSITY"
+    "brand": "CARRIER"
   },
   {
     "id": "48NL-B601153",
@@ -4242,7 +4242,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 4463,
-    "brand": "INTENSITY"
+    "brand": "CARRIER"
   },
   {
     "id": "50NL-B36---5",
@@ -4257,7 +4257,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 2999,
-    "brand": "INTENSITY"
+    "brand": "CARRIER"
   },
   {
     "id": "50NL-B48---5",
@@ -4272,7 +4272,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 3653,
-    "brand": "INTENSITY"
+    "brand": "CARRIER"
   },
   {
     "id": "50NL-B60---5",
@@ -4287,7 +4287,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 3784,
-    "brand": "INTENSITY"
+    "brand": "CARRIER"
   },
   {
     "id": "50NL-B60---6",
@@ -4302,7 +4302,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 3916,
-    "brand": "INTENSITY"
+    "brand": "CARRIER"
   },
   {
     "id": "50NT-B36---5",
@@ -4317,7 +4317,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 3391,
-    "brand": "INTENSITY"
+    "brand": "CARRIER"
   },
   {
     "id": "50NT-B48---5",
