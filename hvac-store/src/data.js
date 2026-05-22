@@ -3964,15 +3964,15 @@ export const products = [
     "name": "42QTD018A32",
     "model": "42QTD018A32",
     "sku": "42QTD018A32",
-    "img": "/images/PAQUETE COMERCIA.png",
-    "image": "/images/PAQUETE COMERCIA.png",
+    "img": "/images/CASSETTE.png",
+    "image": "/images/CASSETTE.png",
     "category": "central-ac",
     "subcategory": "Evaporadoras",
     "description": "Cassette inverter easy match 1.5 ton R32 voltaje 220/1/60",
     "function": "",
     "voltage": "",
     "price": 301.4,
-    "brand": "CIAC"
+    "brand": "CARRIER"
   },
   {
     "id": "40CAS-S5",
@@ -3994,15 +3994,15 @@ export const products = [
     "name": "42QTD024A32",
     "model": "42QTD024A32",
     "sku": "42QTD024A32",
-    "img": "/images/PAQUETE COMERCIA.png",
-    "image": "/images/PAQUETE COMERCIA.png",
+    "img": "/images/CASSETTE.png",
+    "image": "/images/CASSETTE.png",
     "category": "central-ac",
     "subcategory": "Evaporadoras",
     "description": "Cassette inverter easy match 2 ton R32 voltaje 220/1/60",
     "function": "",
     "voltage": "",
     "price": 330,
-    "brand": "CIAC"
+    "brand": "CARRIER"
   },
   {
     "id": "40CAS-L6",
