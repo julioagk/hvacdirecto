@@ -1,0 +1,441 @@
+Analyzing 44 AC COOLING products...
+----------------------------------------
+Index: 0
+SKU: 38ACCO183-CO
+Name: 38ACCO183-CO
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Condensadora vertical On-Off sf marca A/C Cooling de 1.5 ton voltaje 220
+----------------------------------------
+Index: 1
+SKU: 38ACCO243-CO
+Name: 38ACCO243-CO
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Condensadora vertical On-Off sf marca A/C Cooling de 2 ton voltaje 220
+----------------------------------------
+Index: 2
+SKU: 38ACCO363-CO
+Name: 38ACCO363-CO
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Condensadora vertical On-Off sf marca A/C Cooling de 3 ton voltaje 220
+----------------------------------------
+Index: 3
+SKU: 38ACCO483-CO
+Name: 38ACCO483-CO
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Condensadora vertical On-Off sf marca A/C Cooling de 4 ton voltaje 220
+----------------------------------------
+Index: 4
+SKU: 38ACCO603-CO
+Name: 38ACCO603-CO
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Condensadora vertical On-Off sf marca A/C Cooling de 5 ton voltaje 220
+----------------------------------------
+Index: 5
+SKU: 38ACHP363-CO
+Name: 38ACHP363-CO
+Brand: AC COOLING
+Img: /images/PAQUETE COMERCIA.png
+Image: /images/PAQUETE COMERCIA.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Condensadora vertical On-Off hp marca A/C Cooling de 3 ton voltaje 220
+----------------------------------------
+Index: 6
+SKU: 40ACCO363-PT
+Name: 40ACCO363-PT
+Brand: AC COOLING
+Img: /images/Evaporador Piso Techo On-Off sf marca AC Cooling.png
+Image: /images/Evaporador Piso Techo On-Off sf marca AC Cooling.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Evaporador Piso Techo On-Off sf marca A/C Cooling de 3 ton voltaje 220
+----------------------------------------
+Index: 7
+SKU: 40ACHP363-PT
+Name: 40ACHP363-PT
+Brand: AC COOLING
+Img: /images/Evaporador Piso Techo On-Off sf marca AC Cooling.png
+Image: /images/Evaporador Piso Techo On-Off sf marca AC Cooling.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Evaporador Piso Techo On-Off hp marca A/C Cooling de 3 ton voltaje 220
+----------------------------------------
+Index: 8
+SKU: 40ACCO603-PT
+Name: 40ACCO603-PT
+Brand: AC COOLING
+Img: /images/Evaporador Piso Techo On-Off sf marca AC Cooling.png
+Image: /images/Evaporador Piso Techo On-Off sf marca AC Cooling.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Evaporador Piso Techo On-Off sf marca A/C Cooling de 5 ton voltaje 220
+----------------------------------------
+Index: 9
+SKU: 40ACHP603-PT
+Name: 40ACHP603-PT
+Brand: AC COOLING
+Img: /images/Evaporador Piso Techo On-Off sf marca AC Cooling.png
+Image: /images/Evaporador Piso Techo On-Off sf marca AC Cooling.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Evaporador Piso Techo On-Off hp marca A/C Cooling de 5 ton voltaje 220
+----------------------------------------
+Index: 10
+SKU: 50PAC363HOT1
+Name: 50PAC363HOT1
+Brand: AC COOLING
+Img: /images/PAQUETE COMERCIA.png
+Image: /images/PAQUETE COMERCIA.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Paquete horizontal on-off solo frio marca A/C Cooling de 3 ton voltaje 220/1/60
+----------------------------------------
+Index: 11
+SKU: 50PAC603HOT1
+Name: 50PAC603HOT1
+Brand: AC COOLING
+Img: /images/PAQUETE COMERCIA.png
+Image: /images/PAQUETE COMERCIA.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Paquete horizontal on-off solo frio marca A/C Cooling de 5 ton voltaje 220/1/60
+----------------------------------------
+Index: 12
+SKU: 40KIQ363A32-E
+Name: 40KIQ363A32-E
+Brand: AC COOLING
+Img: /images/PAQUETE COMERCIA.png
+Image: /images/PAQUETE COMERCIA.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Cassette inverter easy match 3 ton R32 voltaje 220/1/60
+----------------------------------------
+Index: 13
+SKU: 40KIQ603A32-E
+Name: 40KIQ603A32-E
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Cassette inverter easy match 5 ton R32 voltaje 220/1/60
+----------------------------------------
+Index: 14
+SKU: 40VIQ363A32-E
+Name: 40VIQ363A32-E
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Piso techo inverter esay match 3 ton R32 voltaje 220/1/60
+----------------------------------------
+Index: 15
+SKU: 40VIQ603A32-E
+Name: 40VIQ603A32-E
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Piso techo inverter esay match 5 ton R32 voltaje 220/1/60
+----------------------------------------
+Index: 16
+SKU: 50NPB024---3
+Name: 50NPB024---3
+Brand: AC COOLING
+Img: /images/PAQUETE COMERCIA.png
+Image: /images/PAQUETE COMERCIA.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Paquete res SF 2 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal
+----------------------------------------
+Index: 17
+SKU: 50NPB036---3
+Name: 50NPB036---3
+Brand: AC COOLING
+Img: /images/PAQUETE COMERCIA.png
+Image: /images/PAQUETE COMERCIA.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Paquete res SF 3 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal
+----------------------------------------
+Index: 18
+SKU: 50NPB048---3
+Name: 50NPB048---3
+Brand: AC COOLING
+Img: /images/PAQUETE COMERCIA.png
+Image: /images/PAQUETE COMERCIA.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Paquete res SF 4 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal
+----------------------------------------
+Index: 19
+SKU: 50NPB060---3
+Name: 50NPB060---3
+Brand: AC COOLING
+Img: /images/PAQUETE COMERCIA.png
+Image: /images/PAQUETE COMERCIA.png
+Category: packaged
+Subcategory: Gas/Eléctricas
+Description: Paquete res SF 5 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal
+----------------------------------------
+Index: 20
+SKU: 50NHB024---3
+Name: 50NHB024---3
+Brand: AC COOLING
+Img: /images/PAQUETE COMERCIA.png
+Image: /images/PAQUETE COMERCIA.png
+Category: packaged
+Subcategory: Bombas de Calor Empacadas
+Description: Paquete res HP 2 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal
+----------------------------------------
+Index: 21
+SKU: 50NHB036---3
+Name: 50NHB036---3
+Brand: AC COOLING
+Img: /images/PAQUETE COMERCIA.png
+Image: /images/PAQUETE COMERCIA.png
+Category: packaged
+Subcategory: Bombas de Calor Empacadas
+Description: Paquete res HP 3 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal
+----------------------------------------
+Index: 22
+SKU: 50NHB048---3
+Name: 50NHB048---3
+Brand: AC COOLING
+Img: /images/PAQUETE COMERCIA.png
+Image: /images/PAQUETE COMERCIA.png
+Category: packaged
+Subcategory: Bombas de Calor Empacadas
+Description: Paquete res HP 4 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal
+----------------------------------------
+Index: 23
+SKU: 50NHB060---3
+Name: 50NHB060---3
+Brand: AC COOLING
+Img: /images/PAQUETE COMERCIA.png
+Image: /images/PAQUETE COMERCIA.png
+Category: packaged
+Subcategory: Bombas de Calor Empacadas
+Description: Paquete res HP 5 ton, 14 SEER, R-454b, 220/1/60, descarga horizontal
+----------------------------------------
+Index: 24
+SKU: ACADX08CY
+Name: ACADX08CY
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Manejadora Comercial SF marca A/C Cooling de 7.5 ton voltaje 220/3/60
+----------------------------------------
+Index: 25
+SKU: ACADX08EY
+Name: ACADX08EY
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Manejadora Comercial SF marca A/C Cooling de 7.5 ton voltaje 460/3/60
+----------------------------------------
+Index: 26
+SKU: ACADX10CY
+Name: ACADX10CY
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Manejadora Comercial SF marca A/C Cooling de 10 ton voltaje 220/3/60
+----------------------------------------
+Index: 27
+SKU: ACADX10EY
+Name: ACADX10EY
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Manejadora Comercial SF marca A/C Cooling de 10 ton voltaje 460/3/60
+----------------------------------------
+Index: 28
+SKU: ACADX15CY
+Name: ACADX15CY
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Manejadora Comercial SF marca A/C Cooling de 15 ton voltaje 220/3/60
+----------------------------------------
+Index: 29
+SKU: ACADX15EY
+Name: ACADX15EY
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Manejadora Comercial SF marca A/C Cooling de 15 ton voltaje 460/3/60
+----------------------------------------
+Index: 30
+SKU: ACADX20CY
+Name: ACADX20CY
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Manejadora Comercial SF marca A/C Cooling de 20 ton voltaje 220/3/60
+----------------------------------------
+Index: 31
+SKU: ACADX20EY
+Name: ACADX20EY
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Manejadora Comercial SF marca A/C Cooling de 20 ton voltaje 460/3/60
+----------------------------------------
+Index: 32
+SKU: ACADX25CY
+Name: ACADX25CY
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Manejadora Comercial SF marca A/C Cooling de 25 ton voltaje 220/3/60
+----------------------------------------
+Index: 33
+SKU: ACADX25EY
+Name: ACADX25EY
+Brand: AC COOLING
+Img: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Image: /images/Condensadora vertical On Off sf marca AC Cooling.png
+Category: central-ac
+Subcategory: Evaporadoras
+Description: Manejadora Comercial SF marca A/C Cooling de 25 ton voltaje 460/3/60
+----------------------------------------
+Index: 34
+SKU: ACCC08COCY
+Name: ACCC08COCY
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Condensadoras
+Description: Condensadora Comercial SF marca A/C Cooling de 7.5 ton voltaje 220/3/60
+----------------------------------------
+Index: 35
+SKU: ACCC08COEY
+Name: ACCC08COEY
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Condensadoras
+Description: Condensadora Comercial SF marca A/C Cooling de 7.5 ton voltaje 460/3/60
+----------------------------------------
+Index: 36
+SKU: ACCC10COCY
+Name: ACCC10COCY
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Condensadoras
+Description: Condensadora Comercial SF marca A/C Cooling de 10 ton voltaje 220/3/60
+----------------------------------------
+Index: 37
+SKU: ACCC10COEY
+Name: ACCC10COEY
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Condensadoras
+Description: Condensadora Comercial SF marca A/C Cooling de 10 ton voltaje 460/3/60
+----------------------------------------
+Index: 38
+SKU: ACCC15COCY
+Name: ACCC15COCY
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Condensadoras
+Description: Condensadora Comercial SF marca A/C Cooling de 15 ton voltaje 220/3/60
+----------------------------------------
+Index: 39
+SKU: ACCC15COEY
+Name: ACCC15COEY
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Condensadoras
+Description: Condensadora Comercial SF marca A/C Cooling de 15 ton voltaje 460/3/60
+----------------------------------------
+Index: 40
+SKU: ACCC20COCY
+Name: ACCC20COCY
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Condensadoras
+Description: Condensadora Comercial SF marca A/C Cooling de 20 ton voltaje 220/3/60
+----------------------------------------
+Index: 41
+SKU: ACCC20COEY
+Name: ACCC20COEY
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Condensadoras
+Description: Condensadora Comercial SF marca A/C Cooling de 20 ton voltaje 460/3/60
+----------------------------------------
+Index: 42
+SKU: ACCC25COCY
+Name: ACCC25COCY
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Condensadoras
+Description: Condensadora Comercial SF marca A/C Cooling de 25 ton voltaje 220/3/60
+----------------------------------------
+Index: 43
+SKU: ACCC25COEY
+Name: ACCC25COEY
+Brand: AC COOLING
+Img: /images/CONDENSADORA SF.png
+Image: /images/CONDENSADORA SF.png
+Category: central-ac
+Subcategory: Condensadoras
+Description: Condensadora Comercial SF marca A/C Cooling de 25 ton voltaje 460/3/60

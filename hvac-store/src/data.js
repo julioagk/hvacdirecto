@@ -754,8 +754,8 @@ export const products = [
     "name": "38ACHP363-CO",
     "model": "38ACHP363-CO",
     "sku": "38ACHP363-CO",
-    "img": "/images/PAQUETE COMERCIA.png",
-    "image": "/images/PAQUETE COMERCIA.png",
+    "img": "/images/CONDENSADORA HP.png",
+    "image": "/images/CONDENSADORA HP.png",
     "category": "packaged",
     "subcategory": "Gas/Eléctricas",
     "description": "Condensadora vertical On-Off hp marca A/C Cooling de 3 ton voltaje 220",
@@ -4024,60 +4024,60 @@ export const products = [
     "name": "40KIQ363A32-E",
     "model": "40KIQ363A32-E",
     "sku": "40KIQ363A32-E",
-    "img": "/images/PAQUETE COMERCIA.png",
-    "image": "/images/PAQUETE COMERCIA.png",
+    "img": "/images/CASSETTE.png",
+    "image": "/images/CASSETTE.png",
     "category": "central-ac",
     "subcategory": "Evaporadoras",
     "description": "Cassette inverter easy match 3 ton R32 voltaje 220/1/60",
     "function": "",
     "voltage": "",
     "price": 567.6,
-    "brand": "AC COOLING"
+    "brand": "CARRIER"
   },
   {
     "id": "40KIQ603A32-E",
     "name": "40KIQ603A32-E",
     "model": "40KIQ603A32-E",
     "sku": "40KIQ603A32-E",
-    "img": "/images/CONDENSADORA SF.png",
-    "image": "/images/CONDENSADORA SF.png",
+    "img": "/images/CASSETTE.png",
+    "image": "/images/CASSETTE.png",
     "category": "central-ac",
     "subcategory": "Evaporadoras",
     "description": "Cassette inverter easy match 5 ton R32 voltaje 220/1/60",
     "function": "",
     "voltage": "",
     "price": 816.2,
-    "brand": "AC COOLING"
+    "brand": "CARRIER"
   },
   {
     "id": "40VIQ363A32-E",
     "name": "40VIQ363A32-E",
     "model": "40VIQ363A32-E",
     "sku": "40VIQ363A32-E",
-    "img": "/images/CONDENSADORA SF.png",
-    "image": "/images/CONDENSADORA SF.png",
+    "img": "/images/PISO TECHO.png",
+    "image": "/images/PISO TECHO.png",
     "category": "central-ac",
     "subcategory": "Evaporadoras",
     "description": "Piso techo inverter esay match 3 ton R32 voltaje 220/1/60",
     "function": "",
     "voltage": "",
     "price": 515.9,
-    "brand": "AC COOLING"
+    "brand": "CARRIER"
   },
   {
     "id": "40VIQ603A32-E",
     "name": "40VIQ603A32-E",
     "model": "40VIQ603A32-E",
     "sku": "40VIQ603A32-E",
-    "img": "/images/CONDENSADORA SF.png",
-    "image": "/images/CONDENSADORA SF.png",
+    "img": "/images/PISO TECHO.png",
+    "image": "/images/PISO TECHO.png",
     "category": "central-ac",
     "subcategory": "Evaporadoras",
     "description": "Piso techo inverter esay match 5 ton R32 voltaje 220/1/60",
     "function": "",
     "voltage": "",
     "price": 764.5,
-    "brand": "AC COOLING"
+    "brand": "CARRIER"
   },
   {
     "id": "50NPB024---3",
@@ -4092,7 +4092,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 1738,
-    "brand": "AC COOLING"
+    "brand": "CARRIER"
   },
   {
     "id": "50NPB036---3",
@@ -4107,7 +4107,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 1862,
-    "brand": "AC COOLING"
+    "brand": "CARRIER"
   },
   {
     "id": "50NPB048---3",
@@ -4122,7 +4122,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 2363,
-    "brand": "AC COOLING"
+    "brand": "CARRIER"
   },
   {
     "id": "50NPB060---3",
@@ -4137,7 +4137,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 2487,
-    "brand": "AC COOLING"
+    "brand": "CARRIER"
   },
   {
     "id": "50NHB024---3",
@@ -4152,7 +4152,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 2112,
-    "brand": "AC COOLING"
+    "brand": "CARRIER"
   },
   {
     "id": "50NHB036---3",
@@ -4167,7 +4167,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 2237,
-    "brand": "AC COOLING"
+    "brand": "CARRIER"
   },
   {
     "id": "50NHB048---3",
@@ -4182,7 +4182,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 2738,
-    "brand": "AC COOLING"
+    "brand": "CARRIER"
   },
   {
     "id": "50NHB060---3",
@@ -4197,7 +4197,7 @@ export const products = [
     "function": "",
     "voltage": "",
     "price": 2862,
-    "brand": "AC COOLING"
+    "brand": "CARRIER"
   },
   {
     "id": "48NL-B360603",
