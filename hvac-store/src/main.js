@@ -26,7 +26,7 @@ function getGlobalSearchSuggestions(query) {
       return haystackNorm.includes(qNorm);
     })
     .slice(0, 8)
-    .map(product => ({ display: `${product.name} · ${product.model || ''} · ${product.brand}`, query: product.model || product.name }));
+    .map(product => ({ display: `${product.description || product.name} · ${product.brand}`, query: product.model || product.name }));
 }
 
 function bindGlobalSearch(searchInputId, sugBoxId, searchBtnId) {
