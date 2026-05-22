@@ -3,7 +3,7 @@ export const categories = [
   { id: 'mini-splits', name: 'Mini Splits', icon: 'fa-wind', desc: 'Una zona, multi-zona, pared, techo', subs: ['Frio', 'Heat Pump', 'Inverter'], subsubs: ['MURO', 'PISO-TECHO', 'TIPO DUCTO'] },
   { id: 'heat-pumps', name: 'Bombas de Calor', icon: 'fa-temperature-half', desc: 'Sistemas completos, unidades exteriores', subs: ['Sistemas Completos', 'Unidades Exteriores'] },
    { id: 'furnaces', name: 'Calefacción', icon: 'fa-fire', desc: 'Hornos a gas, eléctricos, calderas', subs: ['Hornos a Gas', 'Hornos Eléctricos', 'Calderas'] },
-  { id: 'packaged', name: 'Unidades Paquete', icon: 'fa-box', desc: 'Gas/eléctricas, bombas empacadas', subs: ['Gas/Eléctricas', 'Bombas de Calor Empacadas'] },
+  { id: 'packaged', name: 'Unidad Paquete', icon: 'fa-box', desc: 'Gas/eléctricas, bombas empacadas', subs: ['Gas/Eléctricas', 'Bombas de Calor Empacadas'] },
   { id: 'iaq', name: 'Calidad del Aire', icon: 'fa-leaf', desc: 'Purificadores, humidificadores, filtros', subs: ['Purificadores', 'Humidificadores', 'Deshumidificadores', 'Filtros'] },
   { id: 'commercial', name: 'Sistemas Comerciales', icon: 'fa-building', desc: 'Unidades de techo, manejadoras, condensadoras, fan coils', subs: ['Unidades de Techo (Rooftop)', 'Calentadores de Unidad', 'Condensadoras', 'Manejadoras', 'Fan and Coil'] },
   { id: 'accessories', name: 'Accesorios e Instalación', icon: 'fa-screwdriver-wrench', desc: 'Termostatos, tuberías, soportes', subs: ['Termostatos', 'Tuberías', 'Soportes', 'Cables'] },
